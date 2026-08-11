@@ -16,14 +16,24 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Node 24
+        uses: actions/setup-node@v5
         with:
-          node-version: "22"
+          node-version: "24"
+          package-manager-cache: false
+
+      - name: Environment check
+        run: |
+          echo "Node: $(node --version)"
+          echo "UTC:  $(date -u)"
+          echo "Files:"
+          ls -la
 
       - name: Generate free daily edition
         run: node update-news.mjs
