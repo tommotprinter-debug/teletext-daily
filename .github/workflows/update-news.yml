@@ -1,4 +1,3 @@
-
 name: Update Teletext Daily
 
 on:
@@ -17,14 +16,16 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: "22"
+          node-version: "24"
+          package-manager-cache: false
 
       - name: Generate free daily edition
         run: node update-news.mjs
