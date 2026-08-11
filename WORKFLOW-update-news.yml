@@ -1,0 +1,44 @@
+name: Update Teletext Daily
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+      timezone: "Europe/Warsaw"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: teletext-daily-news
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate free daily edition
+        run: node update-news.mjs
+
+      - name: Validate edition
+        run: node test-pack.mjs --github
+
+      - name: Commit updated news
+        run: |
+          git config user.name "teletext-daily-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add news.json
+          if git diff --cached --quiet; then
+            echo "No news.json change to commit."
+          else
+            git commit -m "Update Teletext Daily edition"
+            git push
+          fi

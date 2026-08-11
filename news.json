@@ -1,0 +1,242 @@
+{
+  "date": "2026-08-12",
+  "generatedAt": "2026-08-12T00:00:00Z",
+  "edition": "starter",
+  "categories": {
+    "200": [
+      {
+        "title": "Politics starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Politics starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Politics starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Politics starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Politics starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      }
+    ],
+    "300": [
+      {
+        "title": "Business starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Business starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Business starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Business starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Business starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      }
+    ],
+    "400": [
+      {
+        "title": "Energy starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Energy starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Energy starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Energy starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Energy starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      }
+    ],
+    "500": [
+      {
+        "title": "AI starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "AI starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "AI starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "AI starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "AI starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      }
+    ],
+    "600": [
+      {
+        "title": "Sports starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Sports starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Sports starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Sports starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      },
+      {
+        "title": "Sports starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
+      }
+    ]
+  }
+}
