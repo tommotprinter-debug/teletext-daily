@@ -23,6 +23,8 @@ for(const s of allStories){
  if(s.summaryMethod==="article-extract" && String(s.url||"").includes("news.google.com"))
    throw new Error("Quality failure: Google News URL marked as article-extract");
 }
+const mismatched=allStories.filter(s=>s.summaryMethod==="article-extract" && typeof s.titleMatchScore==="number" && s.titleMatchScore<0.34);
+if(mismatched.length)throw new Error(`Quality failure: ${mismatched.length} headline/publisher mismatch`);
 if("badBoilerplateStories" in n && n.badBoilerplateStories!==0)throw new Error("news.json reports boilerplate stories");
 if("meaningfulSummaryStories" in n && n.meaningfulSummaryStories<20)throw new Error("news.json reports insufficient meaningful summaries");
 

@@ -47,29 +47,37 @@ async function getGoogleDecoder(){
 async function decodeGoogleNewsStories(stories){
   const decoder=await getGoogleDecoder();
   if(!decoder)return stories;
-  const targets=stories.map(s=>isGoogleNewsUrl(s.url)?s.url:null);
-  const urls=targets.filter(Boolean);
-  if(!urls.length)return stories;
-  try{
-    const results=await decoder.decodeBatch(urls);
-    let j=0,resolved=0;
-    const out=stories.map(story=>{
-      if(!isGoogleNewsUrl(story.url))return story;
-      const r=results[j++];
+  let resolved=0;
+  const output=[];
+  for(const story of stories){
+    if(!isGoogleNewsUrl(story.url)){
+      output.push(story);
+      continue;
+    }
+    try{
+      const results=await decoder.decodeBatch([story.url]);
+      const r=Array.isArray(results)?results[0]:null;
       const direct=r?.status?safeHttpUrl(r.decoded_url):"";
       if(direct&&!isGoogleNewsUrl(direct)){
         resolved++;
-        return {...story,originalDiscoveryUrl:story.url,url:direct,publisherUrlResolved:true};
+        output.push({
+          ...story,
+          originalDiscoveryUrl:story.url,
+          url:direct,
+          decoderResolved:true
+        });
+      }else{
+        output.push(story);
       }
-      return story;
-    });
-    console.log(`  Publisher URL decoder: ${resolved}/${urls.length} Google News links resolved.`);
-    return out;
-  }catch(e){
-    console.warn(`  Publisher URL decoder failed: ${e.message}`);
-    return stories;
+    }catch(e){
+      console.warn(`  Decoder failed for "${story.title.slice(0,70)}": ${e.message}`);
+      output.push(story);
+    }
   }
+  console.log(`  Publisher URL decoder: ${resolved}/${stories.length} links resolved individually.`);
+  return output;
 }
+
 const STOPWORDS=new Set(("the a an and or but if then else when while of to in on at by for from with as is are was were be been being has have had do does did will would should could may might can this that these those it its their his her they them we our you your i he she who which what where why how about into over after before than also more most less not no new says said report reports reported according amid among during through across per via up down out off just only other another some any all both each few many much such own same so too very".split(/\s+/)));
 
 function htmlDecode(s=""){return s.replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/&lt;/gi,"<").replace(/&gt;/gi,">").replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)))}
@@ -146,40 +154,80 @@ async function fetchHtml(url){
    return{html:await r.text(),finalUrl:r.url};
  }finally{clearTimeout(timer)}
 }
-async function resolveAndExtract(story){
- if(isGoogleNewsUrl(story.url)){
-   return{ok:false,error:"unresolved Google News URL"};
- }
- let html="",finalUrl="";
- try{
-   const first=await fetchHtml(story.url);
-   html=first.html;
-   finalUrl=safeHttpUrl(first.finalUrl)||safeHttpUrl(story.url);
- }catch(e){
-   return{ok:false,error:e.message};
- }
- if(isGoogleNewsUrl(finalUrl))return{ok:false,error:"Google News landing page rejected"};
-
- let resolved=finalUrl;
- const c=canonicalUrl(html),og=safeHttpUrl(metaContent(html,"og:url"));
- if(c&&!isGoogleNewsUrl(c))resolved=c;
- else if(og&&!isGoogleNewsUrl(og))resolved=og;
-
- const body=jsonLdArticleBody(html)||articleElementText(html);
- const meta=metaContent(html,"description")||metaContent(html,"og:description");
- const evidence=(body||meta||"").trim();
- const low=evidence.toLowerCase();
-
- const boilerplate=
-   low.includes("comprehensive up-to-date news coverage") ||
-   low.includes("aggregated from sources all over the world by google news") ||
-   low.includes("google news");
-
- if(boilerplate)return{ok:false,error:"Google News boilerplate rejected"};
- if(evidence.length<220)return{ok:false,error:`insufficient article evidence (${evidence.length} chars)`};
-
- return{ok:true,url:resolved,text:body||"",meta:meta||"",evidenceChars:evidence.length};
+function pageTitle(html=""){
+  const og=metaContent(html,"og:title");
+  if(og)return og;
+  const tw=metaContent(html,"twitter:title");
+  if(tw)return tw;
+  const m=html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  return m?stripPageHtml(m[1]):"";
 }
+function titleMatchScore(a,b){
+  if(!a||!b)return 0;
+  const A=new Set(wordList(a)),B=new Set(wordList(b));
+  if(!A.size||!B.size)return 0;
+  let common=0;
+  for(const w of A)if(B.has(w))common++;
+  return common/Math.min(A.size,B.size);
+}
+async function resolveAndExtract(story){
+  if(isGoogleNewsUrl(story.url)){
+    return{ok:false,error:"unresolved Google News URL"};
+  }
+
+  let html="",finalUrl="";
+  try{
+    const first=await fetchHtml(story.url);
+    html=first.html;
+    finalUrl=safeHttpUrl(first.finalUrl)||safeHttpUrl(story.url);
+  }catch(e){
+    return{ok:false,error:e.message};
+  }
+
+  if(isGoogleNewsUrl(finalUrl)){
+    return{ok:false,error:"Google News landing page rejected"};
+  }
+
+  let resolved=finalUrl;
+  const c=canonicalUrl(html),og=safeHttpUrl(metaContent(html,"og:url"));
+  if(c&&!isGoogleNewsUrl(c))resolved=c;
+  else if(og&&!isGoogleNewsUrl(og))resolved=og;
+
+  const publisherTitle=pageTitle(html);
+  const match=titleMatchScore(story.title,publisherTitle);
+
+  // The central safety check: do not summarize or publish a URL whose
+  // page title is materially unrelated to the RSS story headline.
+  if(publisherTitle && match<0.34){
+    return{
+      ok:false,
+      error:`publisher title mismatch (${match.toFixed(2)}): ${publisherTitle.slice(0,100)}`
+    };
+  }
+
+  const body=jsonLdArticleBody(html)||articleElementText(html);
+  const meta=metaContent(html,"description")||metaContent(html,"og:description");
+  const evidence=(body||meta||"").trim();
+  const low=evidence.toLowerCase();
+
+  const boilerplate=
+    low.includes("comprehensive up-to-date news coverage") ||
+    low.includes("aggregated from sources all over the world by google news") ||
+    low.includes("google news");
+
+  if(boilerplate)return{ok:false,error:"Google News boilerplate rejected"};
+  if(evidence.length<220)return{ok:false,error:`insufficient article evidence (${evidence.length} chars)`};
+
+  return{
+    ok:true,
+    url:resolved,
+    text:body||"",
+    meta:meta||"",
+    publisherTitle,
+    titleMatchScore:match
+  };
+}
+
 function whyLocal(page,title){return why(page,title)}
 function compactSentences(items,maxChars){
  let out="";
@@ -260,8 +308,10 @@ async function enrichStory(story,page,c){
        body:compactSentences(long,1000),
        whyItMatters:whyLocal(page,story.title),
        summaryMethod:"article-extract",
-       publisherUrlResolved:Boolean(direct||story.publisherUrlResolved),
-       extractedTextChars:evidence.length
+       publisherUrlResolved:Boolean(direct),
+       extractedTextChars:evidence.length,
+       publisherTitle:extracted.publisherTitle||"",
+       titleMatchScore:Number((extracted.titleMatchScore||0).toFixed(3))
      };
    }
  }
@@ -312,8 +362,10 @@ const articleExtractStories=allStories.filter(s=>s.summaryMethod==="article-extr
 const rssClusterStories=allStories.filter(s=>s.summaryMethod==="rss-cluster").length;
 const resolvedPublisherUrls=allStories.filter(s=>s.publisherUrlResolved===true).length;
 const badBoilerplateStories=allStories.filter(s=>(s.summary||"").toLowerCase().includes("comprehensive up-to-date news coverage")).length;
+const mismatchedExtractStories=allStories.filter(s=>s.summaryMethod==="article-extract" && typeof s.titleMatchScore==="number" && s.titleMatchScore<0.34).length;
 const meaningfulSummaryStories=allStories.filter(s=>(s.summary||"").length>=100 && (s.body||"").length>=120).length;
 if(badBoilerplateStories>0)throw new Error(`Quality gate failed: ${badBoilerplateStories} Google News boilerplate summaries`);
+if(mismatchedExtractStories>0)throw new Error(`Quality gate failed: ${mismatchedExtractStories} headline/publisher mismatches`);
 if(meaningfulSummaryStories<20)throw new Error(`Quality gate failed: only ${meaningfulSummaryStories}/25 meaningful summaries`);
 const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW);
 const get=t=>parts.find(x=>x.type===t)?.value;
@@ -327,9 +379,10 @@ const out={
   rssClusterStories,
   resolvedPublisherUrls,
   meaningfulSummaryStories,
+  mismatchedExtractStories,
   badBoilerplateStories,
   categoryStatus,
   categories
 };
 await fs.writeFile("news.json",JSON.stringify(out,null,2)+"\n","utf8");
-console.log(`\nSUCCESS: ${date}; stories 25; meaningful summaries ${meaningfulSummaryStories}/25; article extracts ${articleExtractStories}/25; RSS-cluster summaries ${rssClusterStories}/25; direct publisher URLs ${resolvedPublisherUrls}/25; boilerplate 0.`);
+console.log(`\nSUCCESS: ${date}; stories 25; meaningful summaries ${meaningfulSummaryStories}/25; article extracts ${articleExtractStories}/25; RSS-cluster summaries ${rssClusterStories}/25; direct publisher URLs ${resolvedPublisherUrls}/25; mismatched extracts 0; boilerplate 0.`);
