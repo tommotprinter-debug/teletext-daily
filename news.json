@@ -1,17 +1,26 @@
 {
   "date": "2026-08-12",
-  "generatedAt": "2026-08-12T06:26:41.895Z",
-  "edition": "live-rss-free",
-  "freshPages": 5,
+  "generatedAt": "2026-08-12T08:49:31.661Z",
+  "edition": "live-rss-with-fallback",
+  "freshPages": 4,
   "categoryStatus": {
     "200": "fresh",
     "300": "fresh",
-    "400": "fresh",
+    "400": "previous-edition-fallback",
     "500": "fresh",
     "600": "fresh"
   },
   "categories": {
     "200": [
+      {
+        "title": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules",
+        "summary": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules &nbsp;&nbsp; The New Voice of Ukraine",
+        "body": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "The New Voice of Ukraine",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeS00OFY3VVZBM0hjZkFrSDI1dEVoY2NzRnUxbXJQdGZJOGNhSmxfTnI5THZyZW5OcHhyUXVKRXBHS0tyakhyd0o2VVBzeTBJUXA1NVpSR2UySDNaVzM2dDR3UEhycV9sRVN5OWM2eXlYT1p3VFdKYTA4RjVEXzhxMm16dUNab3U2RU52M19KZXJHaEdzaTNGMFpjQXhVS0FjaGtz0gGfAUFVX3lxTFBQTUdsZjhFUmw3eGtWR18zRmhUSXJmTldWVDR3NG9rWHl3dU5kVU9vMEhSb2MySFBoNmRFM0dWdlNqbVFFaW12c21kV1lPVzVFd3ZpMHRGUmVnVUtfaEhCQUNDN0lSZlBweFp6Nzk5ZUlyX0hzR3JkcWNyTW5TU3ZJWFdYZlVIMDR4aDZzalpJRGdGRkhVWTZjRVlVcFY1MA?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 07:20:31 GMT"
+      },
       {
         "title": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers",
         "summary": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers &nbsp;&nbsp; LIGA.net",
@@ -22,12 +31,21 @@
         "publishedAt": "Tue, 11 Aug 2026 11:43:07 GMT"
       },
       {
+        "title": "BNP Paribas' Polish unit posts 18% profit drop on higher taxes",
+        "summary": "BNP Paribas' Polish unit posts 18% profit drop on higher taxes &nbsp;&nbsp; Business Recorder",
+        "body": "BNP Paribas' Polish unit posts 18% profit drop on higher taxes. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "Business Recorder",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE16RVdQVnVBdlJXcjd4VWhkOG1SaXpyMVBwTW04S2FMYkx2SnUzQ05VX2M1d2Z5S1ltT3lTLTJfUjgxNldybDZESFpzUDZkNlZRcGI4SUR30gFWQVVfeXFMTXpFV1BWdUF2UldyN3hVaGQ4bVJpenIxUHBNbThLYUxiTHZKdTNDTlVfYzV3ZnlLWW1PeVMtMl9SODE2V3JsNkRIWnNQNmQ2VlFwYjhJRHc?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 06:53:53 GMT"
+      },
+      {
         "title": "EU edges closer to approving Poland's €7.9b recovery funding request",
         "summary": "EU edges closer to approving Poland's €7.9b recovery funding request &nbsp;&nbsp; The Brussels Times",
         "body": "EU edges closer to approving Poland's €7.9b recovery funding request. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
         "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
         "source": "The Brussels Times",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa1pZSGZQd2JNU2k3VUt2cDlBdDZZLUVvUVVDX2tBVjNvTGVQT1BIMHFrNnBpZVFhNkRfOGZSVVllWC1MR1drcnJhbkRmcE5FTjUtdlZ4T0d6dW5MaF9qa3ExVXZ0WlN3RVF2eHlZVnplYTFjM2hrY2g2bVotU1QySlpZMzRZUExLZllvTzZWVmhxd3l0WVdiSlVwaGNocTJRdEFINWt6WWY?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWlJfbC1WZHZWUFlRR0FvenphcnlpUFNfSGdGTHFsM0ZMWlFESFpBMDFUZWVrMnROcXRQNlk5blpCVU95Z2hnYzA3UG9yM2h2WEUxbWdVeEdUVDNMWkRLYmx5VC05RVBHc1hMMERlcW1NQm83NWsyM3k0OXB6aVJzdHNJa1FsRzZYNmZ0WnlieWRmLWowWF9FQTF4cmpVMlByeFRGd3J0UHNac3BHLWFrVE9lLXJyQ2lO?oc=5",
         "publishedAt": "Tue, 11 Aug 2026 21:24:42 GMT"
       },
       {
@@ -38,35 +56,26 @@
         "source": "Межа. Новини України.",
         "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB4MHdmVkxZazlhY3RzdktEZ04yeWhybmFoa2F6WldDSFdqTVAtNzRUT3ZlbWlIMmVONVdSNVJBN2hIVVdNbFF0ZU1uRmJsZG12NmF5YXpqdjhOVVBtNUtTTnhLMERVYUVBOWVVV0xn?oc=5",
         "publishedAt": "Tue, 11 Aug 2026 20:46:08 GMT"
-      },
-      {
-        "title": "U.S. Army Soldiers with the NATO FLF Battle Group conduct live fire exercise in Poland [Image 5 of 6]",
-        "summary": "U.S. Army Soldiers with the NATO FLF Battle Group conduct live fire exercise in Poland [Image 5 of 6] &nbsp;&nbsp; DVIDS",
-        "body": "U.S. Army Soldiers with the NATO FLF Battle Group conduct live fire exercise in Poland [Image 5 of 6]. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "DVIDS",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUnMwVHNxQTFGVmNnVkRTX2pUaWYwUk9CR0k3MGxXdGZqNGtQak9wZDZxWTI3ZjBjTEM5ZEdadVNhNUhGaktwYXlXZTctVnNwTC11NkdwTGVsNjB6ZGhQLWhwNFpDaGpwMWdGVV9iYlRuQUhVQTZWdDNFd0lTd0ctOTNGak0tRk9DYU96Q0lxZ3c2V3JoVWRmYl8wZjJSejU1ajlmUmV6U1J3b0w3aGUzeWZBMzV0TW8?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 19:05:00 GMT"
-      },
-      {
-        "title": "European Commission reminds Poland of EU principles amid surge in aggression against Ukrainians",
-        "summary": "European Commission reminds Poland of EU principles amid surge in aggression against Ukrainians &nbsp;&nbsp; RBC-Ukraine",
-        "body": "European Commission reminds Poland of EU principles amid surge in aggression against Ukrainians. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "RBC-Ukraine",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPa3VXOW9uQ01MNXVmZWNZbUFCSzlxWEp0eFRyY1NzWE9SQmR0ZVhyaTdYUXlMeG9pS2hqT1ZCMVFiWVhhUkRScTlISzNWbnZUc3ZJZUJsNUNDanhvVlB1aTFvbjlhMWprd3F1ZEM0MnJHZDN4ZXV6dTFjOGg2SVdsUUszbnh4cEtsTUxncUxNX2h1QQ?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 19:00:19 GMT"
       }
     ],
     "300": [
       {
         "title": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters",
-        "summary": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters &nbsp;&nbsp; defence-industry.eu",
+        "summary": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters &nbsp;&nbsp; Defence Industry Europe",
         "body": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
         "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "defence-industry.eu",
+        "source": "Defence Industry Europe",
         "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOWFppRzdaWTE2Z1h5ejZTYVlTYzBYTmtYaTlxLU5DUmhUVDZ6VGs5d0NWX25RZ0diQlhVQ0syZWJuNGdodzRFZWotTEpMTFB6UXB6Z0h5R3o1R1hXRUFtSFFybXhTbkRLS0NkdHdPdXhpRlVVLXNkSjQtWlVmdFlFYzg3Y2c4dG1ES0NRUUh3ekZ4VmxxTUVQc1BvVFBaMjVHYy1KVkplajV5c1l0YTFCeWJFSHVBZVNOUVNZMTFxWmtxb3lkSzdpYWlHanVMUF92X1JtaGdWRjhQOGpucWI0SndQQi1iVF9ZdUU0ZS1JVVZ1bDVVdEE?oc=5",
         "publishedAt": "Tue, 11 Aug 2026 19:04:38 GMT"
+      },
+      {
+        "title": "Mixed trade in Europe before US inflation data",
+        "summary": "Mixed trade in Europe before US inflation data &nbsp;&nbsp; marketscreener.com",
+        "body": "Mixed trade in Europe before US inflation data. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "marketscreener.com",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ2FwYWJqU3FEVXR0OGV4SThaYUdlUDNiMUIzS2VlYzdEVUYxUTJDUFp0VHlfZ0ZiVEhmLWl5ZUZjTEs3YVhSRUpob2lMazliZzNGOXFtY243ajdJcXpWVUFwR0V6OFlYQkliQndja0dKSzF0NWduQ2MwOWZDdm1ya2NXQ25GT2t0dGMyeTNVZzBpTGdEUmNyMnM5Y25SbFNJ?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 07:45:29 GMT"
       },
       {
         "title": "Poland economy now larger than Belgium, Sweden, Ireland and Austria",
@@ -78,6 +87,15 @@
         "publishedAt": "Tue, 11 Aug 2026 11:55:00 GMT"
       },
       {
+        "title": "Circana reveals regional toy market dynamics across Europe, The Americas and Asia-Pacific",
+        "summary": "Circana reveals regional toy market dynamics across Europe, The Americas and Asia-Pacific &nbsp;&nbsp; Licensing.biz",
+        "body": "Circana reveals regional toy market dynamics across Europe, The Americas and Asia-Pacific. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "Licensing.biz",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUDJBWUp3MEZLaWM4dllxdU41VThzcG9MT0pzRm1HcnZOTXFtUmNLWWU5cWUwdElSdGw3b0doSEp3TjZia3VHdHZBN2RodjR0ellCdk1oS2Mwa0g5ZGl1WmNZX3VLRllKTG9MS2FTMkhTbzltbUk0UzBDOHJaRWlfWEJUOUVtaU8wVHJxNHhXV3o4WERYMlloWG10bE1uV0VNUzB5eDEydGlPdVVyX2lIXw?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 08:28:09 GMT"
+      },
+      {
         "title": "Four urgent investment keys for Europe not to miss the train of the economy before 2040",
         "summary": "Four urgent investment keys for Europe not to miss the train of the economy before 2040 &nbsp;&nbsp; Demócrata",
         "body": "Four urgent investment keys for Europe not to miss the train of the economy before 2040. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
@@ -85,24 +103,6 @@
         "source": "Demócrata",
         "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMUVSbF9UTlduWDV0cUpOakJORDdfRUgwWEpoRDc2YjlQLUxMYTV0VExXYUNzSHRvbjZtV1VfTVQ3bzlHODB2aldFaThSMy14cndOektqUnpSRFZ0Z1NMZjVvSkRnNTlFSURZS1JudHBYOGpiMmpMMjlPbG45eFFTNmNKWU9udG93SmpOUFJtNTNxdENScnlYN2JkbFFzcWRhYXJxcXRqNnk0LXk1UzQyenB5dEpaMDItUUIza2U3MXFrd9IBxwFBVV95cUxOdXJQZGlRYWN1RUstT3gzcDZnQk0zSDBleTZ3V0tFNzJFeDBDckJkWE1selROSzhjWUY5MnJ5Zjl2SXNHSUxvaWFZUklPUE5VRW9EaEprdnFBbTFFa2VGOUdqazN4cDVNRVFaYV9GWWlYOTNDSVZDcC0tSWlMMjUwWDVpSl9JNFItVW9FR01Lc0ROWndMY0JPN0tja1FsMWQ5ZGplU3pjYk1Mdm9hN3pLb05yS0xjeG1jNXd5dmtaVWJhZlVPb3hJ?oc=5",
         "publishedAt": "Wed, 12 Aug 2026 03:00:00 GMT"
-      },
-      {
-        "title": "Poland signs Boeing deals to build Europe’s biggest Apache hub",
-        "summary": "Poland signs Boeing deals to build Europe’s biggest Apache hub &nbsp;&nbsp; euractiv.com",
-        "body": "Poland signs Boeing deals to build Europe’s biggest Apache hub. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "euractiv.com",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT01GUUp4aW1MSC02ZXpYemtYNUNhZHRNTk51U2dHd0RFRHVnQWhGeTFqTHNZUTdrbm1jM3lTNm52M0lCdFlZbUxwVUROZ3hGc3JnRF9JdEJCVkxVdmF2UTBkV2lvc0xNd1VXZC1vVVhSNGF4X0ZwcWd3T29nTkV0YVl3S0w4VVVCc2dOUFVkLUQ4c1ZaVDVZ?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 13:08:02 GMT"
-      },
-      {
-        "title": "Poland to seek more EU SAFE funds, deputy minister says",
-        "summary": "Poland to seek more EU SAFE funds, deputy minister says &nbsp;&nbsp; Polska Agencja Prasowa SA",
-        "body": "Poland to seek more EU SAFE funds, deputy minister says. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Polska Agencja Prasowa SA",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOHpZbTBqRnJMNFBqVWVmMjV2RVBFRGx2dm02MVJ6cDM3NXZtZERXNVRpY09XYXpBRzFkR2RrQVQ4alBRcklDSWUybXE0OFk1R2hiYVQ2ZFhlZVZ1XzlNUWxRMm8zUHRXSDNFeUJEZm9peWtQQXI5YkNLR0Z0OGpsSGtOUEY?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 12:45:00 GMT"
       }
     ],
     "400": [
@@ -163,40 +163,40 @@
         "publishedAt": "Wed, 12 Aug 2026 05:00:01 GMT"
       },
       {
-        "title": "Tencent Cloud Powers Alsaif Gallery's Enterprise AI Transformation in Saudi Arabia",
-        "summary": "Tencent Cloud Powers Alsaif Gallery's Enterprise AI Transformation in Saudi Arabia &nbsp;&nbsp; PR Newswire",
-        "body": "Tencent Cloud Powers Alsaif Gallery's Enterprise AI Transformation in Saudi Arabia. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "title": "Google’s Gemini AI Assistant Reaches One Billion Users",
+        "summary": "Google’s Gemini AI Assistant Reaches One Billion Users &nbsp;&nbsp; ASHARQ AL-AWSAT English",
+        "body": "Google’s Gemini AI Assistant Reaches One Billion Users. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
         "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "PR Newswire",
-        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPQ2tQbk1MdVV4dHZpNGVaVEx3MzlFVnFVRGZMTS1fVW4xMWJUS0tRYTB2Q19PMy1lUXl3bzdLajBzUkZqb0RReTZYOW9iNW1hR21ZaFJfYnBod0xxWlB6UFpIMExEckdxQ1pVYVVqLURIckdEUXhfUW81aHFwMTl6VUM3akZJMlk4bTZwMTIwUklMNVo5aE9lMDNJYmVsa01EakZqYlFHNU0tVFBYMTJBSUxoZkw5R3BadTdYTkg0ZU84UE9Lbkh2anFxREthbTFXbm15bnZCVQ?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 04:30:00 GMT"
+        "source": "ASHARQ AL-AWSAT English",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQjFvUEdpU2g4aThZV3d1NjZLMUl5bTNqWWNXaW5rQzd6VlhyeHFaNlpxN2I1bThBdktBS3NOanhibVUtZ3IzTkU3ODZsMGxxSXplYXNiWTVGbkdtbnZtTFdfcFpkQmYtVTZaUXdLUVV2Um10c1dtUVVOMEQyc1Bvei1CMnUxMnRiWUwydkx5WEU0TllLQUZGc1pYWkRneFBfWVd1OGl2bXBoa1Z0?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 08:38:29 GMT"
       },
       {
-        "title": "SpaceXAI launches Grok Bot as AI agent race shifts toward autonomous work",
-        "summary": "SpaceXAI launches Grok Bot as AI agent race shifts toward autonomous work &nbsp;&nbsp; digitimes.com",
-        "body": "SpaceXAI launches Grok Bot as AI agent race shifts toward autonomous work. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "title": "Kyndryl Launches Agentic Modernization Services to Accelerate Enterprise AI Adoption",
+        "summary": "Kyndryl Launches Agentic Modernization Services to Accelerate Enterprise AI Adoption &nbsp;&nbsp; TechAfrica News",
+        "body": "Kyndryl Launches Agentic Modernization Services to Accelerate Enterprise AI Adoption. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
         "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "digitimes.com",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObmtoQjFkQy1kQm5zQXlhcV9pSUNRSWZCTVZrOHIxZ3RmX21mNkFLcnVMMzlocXBEN1BBNWstUFF1Wk1HdEJtTzNBcjBOeElOZ0I1UEVOcWs1ZDg4MkwtNzJOZ2NFMFRFd0p3c21Ec2ZNRElJMWRZN2RyZTJ3RXBkNGRZQTlQWVpJaS11Tg?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 04:05:00 GMT"
+        "source": "TechAfrica News",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVTRXZzVtMGpmYTU3NVNneGdfeGVERFNRUklJMzYzTjdrQmdrdFBsTUJhamhTUUxRLUwyLVc4MFNZLVN5Y0VSak5kUmlGS3c0djBOWDMzX1hjMG9kLXlfMFhjX0UyWW5mOUJSU3ZybFhOc3lybjRnQWMtYlpORk9Xcl9BbGExUG1fSFlXNlk3RWVuRjYySC12TXV0NEtpb1A0ZG5DQ2VFVXhtQzdFM3ZuT241TmQ0ZWw5OVRNRks4d1k?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 08:03:45 GMT"
       },
       {
-        "title": "AI deployments are stretching enterprise security to its limits",
-        "summary": "AI deployments are stretching enterprise security to its limits &nbsp;&nbsp; Help Net Security",
-        "body": "AI deployments are stretching enterprise security to its limits. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "title": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps",
+        "summary": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps &nbsp;&nbsp; IEEE Spectrum",
+        "body": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
         "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "Help Net Security",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcS11MlRFOWVBT1hQSDVXeFVXbXlsbUswakd0bnZoODhuOEZiWnAyMDJBZTNmdDYtV2NHZlFRdExoZ0dGQUdERjczTkxkdmw4XzNGUVBMRFJDaHNWd29wdkJjbUpuQ2FJYWlqazBMYkxFeFJHOG9GYWJla3ZYWDB3emNRbi1oUFh5MDNtT1Jn?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 04:00:55 GMT"
+        "source": "IEEE Spectrum",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9YZWcxOURrVUU5SmtpbTBhbnZfeVNhUDF6WC1JUFpqWUhXZFN6VTc1NU85Qks1VGNBRFN0MVE4dFNJeFp0SlRmTHNBMk9Sd1o2RjZFNXB6cWk0Ti15RWI0bE9USGJzOWxE?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 07:27:44 GMT"
       },
       {
-        "title": "Nvidia reportedly builds 1-trillion-parameter Nemotron 4 AI model",
-        "summary": "Nvidia reportedly builds 1-trillion-parameter Nemotron 4 AI model &nbsp;&nbsp; Tech Wire Asia",
-        "body": "Nvidia reportedly builds 1-trillion-parameter Nemotron 4 AI model. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
+        "title": "Lucrative AI Launches Out of Stealth with $500K in Pre-Seed Funding to Bring MCP-Native Automation to Enterprise",
+        "summary": "Lucrative AI Launches Out of Stealth with $500K in Pre-Seed Funding to Bring MCP-Native Automation to Enterprise &nbsp;&nbsp; aithority.com",
+        "body": "Lucrative AI Launches Out of Stealth with $500K in Pre-Seed Funding to Bring MCP-Native Automation to Enterprise. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
         "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "Tech Wire Asia",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPa2h1UTVrREVaSlF3T2VscGxrQjFQbGtxVUtsR1o2dDNTdzhCRDJVVjRteEdhM3dWY3FXbUtCSWhpemtsVWNvVnJqU2oyaFYyb3o4aExsOUVfN21sWGFubGpLQmJSdDlGYXowVV9wenU3MEpCT3ZwN1I3U05fLWhLUXU4MUpSdw?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 04:00:49 GMT"
+        "source": "aithority.com",
+        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSkJQV0F4eVZZbEd5empvaVlINVp2T0Z6ZTBTVzdxTUZFZ1hzSWcyVTgtNjJXOVA5bnpDOWVyN2dPS1BTd0MwbDczVmw3cjVxUGRXVk94T0FJUHU4aDNOdnRMME9BdjZXeWg5azBZcm9SOG9CVk1sem5fWHpkVWdqaHVMQmJna0VRYS13cEVZa29JNDFTaWYwWDNwb2Y4RERWdjRod3RFMDFla2JZdHNheDJERF9ObkNEYTFxdHRMSnU1eTI3RE83anN5bWNXc3F6cldfc1ppc2gyTC1sWUdTWHhFc3M1QQ?oc=5",
+        "publishedAt": "Wed, 12 Aug 2026 08:41:58 GMT"
       }
     ],
     "600": [
