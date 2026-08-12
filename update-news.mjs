@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 
 const NOW=new Date();
 const GEMINI_API_KEY=process.env.GEMINI_API_KEY||"";
-const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-2.5-flash-lite";
+const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-2.5-flash";
 const PAGES=["200","300","400","500","600"];
 const CATS={
 "200":{name:"Politics",googleQuery:'(Poland OR Polish OR Warsaw) (government OR parliament OR election OR president OR minister OR NATO OR EU) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/news/world/europe/rss.xml","https://www.euronews.com/rss?format=mrss&level=vertical&name=my-europe"],boost:["poland","polish","warsaw","government","parliament","election","president","minister","nato","european union","eu"]},
