@@ -16,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
 
     steps:
       - name: Checkout repository
@@ -28,14 +28,7 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
-      - name: Environment check
-        run: |
-          echo "Node: $(node --version)"
-          echo "UTC:  $(date -u)"
-          echo "Files:"
-          ls -la
-
-      - name: Generate free daily edition
+      - name: Generate RSS daily edition
         run: node update-news.mjs
 
       - name: Validate edition
@@ -49,6 +42,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No news.json change to commit."
           else
-            git commit -m "Update Teletext Daily edition"
+            git commit -m "Update Teletext Daily RSS edition"
             git push
           fi

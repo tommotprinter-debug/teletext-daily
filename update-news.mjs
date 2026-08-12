@@ -1,165 +1,39 @@
 import fs from "node:fs/promises";
 
-const BASE = process.env.GDELT_BASE_URL || "https://api.gdeltproject.org/api/v2/doc/doc";
-const NOW = new Date();
-const RETRY_BASE_MS = Number(process.env.TELETEXT_RETRY_BASE_MS || 4000);
-const PAGES = ["200","300","400","500","600"];
-const CATS = {
-  "200": {name:"Politics", queries:[
-    '(Poland OR Polish OR Warsaw OR government OR parliament OR election OR NATO OR Ukraine)',
-    '(Poland OR Polish OR Europe OR government OR parliament OR election OR security)'
-  ], boost:["poland","polish","warsaw","government","parliament","election","minister","nato","ukraine","europe"]},
-  "300": {name:"Business", queries:[
-    '(Poland OR Polish OR business OR economy OR market OR investment OR inflation OR industry)',
-    '(Poland OR Europe OR business OR economy OR company OR market OR investment)'
-  ], boost:["poland","polish","business","economy","market","investment","inflation","industry","bank","company"]},
-  "400": {name:"Energy", queries:[
-    '(Poland OR Polish OR Baltic OR energy OR electricity OR offshore OR wind OR nuclear OR grid)',
-    '(Poland OR Europe OR energy OR electricity OR wind OR nuclear OR grid OR hydrogen OR storage)'
-  ], boost:["poland","polish","baltic","offshore","wind","grid","nuclear","energy","electricity","hydrogen","storage","pse","orlen"]},
-  "500": {name:"AI", queries:[
-    '(OpenAI OR Anthropic OR Gemini OR Copilot OR artificialintelligence OR AI)',
-    '(OpenAI OR Anthropic OR GoogleAI OR MicrosoftAI OR AI OR artificialintelligence)'
-  ], boost:["openai","anthropic","google","gemini","microsoft","copilot","model","agent","enterprise","artificial intelligence"," ai "]},
-  "600": {name:"Sports", queries:[
-    '(Poland OR Polish OR football OR tennis OR volleyball OR athletics OR motorsport OR basketball)',
-    '(Poland OR Europe OR football OR tennis OR volleyball OR athletics OR motorsport OR sport)'
-  ], boost:["poland","polish","football","tennis","volleyball","athletics","motorsport","basketball","championship"]}
+const NOW=new Date();
+const PAGES=["200","300","400","500","600"];
+const CATS={
+"200":{name:"Politics",googleQuery:'(Poland OR Polish OR Warsaw) (government OR parliament OR election OR president OR minister OR NATO OR EU) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/news/world/europe/rss.xml","https://www.euronews.com/rss?format=mrss&level=vertical&name=my-europe"],boost:["poland","polish","warsaw","government","parliament","election","president","minister","nato","european union","eu"]},
+"300":{name:"Business",googleQuery:'(Poland OR Polish OR Europe) (business OR economy OR company OR market OR investment OR inflation OR rates OR industry) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/news/business/rss.xml","https://www.euronews.com/rss?format=mrss&level=theme&name=business"],boost:["poland","polish","business","economy","company","market","investment","inflation","rates","industry","bank"]},
+"400":{name:"Energy",googleQuery:'(Poland OR Polish OR Baltic OR Europe) (energy OR electricity OR offshore wind OR nuclear OR grid OR hydrogen OR storage) when:3d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://www.euronews.com/rss?format=mrss&level=vertical&name=green","https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"],boost:["poland","polish","baltic","offshore","wind","grid","nuclear","energy","electricity","hydrogen","storage","pse","orlen"]},
+"500":{name:"AI",googleQuery:'(OpenAI OR Anthropic OR Gemini OR Copilot OR "artificial intelligence" OR AI) (model OR agent OR software OR enterprise OR technology) when:2d',locale:{hl:"en-US",gl:"US",ceid:"US:en"},fallbacks:["https://feeds.bbci.co.uk/news/technology/rss.xml","https://www.euronews.com/rss?format=mrss&level=vertical&name=next"],boost:["openai","anthropic","google","gemini","microsoft","copilot","model","agent","enterprise","artificial intelligence","ai"]},
+"600":{name:"Sports",googleQuery:'(Poland OR Polish) (football OR tennis OR volleyball OR athletics OR motorsport OR basketball OR sport) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/sport/rss.xml","https://www.euronews.com/rss?format=mrss&level=theme&name=sport"],boost:["poland","polish","football","tennis","volleyball","athletics","motorsport","basketball","championship"]}
 };
 
-function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+function decodeEntities(s=""){return s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,"$1").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)))}
+function stripHtml(s=""){return decodeEntities(s).replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim()}
+function tag(block,name){const m=block.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${name}>`,"i"));return m?stripHtml(m[1]):""}
+function linkTag(block){const direct=tag(block,"link");if(direct)return direct;const m=block.match(/<link[^>]+href=["']([^"']+)["']/i);return m?decodeEntities(m[1]):""}
+function sourceTag(block){const m=block.match(/<source(?:\s[^>]*)?>([\s\S]*?)<\/source>/i);return m?stripHtml(m[1]):""}
+function domain(u=""){try{return new URL(u).hostname.replace(/^www\./,"")}catch{return""}}
+function parseFeed(xml,fallbackSource=""){const blocks=[...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi),...xml.matchAll(/<entry(?:\s[^>]*)?>([\s\S]*?)<\/entry>/gi)].map(m=>m[1]);return blocks.map(b=>{const title=tag(b,"title"),url=linkTag(b),description=tag(b,"description")||tag(b,"summary")||tag(b,"content"),source=sourceTag(b)||fallbackSource||domain(url),publishedAt=tag(b,"pubDate")||tag(b,"published")||tag(b,"updated");return{title,url,description,source,publishedAt}}).filter(x=>x.title&&x.url)}
 function normalize(t=""){return t.toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim()}
 function wset(t){return new Set(normalize(t).split(" ").filter(x=>x.length>3))}
 function similarity(a,b){const A=wset(a),B=wset(b);if(!A.size||!B.size)return 0;let n=0;for(const w of A)if(B.has(w))n++;return n/(A.size+B.size-n)}
-function cleanTitle(t=""){return t.replace(/\s*[-–—|]\s*[^-–—|]{2,45}$/," ").replace(/\s+/g," ").trim()}
-function domain(u=""){try{return new URL(u).hostname.replace(/^www\./,"")}catch{return""}}
-function parseDate(v=""){
-  const s=String(v);
-  if(/^\d{8}T\d{6}Z$/.test(s))return new Date(`${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}T${s.slice(9,11)}:${s.slice(11,13)}:${s.slice(13,15)}Z`);
-  return new Date(v);
-}
-function ageH(v){const d=parseDate(v);return isNaN(d)?72:Math.max(0,(NOW-d)/36e5)}
-function score(a,c){
-  const text=` ${a.title} ${a.domain||""} ${a.sourcecountry||""} `.toLowerCase();
-  let s=Math.max(0,72-ageH(a.seendate));
-  for(const k of c.boost)if(text.includes(k))s += ["poland","polish"].includes(k)?20:5;
-  if((a.sourcecountry||"").toLowerCase()==="poland")s+=15;
-  return s;
-}
-function summary(a,c){
-  const h=Math.round(ageH(a.seendate));
-  const when=h<1?"recently":h===1?"about one hour ago":`about ${Math.min(h,72)} hours ago`;
-  return `${c.name} report from ${a.domain}, published ${when}. Open the original source for full context.`;
-}
-function why(page,title){
-  const t=title.toLowerCase();
-  if(page==="400"){
-    if(t.includes("offshore")||t.includes("wind"))return "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.";
-    if(t.includes("grid"))return "Grid capacity can determine how quickly new generation connects and reaches customers.";
-    if(t.includes("nuclear"))return "Nuclear decisions can affect long-term generation mix, investment, and energy security.";
-    return "Energy developments can affect investment, security of supply, infrastructure, and power prices.";
-  }
-  if(page==="500")return "Material AI developments can affect software capability, productivity, competition, and technology spending.";
-  if(page==="300")return "Business developments can affect investment, demand, financing conditions, and corporate decisions.";
-  if(page==="200")return "Political decisions can change regulation, public spending, security policy, and the business environment.";
-  return "Major sports results and events shape rankings, qualification, schedules, and public attention.";
-}
+function ageH(v){const d=new Date(v);return isNaN(d)?96:Math.max(0,(NOW-d)/36e5)}
+function cleanGoogleTitle(title,source){let t=title.trim();if(source){const e=source.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");t=t.replace(new RegExp(`\\s[-–—]\\s${e}$`,"i"),"")}return t.replace(/\s+/g," ").trim()}
+function score(a,c){const text=` ${a.title} ${a.source} `.toLowerCase();let s=Math.max(0,96-ageH(a.publishedAt));for(const k of c.boost)if(text.includes(k))s+=["poland","polish"].includes(k)?22:5;return s}
+function why(page,title){const t=title.toLowerCase();if(page==="400"){if(t.includes("offshore")||t.includes("wind"))return"Relevant to offshore wind capacity, infrastructure, supply chain, or market development.";if(t.includes("grid"))return"Grid capacity can determine how quickly new generation connects and reaches customers.";if(t.includes("nuclear"))return"Nuclear decisions can affect long-term generation mix, investment, and energy security.";return"Energy developments can affect investment, security of supply, infrastructure, and power prices."}if(page==="500")return"Material AI developments can affect software capability, productivity, competition, and technology spending.";if(page==="300")return"Business developments can affect investment, demand, financing conditions, and corporate decisions.";if(page==="200")return"Political decisions can change regulation, public spending, security policy, and the business environment.";return"Major sports results and events shape rankings, qualification, schedules, and public attention."}
+function summary(a,c){let d=(a.description||"").trim();if(d&&normalize(d)!==normalize(a.title)&&d.length>35){d=d.replace(/\s+/g," ");if(d.length>220)d=d.slice(0,217).replace(/\s+\S*$/,"")+"...";return d}const h=Math.round(ageH(a.publishedAt)),when=h<1?"recently":h===1?"about one hour ago":`about ${Math.min(h,96)} hours ago`;return`${c.name} report from ${a.source||domain(a.url)}, published ${when}.`}
+async function fetchText(url){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);try{const r=await fetch(url,{signal:controller.signal,headers:{"User-Agent":"TeletextDailyRSS/2.0","Accept":"application/rss+xml, application/xml, text/xml, */*"}});if(!r.ok)throw new Error(`HTTP ${r.status}`);return await r.text()}finally{clearTimeout(timer)}}
+function googleUrl(c){const p=new URLSearchParams({q:c.googleQuery,hl:c.locale.hl,gl:c.locale.gl,ceid:c.locale.ceid});return"https://news.google.com/rss/search?"+p}
+function rank(all,page,c){const valid=all.filter(a=>a.title.length>=18);valid.sort((a,b)=>score(b,c)-score(a,c));const out=[],perSource=new Map();for(const a of valid){if(out.some(x=>x.url===a.url||similarity(x.title,a.title)>.58))continue;const source=a.source||domain(a.url)||"News source",n=perSource.get(source)||0;if(n>=2)continue;perSource.set(source,n+1);out.push({title:a.title,summary:summary(a,c),body:`${a.title}. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.`,whyItMatters:why(page,a.title),source,url:a.url,publishedAt:a.publishedAt||""});if(out.length===5)break}console.log(`  ${c.name}: ${out.length}/5 selected from ${valid.length} RSS candidates.`);return out}
+async function collect(page,c){const all=[],seen=new Set();const add=items=>{for(const a of items){if(!a.url||seen.has(a.url))continue;seen.add(a.url);a.title=cleanGoogleTitle(a.title,a.source);all.push(a)}};try{console.log(`  Google News RSS: ${c.googleQuery}`);const items=parseFeed(await fetchText(googleUrl(c)),"Google News");console.log(`  Received ${items.length} Google News RSS items.`);add(items)}catch(e){console.warn(`  Google News RSS unavailable: ${e.message}`)}let ranked=rank(all,page,c);if(ranked.length===5)return ranked;for(const url of c.fallbacks){try{console.log(`  Fallback RSS: ${url}`);const items=parseFeed(await fetchText(url),domain(url));console.log(`  Received ${items.length} fallback RSS items.`);add(items);ranked=rank(all,page,c);if(ranked.length===5)return ranked}catch(e){console.warn(`  Fallback unavailable: ${e.message}`)}}if(ranked.length<5)throw new Error(`${c.name}: only ${ranked.length}/5 suitable RSS stories`);return ranked}
+async function previousCategories(){try{return JSON.parse(await fs.readFile("news.json","utf8"))?.categories||{}}catch{return{}}}
 
-async function requestArticles(query,timespan){
-  const q=new URLSearchParams({query,mode:"artlist",maxrecords:"100",format:"json",sort:"datedesc",timespan});
-  const url=`${BASE}?${q}`;
-  let lastError;
-  for(let attempt=1; attempt<=3; attempt++){
-    try{
-      console.log(`  GDELT request ${attempt}/3 • ${timespan} • ${query}`);
-      const r=await fetch(url,{headers:{"User-Agent":"TeletextDaily/1.1 (GitHub Actions; public GDELT client)","Accept":"application/json"}});
-      const text=await r.text();
-      if(!r.ok)throw new Error(`HTTP ${r.status}: ${text.slice(0,180).replace(/\s+/g," ")}`);
-      let j;
-      try{j=JSON.parse(text)}catch{throw new Error(`non-JSON response: ${text.slice(0,180).replace(/\s+/g," ")}`)}
-      const raw=Array.isArray(j?.articles)?j.articles:Array.isArray(j)?j:[];
-      console.log(`  Received ${raw.length} candidate articles.`);
-      return raw;
-    }catch(e){
-      lastError=e;
-      console.warn(`  Attempt ${attempt} failed: ${e.message}`);
-      if(attempt<3)await sleep(attempt*RETRY_BASE_MS);
-    }
-  }
-  throw lastError;
-}
-
-function rankArticles(raw,page,c){
-  const valid=raw.filter(a=>a?.title&&a?.url)
-    .map(a=>({...a,title:cleanTitle(a.title),domain:a.domain||domain(a.url)}))
-    .filter(a=>a.title.length>=18&&a.domain);
-  valid.sort((a,b)=>score(b,c)-score(a,c));
-  const out=[],perDomain=new Map();
-  for(const a of valid){
-    if(out.some(x=>x.url===a.url||similarity(x.title,a.title)>.58))continue;
-    const n=perDomain.get(a.domain)||0;
-    if(n>=2)continue;
-    perDomain.set(a.domain,n+1);
-    out.push({title:a.title,summary:summary(a,c),body:`${a.title}. This daily edition ranks the story from public news metadata and links to the publisher for the complete report.`,whyItMatters:why(page,a.title),source:a.domain,url:a.url,publishedAt:a.seendate||""});
-    if(out.length===5)break;
-  }
-  return out;
-}
-
-async function fetchPage(page,c){
-  const all=[];
-  const seenUrls=new Set();
-  for(const timespan of ["36h","72h"]){
-    for(const query of c.queries){
-      try{
-        const batch=await requestArticles(query,timespan);
-        for(const a of batch){ if(a?.url&&!seenUrls.has(a.url)){seenUrls.add(a.url);all.push(a);} }
-        const ranked=rankArticles(all,page,c);
-        console.log(`  ${c.name}: ${ranked.length}/5 suitable distinct stories after ${all.length} unique candidates.`);
-        if(ranked.length===5)return ranked;
-      }catch(e){
-        console.warn(`  ${c.name} query failed but fallback will continue: ${e.message}`);
-      }
-    }
-  }
-  const final=rankArticles(all,page,c);
-  if(final.length<5)throw new Error(`${c.name}: only ${final.length}/5 suitable stories after all fallback searches`);
-  return final;
-}
-
-async function readPrevious(){
-  try{
-    const j=JSON.parse(await fs.readFile("news.json","utf8"));
-    return j?.categories||{};
-  }catch{return {};}
-}
-
-const previous=await readPrevious();
-const categories={};
-const status={};
-let freshPages=0;
-for(const p of PAGES){
-  const c=CATS[p];
-  console.log(`\n=== ${p} ${c.name.toUpperCase()} ===`);
-  try{
-    categories[p]=await fetchPage(p,c);
-    status[p]="fresh";
-    freshPages++;
-  }catch(e){
-    console.error(`  ${c.name} live update failed: ${e.message}`);
-    if(Array.isArray(previous[p])&&previous[p].length===5){
-      categories[p]=previous[p];
-      status[p]="previous-edition-fallback";
-      console.warn(`  Keeping previous valid ${c.name} page instead of failing the entire edition.`);
-    }else{
-      throw new Error(`${c.name} has no live results and no previous valid page to fall back to.`);
-    }
-  }
-}
-
-const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW);
-const get=t=>parts.find(x=>x.type===t)?.value;
-const date=`${get("year")}-${get("month")}-${get("day")}`;
-const out={date,generatedAt:NOW.toISOString(),edition:freshPages===5?"live-free":"live-free-with-fallback",freshPages,categoryStatus:status,categories};
+const previous=await previousCategories(),categories={},categoryStatus={};let freshPages=0;
+for(const page of PAGES){const c=CATS[page];console.log(`\n=== ${page} ${c.name.toUpperCase()} ===`);try{categories[page]=await collect(page,c);categoryStatus[page]="fresh";freshPages++}catch(e){console.error(`  ${c.name} RSS update failed: ${e.message}`);if(Array.isArray(previous[page])&&previous[page].length===5){categories[page]=previous[page];categoryStatus[page]="previous-edition-fallback";console.warn(`  Keeping previous valid ${c.name} page.`)}else throw new Error(`${c.name} has no fresh RSS stories and no previous valid page.`)}}
+const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW),get=t=>parts.find(x=>x.type===t)?.value,date=`${get("year")}-${get("month")}-${get("day")}`;
+const out={date,generatedAt:NOW.toISOString(),edition:freshPages===5?"live-rss-free":"live-rss-with-fallback",freshPages,categoryStatus,categories};
 await fs.writeFile("news.json",JSON.stringify(out,null,2)+"\n","utf8");
-console.log(`\nSUCCESS: generated ${date}. Fresh pages: ${freshPages}/5. Total stories: ${Object.values(categories).reduce((n,x)=>n+x.length,0)}.`);
+console.log(`\nSUCCESS: ${date}; fresh pages ${freshPages}/5; total stories ${Object.values(categories).reduce((n,a)=>n+a.length,0)}.`);
