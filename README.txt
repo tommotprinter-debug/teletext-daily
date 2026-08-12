@@ -2,7 +2,7 @@ TELETEXT DAILY — RSS + AI SUMMARIES
 
 HOW IT WORKS
 1. RSS sources discover and rank the Top 5 stories in each category.
-2. Gemini 2.5 Flash-Lite uses Google Search grounding to research those selected stories.
+2. Gemini 3.1 Flash-Lite uses URL Context to research those selected stories.
 3. Gemini writes a meaningful 2-sentence summary, a 3-5 sentence article brief, and a story-specific WHY IT MATTERS line.
 4. GitHub publishes news.json. The API key never goes to the phone/PWA.
 
@@ -30,3 +30,15 @@ news.json should show:
 
 ANDROID
 No reinstall should normally be needed. Open the installed PWA after the workflow finishes and tap CHECK NEW EDITION.
+
+
+CURRENT AI DESIGN
+The AI stage does not use paid Google Search grounding.
+Gemini 3.1 Flash-Lite uses URL Context on the five selected story URLs per category.
+If an article URL is inaccessible/paywalled, that story keeps the RSS fallback text rather than inventing details.
+
+Expected successful news.json:
+"aiPages": 5
+and each successfully summarized story:
+"aiSummary": true
+"aiContext": "url-context"

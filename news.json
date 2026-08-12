@@ -1,275 +1,241 @@
 {
   "date": "2026-08-12",
-  "generatedAt": "2026-08-12T10:28:51.926Z",
-  "edition": "live-rss-partial-ai",
-  "freshPages": 5,
-  "aiPages": 0,
-  "categoryStatus": {
-    "200": "fresh-rss",
-    "300": "fresh-rss",
-    "400": "fresh-rss",
-    "500": "fresh-rss",
-    "600": "fresh-rss"
-  },
+  "generatedAt": "2026-08-12T00:00:00Z",
+  "edition": "starter",
   "categories": {
     "200": [
       {
-        "title": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules",
-        "summary": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules &nbsp;&nbsp; The New Voice of Ukraine",
-        "body": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules. Open the original publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "The New Voice of Ukraine",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeS00OFY3VVZBM0hjZkFrSDI1dEVoY2NzRnUxbXJQdGZJOGNhSmxfTnI5THZyZW5OcHhyUXVKRXBHS0tyakhyd0o2VVBzeTBJUXA1NVpSR2UySDNaVzM2dDR3UEhycV9sRVN5OWM2eXlYT1p3VFdKYTA4RjVEXzhxMm16dUNab3U2RU52M19KZXJHaEdzaTNGMFpjQXhVS0FjaGtz0gGfAUFVX3lxTFBQTUdsZjhFUmw3eGtWR18zRmhUSXJmTldWVDR3NG9rWHl3dU5kVU9vMEhSb2MySFBoNmRFM0dWdlNqbVFFaW12c21kV1lPVzVFd3ZpMHRGUmVnVUtfaEhCQUNDN0lSZlBweFp6Nzk5ZUlyX0hzR3JkcWNyTW5TU3ZJWFdYZlVIMDR4aDZzalpJRGdGRkhVWTZjRVlVcFY1MA?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:20:31 GMT",
-        "aiSummary": false
+        "title": "Politics starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers",
-        "summary": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers &nbsp;&nbsp; LIGA.net",
-        "body": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers. Open the original publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "LIGA.net",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRUpYOW4tQ0F4elM1SF9kdXd6VnJ2WnZfb1pjVGxqaUFGQTVpMVVqdzdrM2tLdFl0TGVBZGk0MjhiaFhseV80VHZGQ01pYlJLajEtUXFxdHdpLVRiNkNxLTlsUkxZV2NzVF94M05BaTUyNlVGV3o2UGxTVGhseFZvekZyZHVxUExieVBLNVdWSlp0SWtlNDdWc2NjTmJUU2ZvQ2tXOTY4cTZEMXJFTVpyNk1MSWtFeVQ4NHZSanRCXy1Ld9IBxwFBVV95cUxOeHhLYVhpbVVubGswNEtBNnRVLTd2SnRDNnZRcDl5a2NvZTVoWVdNcXdqeWJlQmVxcW1Cc1J1NlR1VWlOUTNFaVJPbmx6eDQ3dG9BR3p0blJ6aFBJUmpzMGlqekJGUk9EY2JTcmdRUHZ0eDh3T2l5ZUh0UnlLT0VPMHBtak5mdE9YZ3lZNFJQNjVDeDRyX09XVWdaYkJTejN0cnhKMkF3T2hVNnBPVU5ZcFJManF1UkxlNmZFc24wa1pDLXNLSG9Z?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 11:43:07 GMT",
-        "aiSummary": false
+        "title": "Politics starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Boeing Partners with Polish Defense Firms to Support AH-64E Apache Fleet Sustainment",
-        "summary": "Boeing Partners with Polish Defense Firms to Support AH-64E Apache Fleet Sustainment &nbsp;&nbsp; Aviation News.eu",
-        "body": "Boeing Partners with Polish Defense Firms to Support AH-64E Apache Fleet Sustainment. Open the original publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "Aviation News.eu",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPQ1drT0Z5NWloTTB0SVpmVGZtS3dzdkJNUE11d25OY0FPWGduOE1FX0VrZmoxLXNZQUx6dE4zTzJ3alhzek4tSUJfTUlMMktkMlV3NDdWclI2aHZyeXlWMUwyVVBFdldXTmRGZ0UyNExkMGZ4dzVpZlMwWF9hOGZaUjdpNkRBSUdXbGVOQWRZVTRiWlhVM3hCenBFNnBvWXRvWWpkVllZRTRJSFhtS0hSTTVScXZUbFJkdjk2YktaUQ?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 08:32:18 GMT",
-        "aiSummary": false
+        "title": "Politics starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Polish Embassy: Kaczyński’s 2008 warning sound like a dark prophecy",
-        "summary": "Polish Embassy: Kaczyński’s 2008 warning sound like a dark prophecy &nbsp;&nbsp; sovanews.tv",
-        "body": "Polish Embassy: Kaczyński’s 2008 warning sound like a dark prophecy. Open the original publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "sovanews.tv",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWU5wZkxzTEswUUdCYVliN2dLNVY1emliSUdVV3UtUC1LMkpIbVBmdUZkVVNiUTNJM0FmajI4RGVCeUJKRzBJa1RCVDRhbTVjSTdvNTdDU0R3QkV1cHRadlNxRmZXS0cxQjFZUW91UnJYS2Q0d2FsV0drclNiaEJIRW04b0hWOXgtTW8yUGlCUko0S0NUQl8wcWZyUGFvWXfSAaQBQVVfeXFMTndTN19lVTVWM0RlM2ExNGUtRU1JZHJpMUQ3V19LdjZLLVEtYVRnbFRsZWhyb1lFOUVfYkJlLTJPb1VmQzlaNWhUelVweUVKRFpUdEhsZ0FjdDhkT2lmeEhpY3dBcHRwQnRwaGkyNE1HbmJJTmxhUXV2T01DbHVZcGNEZE1Md01QbGc3bmNqNlk4RmExREJMUHh2bTlWeWoxd3Nmc0E?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 09:00:54 GMT",
-        "aiSummary": false
+        "title": "Politics starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "LIVE: Poland Host Welcome Ceremony For NATO Secretary General Mark Rutte Vaccination Clinic (k4pvizULH3)",
-        "summary": "LIVE: Poland Host Welcome Ceremony For NATO Secretary General Mark Rutte Vaccination Clinic (k4pvizULH3) &nbsp;&nbsp; Mshale",
-        "body": "LIVE: Poland Host Welcome Ceremony For NATO Secretary General Mark Rutte Vaccination Clinic (k4pvizULH3). Open the original publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "Mshale",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5OWHlwV0E1bGNFcDEydUFDekdvU1FEVVd5NERhajJDYmxhaU1OQVVaOEdMTE9PV184Y0M4dk96dGJSVTZzWGxqalhoTDdaZXhfZUtJN0pPR0piU00?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 03:23:31 GMT",
-        "aiSummary": false
+        "title": "Politics starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "300": [
       {
-        "title": "Polish business sentiment retreats after two-month recovery, institute says",
-        "summary": "Polish business sentiment retreats after two-month recovery, institute says &nbsp;&nbsp; TradingView",
-        "body": "Polish business sentiment retreats after two-month recovery, institute says. Open the original publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "TradingView",
-        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNN2VPRHZTQzd6YmFHcjBwdlVHMUducUxyblh6YlpKLXprQjd0cWxlb1BVTjZRLTZ4QmNWZG0zMHRXaWZBclNBY0N4b0xtWDAxXzNBZEZkOUNWcFNCcEtDdmhiZnpkVUR0OUtqMXlZQkRJdllyVS1DNmJldEV5QkZOUkhISU9COC1ENW1uZ1ROT0w0cWE0ZmNuVzBDLUZJclpremQydGJtdVd0QnVBWUprZ2pZbDVCYW9QRzNMU1RXdUNZSFdYQi1sVUhaTFR5LWV5bFdrVHNUVk9xUmM2?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 09:29:38 GMT",
-        "aiSummary": false
+        "title": "Business starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "H+H Q2 2026 slides: Poland drives rebound as UK outlook softens",
-        "summary": "H+H Q2 2026 slides: Poland drives rebound as UK outlook softens &nbsp;&nbsp; Investing.com",
-        "body": "H+H Q2 2026 slides: Poland drives rebound as UK outlook softens. Open the original publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Investing.com",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOem5saHdrRjdNcnJuT1RuMzE3UkdFUk5XVE1sb0s0b3dOazN0N0ZiWnRIVHRkdk5TYXo1dlMxaVExdjAwbG41S0RTc1RYOG1PNTVBMGwtQXZHWmFsTjZLQ3RmR0ZDY0FaVFQ4ZXlMd2kzeFcyNEctbHExc1FvelhBejg3dnhZeE9wZDBBRExfU1dKaGRBQ3prRTBOemtvUTF0dW0xbjVPUUZKM0V5b05UUFpWdU12VFIxakE?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 10:13:04 GMT",
-        "aiSummary": false
+        "title": "Business starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters",
-        "summary": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters &nbsp;&nbsp; Defence Industry Europe",
-        "body": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters. Open the original publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Defence Industry Europe",
-        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOWFppRzdaWTE2Z1h5ejZTYVlTYzBYTmtYaTlxLU5DUmhUVDZ6VGs5d0NWX25RZ0diQlhVQ0syZWJuNGdodzRFZWotTEpMTFB6UXB6Z0h5R3o1R1hXRUFtSFFybXhTbkRLS0NkdHdPdXhpRlVVLXNkSjQtWlVmdFlFYzg3Y2c4dG1ES0NRUUh3ekZ4VmxxTUVQc1BvVFBaMjVHYy1KVkplajV5c1l0YTFCeWJFSHVBZVNOUVNZMTFxWmtxb3lkSzdpYWlHanVMUF92X1JtaGdWRjhQOGpucWI0SndQQi1iVF9ZdUU0ZS1JVVZ1bDVVdEE?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 19:04:38 GMT",
-        "aiSummary": false
+        "title": "Business starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Mixed trade in Europe before US inflation data",
-        "summary": "Mixed trade in Europe before US inflation data &nbsp;&nbsp; marketscreener.com",
-        "body": "Mixed trade in Europe before US inflation data. Open the original publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "marketscreener.com",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ2FwYWJqU3FEVXR0OGV4SThaYUdlUDNiMUIzS2VlYzdEVUYxUTJDUFp0VHlfZ0ZiVEhmLWl5ZUZjTEs3YVhSRUpob2lMazliZzNGOXFtY243ajdJcXpWVUFwR0V6OFlYQkliQndja0dKSzF0NWduQ2MwOWZDdm1ya2NXQ25GT2t0dGMyeTNVZzBpTGdEUmNyMnM5Y25SbFNJ?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:45:29 GMT",
-        "aiSummary": false
+        "title": "Business starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Shares are mixed in Europe and Asia ahead of US inflation report, while oil prices gain",
-        "summary": "Shares are mixed in Europe and Asia ahead of US inflation report, while oil prices gain &nbsp;&nbsp; Fine Day 102.3",
-        "body": "Shares are mixed in Europe and Asia ahead of US inflation report, while oil prices gain. Open the original publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Fine Day 102.3",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNd3BfYlRXZTJHbXpfQklFWllRbmZTMDBZTERDTWswcVJwTGl0cTdhNU5Yb2prWkNjc2xMbTlSYldnX0I4M2M4RFloeF9jTVh0ZGlYWU1qR3NyMWRBX21Ud1FGWmpFVlBvTTZ4WHhGaVNMZkM4M180YTZQSDRqLThqN2VoV3owWU4tMlpVTWlycUYyQWlQVzhnaTNyVXJwSzFJOXpCdDFLNS1tQWducGVDVGxSaTA1OXQ5ektIQVhQWDNTMG5CQTZPcmVqbGpnTFk?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 10:24:06 GMT",
-        "aiSummary": false
+        "title": "Business starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "400": [
       {
-        "title": "Vestas Stock And 2 Clean Energy Names Riding The Global Grid Spending Boom",
-        "summary": "Vestas Stock And 2 Clean Energy Names Riding The Global Grid Spending Boom &nbsp;&nbsp; simplywall.st",
-        "body": "Vestas Stock And 2 Clean Energy Names Riding The Global Grid Spending Boom. Open the original publisher for the complete report.",
-        "whyItMatters": "Grid capacity can determine how quickly new generation connects and reaches customers.",
-        "source": "simplywall.st",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVUtzTU83QXFyWkZUdDR4aXl2NTd1bUFYT1BnVXh4d25WWU8zc0xxMmJjdDJFRFdUTUxNSXN2aDNCSDdVSlZ5UFJkWktnRjF0blQ3OTZ0SW9Nb0JsLW9WT2NqZnEyOGJabTcydmFxSnhWMWhDb2dJSEd0RTQtNnc0VThOX0pOWVE2WElzRzhIZVhiWHdyVE8xSm40MHpTb2lVRnJBa3BqVmFmT2h6WjJ6eUdud2RNS0tWdm5yczAyT2F5Tlh6TTNEamJQaS1DSjDSAc8BQVVfeXFMTVVLc01PN0FxclpGVHQ0eGl5djU3dW1BWE9QZ1V4eHduVllPM3NMcTJiY3QyRURXVE1MTUlzdmgzQkg3VUpWeVBSZFpLZ0YxdG5UNzk2dElvTW9CbC1vVk9jamZxMjhiWm03MnZhcUp4VjFoQ29nSUhHdEU0LTZ3NFU4Tl9KTllRNlhJc0c4SGVYYlh3clRPMUpuNDB6U29pVUZyQWtwalZhZk9oeloyenlHbndkTUtLVnZucnMwMk9heU5Yek0zRGpiUGktQ0ow?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:12:03 GMT",
-        "aiSummary": false
+        "title": "Energy starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Compromised FortiGate VPN Opens First Step in Multi-Network Polish Energy Attack",
-        "summary": "Compromised FortiGate VPN Opens First Step in Multi-Network Polish Energy Attack &nbsp;&nbsp; CyberSecurityNews",
-        "body": "Compromised FortiGate VPN Opens First Step in Multi-Network Polish Energy Attack. Open the original publisher for the complete report.",
-        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
-        "source": "CyberSecurityNews",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vYWJDSUJNdTUtMFZNejJjY0hkcjF1UXZ0UGtSbXAwT0gtakVrQlZHYVJ0QmJtVTk4QzZXanVCOUQySTJ4VHJaSlEtRGFSbU1BckVkLUhIaXlKa3phQVJld05IMm9kdGvSAWxBVV95cUxOMHFtY3pLQlJyQ2Zzc0YyYkVtOHN5cXZ1TDh4RzlBQXJRLUplTHVCYmZMMDhGODd1TWRhQUt0bWpyazFUWXhueWdSUkRtQnpqb19rS19UN2RZUlN0QW8wakhfNW1LX2p2aEJGRko?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 11:26:25 GMT",
-        "aiSummary": false
+        "title": "Energy starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Sumitomo Secures Stake in UK Gwynt Glas Offshore Wind Farm",
-        "summary": "Sumitomo Secures Stake in UK Gwynt Glas Offshore Wind Farm &nbsp;&nbsp; sekbernews.id",
-        "body": "Sumitomo Secures Stake in UK Gwynt Glas Offshore Wind Farm. Open the original publisher for the complete report.",
-        "whyItMatters": "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.",
-        "source": "sekbernews.id",
-        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE80NWxteW04NEFJV3NGd0otVDRVVEpjOVRsMTViTE9adHFBOFJvaVFEYW9IREtWQzNXTnpXdnRjZVlydkxrRkMteVZaRUIyS3ktYVVIQmg5Z3VDTWl4YXcyT1N6SVBPTFFQanRsS2NkSV9MQmtjcWhkMEtCSFk?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 01:37:20 GMT",
-        "aiSummary": false
+        "title": "Energy starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "ENTSO-E Prepares Europe's Power Grids for the August 12 Eclipse",
-        "summary": "ENTSO-E Prepares Europe's Power Grids for the August 12 Eclipse &nbsp;&nbsp; energynews.pro",
-        "body": "ENTSO-E Prepares Europe's Power Grids for the August 12 Eclipse. Open the original publisher for the complete report.",
-        "whyItMatters": "Grid capacity can determine how quickly new generation connects and reaches customers.",
-        "source": "energynews.pro",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORF9VWm4yU0ZSWUZha01uSkczcGVDY2c3LUlaeDVzOW1PVmNGZTBBdWFMTkUxYldCTkJZc3NURnpvZUxzZ05SemVsLXV5SjNsUXpvWThGOHJJNUZZVVl1RTNfU19LNFgwVXlkbkFBd0xGT3hMSFVnY0J4d2poM21FTlNGaURndXJhM013cUZVcXVnUQ?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 19:44:07 GMT",
-        "aiSummary": false
+        "title": "Energy starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Previously unseen entry vector used to breach Polish energy plant",
-        "summary": "Previously unseen entry vector used to breach Polish energy plant &nbsp;&nbsp; Help Net Security",
-        "body": "Previously unseen entry vector used to breach Polish energy plant. Open the original publisher for the complete report.",
-        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
-        "source": "Help Net Security",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMkFZQkNWa3lodHplX201WjNsZ3JhYzNlR3F2bExhWUdjWExHMWdjTW91QVhtaDFsVnRUQldHNUo2STBqUnpRVzlUUFVjeVZVNXFnLUZNbjNobEpDRWlHMFFxZFJRNDlHYjY3bFg4Y1J4SklQTUtNMUp3WXNma21Gdm1pQlBsa0o2RHBLUW5nTm5naDZZc1RlU0NyZW1oYmZfWm1rdA?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 05:00:59 GMT",
-        "aiSummary": false
+        "title": "Energy starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "500": [
       {
-        "title": "HSBC AM invests in enterprise AI firm Model ML",
-        "summary": "HSBC AM invests in enterprise AI firm Model ML &nbsp;&nbsp; Funds Europe",
-        "body": "HSBC AM invests in enterprise AI firm Model ML. Open the original publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "Funds Europe",
-        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBZNnFOSzk0ZTR5Z2dMTmM5dkdBWWhmd0UwTW00c2xYSFRzNVRTSy1ibGdINDJrWHV4cnpnb3JsclVrSVlwOWUySklCV1BPS3h3U19pWE5hRi1BVkhYYU9laGVkVTl2MzdESEVWRUJiZ2hBOFhlQm55VVdLTTM?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 10:02:11 GMT",
-        "aiSummary": false
+        "title": "AI starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic",
-        "summary": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic &nbsp;&nbsp; cnbc.com",
-        "body": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic. Open the original publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "cnbc.com",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1GdzdHeVhqMkp3QnhRTmNUeDdGNXFPcXUzME5SR0dSenc0OG9qcFFJYk53RE5scUVzNlpneG5panpMb2pmUWlLS0dqVDJxRGJPLW9EdFlYdW1UV3RsdjB3LUVyTU1rYTYxY19DUDZjX2JWbkZaOTR4dzZ30gF_QVVfeXFMTUZqWnlpYnMzVXlYeW9XYXFDWEVhUjdjZzIxaU1VbmdRUXI1eHhkUjRGOGxkNDQ2c3RRdnRNRGVRXzFUcDNzRXQtYW5pTjNsc1lTVzRzaGNTREtYVDRzbFdrenFBVklKRDZRVW9NSnN1LXJaYl9PZ18zYXpDd05VNA?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 05:00:01 GMT",
-        "aiSummary": false
+        "title": "AI starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Enterprise AI needs a new model for behavioral intelligence",
-        "summary": "Enterprise AI needs a new model for behavioral intelligence &nbsp;&nbsp; TechRadar",
-        "body": "Enterprise AI needs a new model for behavioral intelligence. Open the original publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "TechRadar",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONnNQZDNrYjhsb3I3clplVlRiTm1EUDZ1V0dTMjNWNXA1c3RveGtickQzWFpkRnZGUnhMQTVVZDRLc3hGNGctVFFubWtJV1FiWFE2MUt5SnlCWTNLZkZEa29SaWN1WXY3WmxRVVBrX1htYlFaMlZyMzBkeGQ1QTdJNHJMc2FJTnBqZ3c3RmRCMC1tUlE?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 08:56:56 GMT",
-        "aiSummary": false
+        "title": "AI starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps",
-        "summary": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps &nbsp;&nbsp; spectrum.ieee.org",
-        "body": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps. Open the original publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "spectrum.ieee.org",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9YZWcxOURrVUU5SmtpbTBhbnZfeVNhUDF6WC1JUFpqWUhXZFN6VTc1NU85Qks1VGNBRFN0MVE4dFNJeFp0SlRmTHNBMk9Sd1o2RjZFNXB6cWk0Ti15RWI0bE9USGJzOWxE?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:27:44 GMT",
-        "aiSummary": false
+        "title": "AI starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Odine and OdineLabs File Two Patent Applications Focused on Enterprise AI Technologies",
-        "summary": "Odine and OdineLabs File Two Patent Applications Focused on Enterprise AI Technologies &nbsp;&nbsp; PR Newswire",
-        "body": "Odine and OdineLabs File Two Patent Applications Focused on Enterprise AI Technologies. Open the original publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "PR Newswire",
-        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYmc1cHdGWlRiTzRSMmFHZHl3dEl3YnliM3ZRaUh4UXExeGRwY1I3bDViTVM1RGpWeUZqdHVRWDJ2VVhLc1hNWWRfTjE2Q1hmb09JZnZCQVd0VF95MDlJSkpaU3FmOVhlVjF0YjdVUlJCeEIwV2dsZ0xhZTFHUFBxSzRlaVhwZ080LUQwRUk0NndHeEE1cm9IMHpTOHVPLWprYXBDeHdsUnFOZkEtQkk4N1ZTM2NscVZ0Q1RhSXMwN3VJZ1dDVWt6WGJtMmJkWkMzcVhpNWRhbnVHdw?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 09:45:00 GMT",
-        "aiSummary": false
+        "title": "AI starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "600": [
       {
-        "title": "Canadian Open Tennis: Poland’s Iga Swiatek storms into semifinals with straight-set win over Russia’s Diana Shnaider",
-        "summary": "Canadian Open Tennis: Poland’s Iga Swiatek storms into semifinals with straight-set win over Russia’s Diana Shnaider &nbsp;&nbsp; newsonair.gov.in",
-        "body": "Canadian Open Tennis: Poland’s Iga Swiatek storms into semifinals with straight-set win over Russia’s Diana Shnaider. Open the original publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "newsonair.gov.in",
-        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVEg3Vm1pUVZ3OUpLSldZdUIzY0JmR2k0MHJVSEZCOVd4Q1dtdW9KMks3eHN0c1Z5WW15dUJMWk43WnZhdnBzUU1yTnJManpLN3c5UF9FcDUwcnEzUmZZc1RZTDZ1aFFPUVc0MWFMcjJ3d1Z5Ql9wRGVfclY2MlczWm5EZmdvYXMybC1TTUpMMUJhblhnS0VudXR0LUpuNFh4N3dPb3FRa09ueFh3YnlLUnFtZEw2MVFCRXBlRV9PeU4zcDlLVjdtLVJkRGFqN1VLY2xNQldn?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 10:10:18 GMT",
-        "aiSummary": false
+        "title": "Sports starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "CHECK OUT POLAND'S EWA SWOBODA In WOMENS 100m At Athletics World Cup 2018 What Channel Is The Nba Game On Tonight (TaY8t0PfG8)",
-        "summary": "CHECK OUT POLAND'S EWA SWOBODA In WOMENS 100m At Athletics World Cup 2018 What Channel Is The Nba Game On Tonight (TaY8t0PfG8) &nbsp;&nbsp; Mshale",
-        "body": "CHECK OUT POLAND'S EWA SWOBODA In WOMENS 100m At Athletics World Cup 2018 What Channel Is The Nba Game On Tonight (TaY8t0PfG8). Open the original publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "Mshale",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uTFNDTUFLS2FtMW5taFdlRGhMMTIxUTJST0lFalJ6MGQ2TnUtQ1M2YTlYQkpvUEM5elhMNlRTTzUwRktDdlNNQS04WDhJS25ydnpMcjM2aDE0NUk?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 00:07:30 GMT",
-        "aiSummary": false
+        "title": "Sports starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final",
-        "summary": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final &nbsp;&nbsp; TVP World",
-        "body": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final. Open the original publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "TVP World",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON19IY1BVc3pudW81OUc4SXF5UVVjQm5iSU01RTVwSVEtMmJEVGZCWXU3NTVNSWl4TG9OMDB2MEZIVXoyUktVSTRtY0FDbS1ieUd1dkxBQ2hTcElHcmtKVDJTa1J2S3l3NXVBRTF2MXBMX0ZUbUtqY3FQcEQwN0Q0dWZDaE1Bcm9DRHdjb2MzUEtMd3RTdUZZNVppR0o0VkR1U3c?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 03:32:42 GMT",
-        "aiSummary": false
+        "title": "Sports starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships",
-        "summary": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships &nbsp;&nbsp; TVP World",
-        "body": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships. Open the original publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "TVP World",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTnVFcnY2ZDBjbmJrNHliMXJxMXNsZU01dlBwMmZ2cUN6bW1wMzNZWkUwT1RlRGhSb1lJc0dYVXhuV2t3cG9NSDBTZWhrZlV4VS1XYkU0WHpfMTZwUjZMX2p0VW9VUXQ3aTRzcU1HRVgzT2tORTFISEpzNkRfeGhFRUVDd2tsTHJ5dk9wYWpWNVhhbENhRkVMRGVn?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 20:37:00 GMT",
-        "aiSummary": false
+        "title": "Sports starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "2026 FIVB Beach Volleyball CEV EuroBeachVolley - Stare Jablonki, Poland",
-        "summary": "2026 FIVB Beach Volleyball CEV EuroBeachVolley - Stare Jablonki, Poland &nbsp;&nbsp; olympics.com",
-        "body": "2026 FIVB Beach Volleyball CEV EuroBeachVolley - Stare Jablonki, Poland. Open the original publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "olympics.com",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObmZMelRQR3ROV2l1c3RvNmFGY1ZOQ3laRjNJaFVKWkRmX0M5dHU2V3RBckJsRXp4T21QbW5ZdDF2OVRXTnc2Xzk0cXNZS19lakV4VFc1dml6ZXVncTZVQzU1eUNRMVVqeXJYY2EtM0thVHFLdGpjdjRBaXVVT3J4bEVHT0dibE5kbjlVR0tJV21oN3VPZ1VmZ2hCam9ySTYyZ2Nvbw?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 16:57:28 GMT",
-        "aiSummary": false
+        "title": "Sports starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ]
   }

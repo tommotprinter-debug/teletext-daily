@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 
 const NOW=new Date();
 const GEMINI_API_KEY=process.env.GEMINI_API_KEY||"";
-const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-2.5-flash";
+const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-3.1-flash-lite";
 const PAGES=["200","300","400","500","600"];
 const CATS={
 "200":{name:"Politics",googleQuery:'(Poland OR Polish OR Warsaw) (government OR parliament OR election OR president OR minister OR NATO OR EU) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/news/world/europe/rss.xml","https://www.euronews.com/rss?format=mrss&level=vertical&name=my-europe"],boost:["poland","polish","warsaw","government","parliament","election","president","minister","nato","european union","eu"]},
@@ -40,21 +40,102 @@ function extractJson(text=""){
   throw new Error("Gemini returned no parseable JSON array");
 }
 async function aiSummarize(page,c,stories){
-  if(!GEMINI_API_KEY){console.warn(`  ${c.name}: GEMINI_API_KEY missing; keeping RSS summaries.`);return stories;}
-  const inputs=stories.map((s,i)=>({id:i+1,title:s.title,source:s.source,rssSummary:s.summary}));
-  const prompt=`You are preparing an old-TV teletext daily news edition. Research and summarize these 5 CURRENT ${c.name.toUpperCase()} stories. Use Google Search grounding to verify what each headline refers to. Do not invent facts. Keep the exact story IDs.\n\nFor each item return: id; summary (2 concise factual sentences, 35-65 words total); body (3-5 concise factual sentences, 70-120 words total, with key facts, actors, numbers/dates when relevant); whyItMatters (1 concise event-specific sentence).\n\nReturn ONLY a JSON array, no markdown.\n\nStories:\n${JSON.stringify(inputs)}`;
+  if(!GEMINI_API_KEY){
+    console.warn(`  ${c.name}: GEMINI_API_KEY missing; keeping RSS summaries.`);
+    return stories;
+  }
+
+  const inputs=stories.map((s,i)=>({
+    id:i+1,
+    title:s.title,
+    source:s.source,
+    url:s.url,
+    rssSummary:s.summary
+  }));
+
+  const prompt=`You are preparing a concise factual teletext news edition.
+Use URL Context to inspect the URLs supplied below. The URLs may be Google News redirect URLs; follow the accessible page/redirect where possible.
+
+For EACH of the 5 ${c.name.toUpperCase()} stories:
+1. Identify what actually happened from the accessible URL content.
+2. Do not invent facts that are absent from the retrieved content.
+3. If a URL cannot be accessed or does not provide enough evidence, set unavailable=true and leave the factual text fields empty.
+
+Return ONLY a JSON array with exactly these fields:
+[
+  {
+    "id": 1,
+    "unavailable": false,
+    "summary": "2 concise factual sentences, 35-65 words total",
+    "body": "3-5 concise factual sentences, 70-120 words total",
+    "whyItMatters": "1 event-specific sentence"
+  }
+]
+
+Keep the exact IDs.
+
+Stories:
+${JSON.stringify(inputs)}`;
+
   const url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),90000);
   try{
-    const r=await fetch(url,{method:"POST",signal:controller.signal,headers:{"x-goog-api-key":GEMINI_API_KEY,"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],tools:[{google_search:{}}],generationConfig:{temperature:0.2,maxOutputTokens:5000}})});
+    const r=await fetch(url,{
+      method:"POST",
+      signal:controller.signal,
+      headers:{
+        "x-goog-api-key":GEMINI_API_KEY,
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        contents:[{parts:[{text:prompt}]}],
+        tools:[{url_context:{}}],
+        generationConfig:{
+          maxOutputTokens:5000,
+          responseMimeType:"application/json"
+        }
+      })
+    });
+
     const raw=await r.text();
-    if(!r.ok)throw new Error(`Gemini HTTP ${r.status}: ${raw.slice(0,220).replace(/\s+/g," ")}`);
-    const j=JSON.parse(raw),outText=(j.candidates?.[0]?.content?.parts||[]).map(x=>x.text||"").join("").trim();
-    const items=extractJson(outText); if(!Array.isArray(items))throw new Error("Gemini output is not an array");
-    const byId=new Map(items.map(x=>[Number(x.id),x])); let applied=0;
-    const merged=stories.map((s,i)=>{const x=byId.get(i+1);if(!x||typeof x.summary!=="string"||typeof x.body!=="string"||typeof x.whyItMatters!=="string")return s;applied++;return {...s,summary:x.summary.trim(),body:x.body.trim(),whyItMatters:x.whyItMatters.trim(),aiSummary:true,aiModel:GEMINI_MODEL};});
-    console.log(`  ${c.name}: AI summaries applied to ${applied}/5 stories.`); return merged;
-  }catch(e){console.warn(`  ${c.name}: Gemini summarization unavailable: ${e.message}`);return stories;}finally{clearTimeout(timer)}
+    if(!r.ok)throw new Error(`Gemini HTTP ${r.status}: ${raw.slice(0,300).replace(/\s+/g," ")}`);
+
+    const j=JSON.parse(raw);
+    const outText=(j.candidates?.[0]?.content?.parts||[]).map(x=>x.text||"").join("").trim();
+    const items=extractJson(outText);
+    if(!Array.isArray(items))throw new Error("Gemini output is not an array");
+
+    const byId=new Map(items.map(x=>[Number(x.id),x]));
+    let applied=0, unavailable=0;
+
+    const merged=stories.map((story,i)=>{
+      const x=byId.get(i+1);
+      if(!x || x.unavailable===true){
+        unavailable++;
+        return story;
+      }
+      if(typeof x.summary!=="string" || typeof x.body!=="string" || typeof x.whyItMatters!=="string") return story;
+      if(x.summary.trim().length<30 || x.body.trim().length<50) return story;
+      applied++;
+      return {
+        ...story,
+        summary:x.summary.trim(),
+        body:x.body.trim(),
+        whyItMatters:x.whyItMatters.trim(),
+        aiSummary:true,
+        aiModel:GEMINI_MODEL,
+        aiContext:"url-context"
+      };
+    });
+
+    console.log(`  ${c.name}: URL-context AI summaries applied to ${applied}/5 stories; unavailable ${unavailable}.`);
+    return merged;
+  }catch(e){
+    console.warn(`  ${c.name}: Gemini URL-context summarization unavailable: ${e.message}`);
+    return stories;
+  }finally{
+    clearTimeout(timer);
+  }
 }
 
 async function previousCategories(){try{return JSON.parse(await fs.readFile("news.json","utf8"))?.categories||{}}catch{return{}}}
