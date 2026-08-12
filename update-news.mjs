@@ -1,8 +1,6 @@
 import fs from "node:fs/promises";
 
 const NOW=new Date();
-const GEMINI_API_KEY=process.env.GEMINI_API_KEY||"";
-const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-3-flash-preview";
 const PAGES=["200","300","400","500","600"];
 const CATS={
 "200":{name:"Politics",googleQuery:'(Poland OR Polish OR Warsaw) (government OR parliament OR election OR president OR minister OR NATO OR EU) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/news/world/europe/rss.xml","https://www.euronews.com/rss?format=mrss&level=vertical&name=my-europe"],boost:["poland","polish","warsaw","government","parliament","election","president","minister","nato","european union","eu"]},
@@ -32,136 +30,176 @@ function googleUrl(c){const p=new URLSearchParams({q:c.googleQuery,hl:c.locale.h
 function rank(all,page,c){const valid=all.filter(a=>a.title.length>=18);valid.sort((a,b)=>score(b,c)-score(a,c));const out=[],perSource=new Map();for(const a of valid){if(out.some(x=>x.url===a.url||similarity(x.title,a.title)>.58))continue;const source=a.source||domain(a.url)||"News source",n=perSource.get(source)||0;if(n>=2)continue;perSource.set(source,n+1);out.push({title:a.title,summary:summary(a,c),body:`${a.title}. Open the original publisher for the complete report.`,whyItMatters:why(page,a.title),source,url:a.url,publishedAt:a.publishedAt||"",aiSummary:false});if(out.length===5)break}console.log(`  ${c.name}: ${out.length}/5 selected from ${valid.length} RSS candidates.`);return out}
 async function collect(page,c){const all=[],seen=new Set();const add=items=>{for(const a of items){if(!a.url||seen.has(a.url))continue;seen.add(a.url);a.title=cleanGoogleTitle(a.title,a.source);all.push(a)}};try{console.log(`  Google News RSS: ${c.googleQuery}`);const items=parseFeed(await fetchText(googleUrl(c)),"Google News");console.log(`  Received ${items.length} Google News RSS items.`);add(items)}catch(e){console.warn(`  Google News RSS unavailable: ${e.message}`)}let ranked=rank(all,page,c);if(ranked.length===5)return ranked;for(const url of c.fallbacks){try{console.log(`  Fallback RSS: ${url}`);const items=parseFeed(await fetchText(url),domain(url));console.log(`  Received ${items.length} fallback RSS items.`);add(items);ranked=rank(all,page,c);if(ranked.length===5)return ranked}catch(e){console.warn(`  Fallback unavailable: ${e.message}`)}}if(ranked.length<5)throw new Error(`${c.name}: only ${ranked.length}/5 suitable RSS stories`);return ranked}
 
-function extractJson(text=""){
-  const cleaned=text.replace(/^```(?:json)?\s*/i,"").replace(/\s*```$/,"").trim();
-  try{return JSON.parse(cleaned)}catch{}
-  const a=cleaned.indexOf("["),b=cleaned.lastIndexOf("]");
-  if(a>=0&&b>a)return JSON.parse(cleaned.slice(a,b+1));
-  throw new Error("Gemini returned no parseable JSON array");
+const STOPWORDS=new Set(("the a an and or but if then else when while of to in on at by for from with as is are was were be been being has have had do does did will would should could may might can this that these those it its their his her they them we our you your i he she who which what where why how about into over after before than also more most less not no new says said report reports reported according amid among during through across per via up down out off just only other another some any all both each few many much such own same so too very".split(/\s+/)));
+
+function htmlDecode(s=""){return s.replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/&lt;/gi,"<").replace(/&gt;/gi,">").replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)))}
+function stripPageHtml(s=""){return htmlDecode(s).replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<noscript[\s\S]*?<\/noscript>/gi," ").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim()}
+function isGoogleNewsUrl(url=""){try{return new URL(url).hostname.toLowerCase().endsWith("news.google.com")}catch{return false}}
+function safeHttpUrl(url=""){try{const u=new URL(url);return ["http:","https:"].includes(u.protocol)?u.href:""}catch{return""}}
+function metaContent(html,key){
+ const patterns=[
+   new RegExp(`<meta[^>]+(?:property|name)=["']${key}["'][^>]+content=["']([^"']+)["'][^>]*>`,"i"),
+   new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${key}["'][^>]*>`,"i")
+ ];
+ for(const p of patterns){const m=html.match(p);if(m)return stripPageHtml(m[1])}
+ return"";
 }
-async function aiSummarize(page,c,stories){
-  if(!GEMINI_API_KEY){
-    console.warn(`  ${c.name}: GEMINI_API_KEY missing; keeping RSS summaries.`);
-    return stories;
-  }
-
-  const inputs=stories.map((story,i)=>({
-    id:i+1,
-    title:story.title,
-    source:story.source,
-    rssSummary:story.summary,
-    discoveryUrl:story.url
-  }));
-
-  const prompt=`Prepare a factual daily teletext brief for these five CURRENT ${c.name.toUpperCase()} stories.
-
-Use Google Search grounding to identify and verify each event from its headline and named source. Do not rely on model memory for current facts.
-
-For every story:
-- preserve the exact id;
-- summary: 2 concise factual sentences, 35-65 words total;
-- body: 3-5 concise factual sentences, 70-120 words total;
-- whyItMatters: 1 concise sentence specific to this event;
-- sourceName: the publisher/source you verified;
-- sourceUrl: the direct publisher article URL when you can identify it from grounded search results; otherwise "";
-- unavailable: true only if you cannot verify enough facts to summarize safely.
-
-Never invent a URL. Prefer the publisher's article page over Google News, aggregators, home pages, or search-result pages.
-Return ONLY a JSON array, no markdown.
-
-Stories:
-${JSON.stringify(inputs)}`;
-
-  const apiUrl=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),90000);
-
-  try{
-    const response=await fetch(apiUrl,{
-      method:"POST",
-      signal:controller.signal,
-      headers:{
-        "x-goog-api-key":GEMINI_API_KEY,
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        contents:[{parts:[{text:prompt}]}],
-        tools:[{google_search:{}}],
-        generationConfig:{
-          temperature:0.15,
-          maxOutputTokens:6000,
-          responseMimeType:"application/json"
-        }
-      })
-    });
-
-    const raw=await response.text();
-    if(!response.ok){
-      throw new Error(`Gemini HTTP ${response.status}: ${raw.slice(0,320).replace(/\s+/g," ")}`);
-    }
-
-    const payload=JSON.parse(raw);
-    const output=(payload.candidates?.[0]?.content?.parts||[])
-      .map(part=>part.text||"").join("").trim();
-    const items=extractJson(output);
-    if(!Array.isArray(items)) throw new Error("Gemini output is not an array");
-
-    const byId=new Map(items.map(item=>[Number(item.id),item]));
-    let applied=0,resolved=0,unavailable=0;
-
-    const merged=stories.map((story,i)=>{
-      const item=byId.get(i+1);
-      if(!item || item.unavailable===true){
-        unavailable++;
-        return story;
-      }
-      if(
-        typeof item.summary!=="string" ||
-        typeof item.body!=="string" ||
-        typeof item.whyItMatters!=="string"
-      ) return story;
-      if(item.summary.trim().length<30 || item.body.trim().length<50) return story;
-
-      let publisherUrl="";
-      if(typeof item.sourceUrl==="string" && item.sourceUrl.trim()){
-        try{
-          const u=new URL(item.sourceUrl.trim());
-          const host=u.hostname.toLowerCase();
-          if((u.protocol==="https:"||u.protocol==="http:") && !host.endsWith("news.google.com")){
-            publisherUrl=u.href;
-          }
-        }catch{}
-      }
-
-      const sourceName=typeof item.sourceName==="string" && item.sourceName.trim()
-        ? item.sourceName.trim()
-        : story.source;
-
-      applied++;
-      if(publisherUrl) resolved++;
-
-      return {
-        ...story,
-        originalDiscoveryUrl:story.url,
-        url:publisherUrl || story.url,
-        source:sourceName,
-        summary:item.summary.trim(),
-        body:item.body.trim(),
-        whyItMatters:item.whyItMatters.trim(),
-        aiSummary:true,
-        aiModel:GEMINI_MODEL,
-        aiContext:"google-search-grounding",
-        publisherUrlResolved:Boolean(publisherUrl)
-      };
-    });
-
-    console.log(`  ${c.name}: AI summaries ${applied}/5; publisher URLs resolved ${resolved}/5; unavailable ${unavailable}.`);
-    return merged;
-  }catch(e){
-    console.warn(`  ${c.name}: grounded AI summarization unavailable: ${e.message}`);
-    return stories;
-  }finally{
-    clearTimeout(timer);
-  }
+function canonicalUrl(html){
+ const m=html.match(/<link[^>]+rel=["'][^"']*canonical[^"']*["'][^>]+href=["']([^"']+)["'][^>]*>/i)
+      ||html.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["'][^"']*canonical[^"']*["'][^>]*>/i);
+ return m?safeHttpUrl(htmlDecode(m[1])):"";
+}
+function jsonLdArticleBody(html){
+ for(const m of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){
+   try{
+     const parsed=JSON.parse(htmlDecode(m[1]).trim());
+     const stack=Array.isArray(parsed)?[...parsed]:[parsed];
+     while(stack.length){
+       const x=stack.pop();
+       if(!x||typeof x!=="object")continue;
+       if(typeof x.articleBody==="string"&&x.articleBody.trim().length>200)return stripPageHtml(x.articleBody);
+       for(const v of Object.values(x))if(v&&typeof v==="object")stack.push(v);
+     }
+   }catch{}
+ }
+ return"";
+}
+function articleElementText(html){
+ const matches=[...html.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/gi)].map(m=>stripPageHtml(m[1])).filter(t=>t.length>200);
+ if(matches.length)return matches.sort((a,b)=>b.length-a.length)[0];
+ return"";
+}
+function sentenceSplit(text=""){
+ return text.replace(/\s+/g," ").trim().split(/(?<=[.!?])\s+(?=[A-Z0-9"“‘])/).map(x=>x.trim()).filter(x=>x.length>=35&&x.length<=450);
+}
+function wordList(text=""){return normalize(text).split(" ").filter(w=>w.length>3&&!STOPWORDS.has(w))}
+function extractiveSentences(text,title,count){
+ const sentences=sentenceSplit(text).slice(0,80);
+ if(!sentences.length)return[];
+ const freq=new Map();
+ for(const w of wordList(text))freq.set(w,(freq.get(w)||0)+1);
+ const titleWords=new Set(wordList(title));
+ const scored=sentences.map((s,i)=>{
+   const ws=wordList(s);
+   if(!ws.length)return{s,i,score:0};
+   let score=ws.reduce((n,w)=>n+(freq.get(w)||0),0)/Math.sqrt(ws.length);
+   score+=ws.filter(w=>titleWords.has(w)).length*3.5;
+   if(i<3)score+=4-i;
+   if(/\d|%|€|\$|PLN|MW|GW|billion|million/i.test(s))score+=2;
+   return{s,i,score};
+ }).sort((a,b)=>b.score-a.score);
+ const chosen=[];
+ for(const item of scored){
+   if(chosen.some(x=>similarity(x.s,item.s)>.65))continue;
+   chosen.push(item);
+   if(chosen.length===count)break;
+ }
+ return chosen.sort((a,b)=>a.i-b.i).map(x=>x.s);
+}
+async function fetchHtml(url){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
+ try{
+   const r=await fetch(url,{redirect:"follow",signal:controller.signal,headers:{"User-Agent":"Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/126 Safari/537.36","Accept":"text/html,application/xhtml+xml"}});
+   if(!r.ok)throw new Error(`HTTP ${r.status}`);
+   const type=r.headers.get("content-type")||"";
+   if(!type.includes("text/html")&&!type.includes("application/xhtml+xml"))throw new Error(`non-HTML ${type}`);
+   return{html:await r.text(),finalUrl:r.url};
+ }finally{clearTimeout(timer)}
+}
+async function resolveAndExtract(story){
+ let html="",finalUrl="";
+ try{
+   const first=await fetchHtml(story.url);
+   html=first.html;finalUrl=safeHttpUrl(first.finalUrl);
+ }catch(e){
+   return{ok:false,error:e.message};
+ }
+ let resolved=finalUrl&&!isGoogleNewsUrl(finalUrl)?finalUrl:"";
+ if(!resolved){
+   const c=canonicalUrl(html),og=safeHttpUrl(metaContent(html,"og:url"));
+   if(c&&!isGoogleNewsUrl(c))resolved=c;
+   else if(og&&!isGoogleNewsUrl(og))resolved=og;
+ }
+ if(resolved&&resolved!==finalUrl){
+   try{const second=await fetchHtml(resolved);html=second.html;finalUrl=safeHttpUrl(second.finalUrl)||resolved;if(!isGoogleNewsUrl(finalUrl))resolved=finalUrl}catch{}
+ }
+ const text=jsonLdArticleBody(html)||articleElementText(html);
+ const meta=metaContent(html,"description")||metaContent(html,"og:description");
+ return{ok:Boolean(text||meta),url:resolved,text:text||"",meta:meta||""};
+}
+function whyLocal(page,title){return why(page,title)}
+function compactSentences(items,maxChars){
+ let out="";
+ for(const s of items){
+   const clean=s.replace(/\s+/g," ").trim();
+   if(!clean)continue;
+   if((out+" "+clean).trim().length>maxChars)break;
+   out+=(out?" ":"")+clean;
+ }
+ return out;
+}
+async function clusterSummary(story,c){
+ const query=`"${story.title.replace(/"/g,"")}" when:3d`;
+ const p=new URLSearchParams({q:query,hl:c.locale.hl,gl:c.locale.gl,ceid:c.locale.ceid});
+ let items=[];
+ try{items=parseFeed(await fetchText("https://news.google.com/rss/search?"+p),"Google News")}catch{}
+ items=items.filter(x=>x.title&&x.url).map(x=>({...x,title:cleanGoogleTitle(x.title,x.source)}));
+ const related=[];
+ for(const x of items){
+   if(similarity(story.title,x.title)<.18)continue;
+   if(related.some(y=>similarity(y.title,x.title)>.7))continue;
+   related.push(x);
+   if(related.length===4)break;
+ }
+ const sources=[story.source,...related.map(x=>x.source)].filter(Boolean);
+ const uniqueSources=[...new Set(sources)].slice(0,4);
+ const extra=related.filter(x=>normalize(x.title)!==normalize(story.title)).slice(0,2).map(x=>x.title);
+ const summary=extra.length
+   ? `${story.title}. Related coverage from ${uniqueSources.slice(1).join(" and ")||"other outlets"} also reports: ${extra.join("; ")}.`
+   : `${story.title}. The story is being carried by ${story.source}; open the original source for the publisher's full report.`;
+ const bodyParts=[
+   story.summary&&normalize(story.summary)!==normalize(story.title)?story.summary:"",
+   ...related.map(x=>x.description).filter(d=>d&&normalize(d)!==normalize(story.title)&&d.length>50),
+   ...extra.map(x=>x+".")
+ ].filter(Boolean);
+ const body=compactSentences(bodyParts,900)||summary;
+ return{summary:summary.slice(0,420),body,coverageSources:uniqueSources};
+}
+async function enrichStory(story,page,c){
+ const extracted=await resolveAndExtract(story);
+ if(extracted.ok){
+   const evidence=(extracted.text||extracted.meta||"").trim();
+   const short=extractiveSentences(evidence,story.title,2);
+   const long=extractiveSentences(evidence,story.title,4);
+   if(short.length&&long.length){
+     const direct=extracted.url&&!isGoogleNewsUrl(extracted.url)?extracted.url:"";
+     return{
+       ...story,
+       originalDiscoveryUrl:story.url,
+       url:direct||story.url,
+       summary:compactSentences(short,430),
+       body:compactSentences(long,1000),
+       whyItMatters:whyLocal(page,story.title),
+       summaryMethod:"article-extract",
+       publisherUrlResolved:Boolean(direct),
+       extractedTextChars:evidence.length
+     };
+   }
+ }
+ const clustered=await clusterSummary(story,c);
+ return{
+   ...story,
+   summary:clustered.summary,
+   body:clustered.body,
+   whyItMatters:whyLocal(page,story.title),
+   summaryMethod:"rss-cluster",
+   publisherUrlResolved:false,
+   coverageSources:clustered.coverageSources
+ };
+}
+async function enrichStories(stories,page,c){
+ const results=await Promise.allSettled(stories.map(s=>enrichStory(s,page,c)));
+ return results.map((r,i)=>r.status==="fulfilled"?r.value:{...stories[i],summaryMethod:"rss-basic"});
 }
 
 async function previousCategories(){try{return JSON.parse(await fs.readFile("news.json","utf8"))?.categories||{}}catch{return{}}}
@@ -173,48 +211,39 @@ for(const page of PAGES){
   console.log(`\n=== ${page} ${c.name.toUpperCase()} ===`);
   try{
     let stories=await collect(page,c);
-    stories=await aiSummarize(page,c,stories);
+    stories=await enrichStories(stories,page,c);
     categories[page]=stories;
-    const aiCount=stories.filter(story=>story.aiSummary===true).length;
-    categoryStatus[page]=aiCount===5?"fresh-ai":aiCount>0?"fresh-partial-ai":"fresh-rss";
+    const extractCount=stories.filter(s=>s.summaryMethod==="article-extract").length;
+    const clusterCount=stories.filter(s=>s.summaryMethod==="rss-cluster").length;
+    categoryStatus[page]=extractCount===5?"fresh-article-extract":extractCount>0?"fresh-mixed":"fresh-rss-cluster";
     freshPages++;
+    console.log(`  ${c.name}: article extracts ${extractCount}/5; RSS-cluster summaries ${clusterCount}/5.`);
   }catch(e){
     console.error(`  ${c.name} update failed: ${e.message}`);
     if(Array.isArray(previous[page])&&previous[page].length===5){
       categories[page]=previous[page];
       categoryStatus[page]="previous-edition-fallback";
       console.warn(`  Keeping previous valid ${c.name} page.`);
-    }else{
-      throw new Error(`${c.name} has no fresh stories and no previous valid page.`);
-    }
+    }else throw e;
   }
 }
-
 const allStories=Object.values(categories).flat();
-const aiStories=allStories.filter(story=>story.aiSummary===true).length;
-const aiStoriesTotal=allStories.length;
-const aiPages=Object.values(categories).filter(stories=>stories.some(story=>story.aiSummary===true)).length;
-const aiPagesFull=Object.values(categories).filter(stories=>stories.every(story=>story.aiSummary===true)).length;
-const resolvedPublisherUrls=allStories.filter(story=>story.publisherUrlResolved===true).length;
-
+const articleExtractStories=allStories.filter(s=>s.summaryMethod==="article-extract").length;
+const rssClusterStories=allStories.filter(s=>s.summaryMethod==="rss-cluster").length;
+const resolvedPublisherUrls=allStories.filter(s=>s.publisherUrlResolved===true).length;
 const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW);
 const get=t=>parts.find(x=>x.type===t)?.value;
 const date=`${get("year")}-${get("month")}-${get("day")}`;
-const edition=aiStories===25?"live-rss-ai-free":aiStories>0?"live-rss-partial-ai":freshPages===5?"live-rss":"live-rss-with-fallback";
-
 const out={
   date,
   generatedAt:NOW.toISOString(),
-  edition,
+  edition:"live-local-summary",
   freshPages,
-  aiStories,
-  aiStoriesTotal,
-  aiPages,
-  aiPagesFull,
+  articleExtractStories,
+  rssClusterStories,
   resolvedPublisherUrls,
   categoryStatus,
   categories
 };
-
 await fs.writeFile("news.json",JSON.stringify(out,null,2)+"\n","utf8");
-console.log(`\nSUCCESS: ${date}; fresh pages ${freshPages}/5; AI stories ${aiStories}/${aiStoriesTotal}; AI pages ${aiPages}/5; full AI pages ${aiPagesFull}/5; publisher URLs ${resolvedPublisherUrls}/${aiStoriesTotal}.`);
+console.log(`\nSUCCESS: ${date}; stories 25; article extracts ${articleExtractStories}/25; RSS-cluster summaries ${rssClusterStories}/25; direct publisher URLs ${resolvedPublisherUrls}/25.`);
