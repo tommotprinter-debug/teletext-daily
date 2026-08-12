@@ -1,241 +1,413 @@
 {
   "date": "2026-08-12",
-  "generatedAt": "2026-08-12T00:00:00Z",
-  "edition": "starter",
+  "generatedAt": "2026-08-12T14:43:15.349Z",
+  "edition": "live-local-summary",
+  "freshPages": 5,
+  "articleExtractStories": 9,
+  "rssClusterStories": 16,
+  "resolvedPublisherUrls": 9,
+  "meaningfulSummaryStories": 23,
+  "badBoilerplateStories": 0,
+  "categoryStatus": {
+    "200": "fresh-mixed",
+    "300": "fresh-mixed",
+    "400": "fresh-rss-cluster",
+    "500": "fresh-mixed",
+    "600": "fresh-mixed"
+  },
   "categories": {
     "200": [
       {
-        "title": "Politics starter story 1",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Polish Navy MIECZNIK Frigate Floats Off At Gdynia In UK–Poland Defense Milestone",
+        "summary": "Polish Navy MIECZNIK Frigate Floats Off At Gdynia In UK–Poland Defense Milestone. This item is currently reported by Ocean News & Technology; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Polish Navy MIECZNIK Frigate Floats Off At Gdynia In UK–Poland Defense Milestone. This item is currently reported by Ocean News & Technology; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Ocean News & Technology. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "Ocean News & Technology",
+        "url": "https://oceannews.com/news/defense/polish-navy-miecznik-frigate-floats-off-at-gdynia-in-uk-poland-defense-milestone/",
+        "publishedAt": "Wed, 12 Aug 2026 14:30:17 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeEtOU1RUdkIySTQzSm13cGk1cU9FdUF3Wmw0d3VSZ0RITUd6UERSMmYtT09ZMkR1OURXT2I1OHE0WXkwRUVpQ0NiSXppNlNNWGRCRVVqSTdBMVN1UWkxMlhnbUV4WlhILURJR1FqbGs4ZDgyeDhDbWl3d3JobzcyZ2o4UzJ6ZDdkal9YMVNBWWJ6VnNLVGxHTmI4U3hHTnVwZkRzd2c1b0MwR2NKZlh6S3RUUnBKdjQ?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Ocean News & Technology"
+        ]
       },
       {
-        "title": "Politics starter story 2",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Poland Announces Qualification Foreigners Must Meet To Become Polish Citizens",
+        "summary": "Poland Announces Qualification Foreigners Must Meet To Become Polish Citizens. This item is currently reported by Yen News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Poland Announces Qualification Foreigners Must Meet To Become Polish Citizens. This item is currently reported by Yen News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Yen News. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "Yen News",
+        "url": "https://www.aa.com.tr/en/world/nato-condemns-russian-airspace-violations-in-poland-romania/4025427",
+        "publishedAt": "Wed, 12 Aug 2026 11:37:22 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPcWdBdGExM25HaGZRMElXVmVqR25hdnkxaEZQRW5uRGpfWTFjWG14OXZiRjZlRWQyYzVtSWVtS2NBaWlodDdOUFVQUWszT2NJNXNMWEhLUnpxQmozd2E1elhLQjZQLXgzWmZEd1cyRGhEZkhzdFlKamx6Ml9QWVNQNlBrVnd4ZnpoRXpXQjlLbk9vSWJpdmg4aGhCQzE?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Yen News"
+        ]
       },
       {
-        "title": "Politics starter story 3",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "NATO condemns Russian airspace violations in Poland, Romania",
+        "summary": "NATO condemns Russian airspace violations in Poland, Romania. This item is currently reported by Anadolu Ajansı; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "NATO condemns Russian airspace violations in Poland, Romania. This item is currently reported by Anadolu Ajansı; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Anadolu Ajansı. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "Anadolu Ajansı",
+        "url": "https://tvpworld.com/94821571/poland-starlink-row-exposes-europes-reliance-on-us-tech",
+        "publishedAt": "Wed, 12 Aug 2026 14:41:55 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdzc0T0E2QTVjX2hOUkVlRnJCSUMxZTNfLWQ3NXRnYzB2YWJUaWxvUWwwLW55S3dtd0ZHTmVxLUcwX3dZeEZIMnVmaUlOSl9RUzVrWlkyVllsTVM5amZiNW9BNVBUdHdXU3d5cDdHVFBzLUExWm84MkFNQXpMU29EVFRuUzFsaHVoeUlmdUtsY2VnWl9kcXFJTWIzczQ2Vjg?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Anadolu Ajansı"
+        ]
       },
       {
-        "title": "Politics starter story 4",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Poland's Starlink row exposes Europe's dependence on US tech [ANALYSIS]",
+        "summary": "You pay a tiny fraction of the cost. And there is no substitute for Starlink.”function showImageDetail(position) { }",
+        "body": "You pay a tiny fraction of the cost. And there is no substitute for Starlink.”function showImageDetail(position) { }",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "TVP World",
+        "url": "https://newswav.com/article/poland-slams-spacex-over-starlink-european-roaming-exclusion-A2608_MtAux5",
+        "publishedAt": "Wed, 12 Aug 2026 14:07:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUVFCWUt3RWJMRWRRRnVFQ0E4d3pIODRKVEZlc0NPVExUMWs2ck1DVlN0UzBkajRkQlVaWDZMVWZQZDQ3WUdKaG5aUk41MjVMTjg1dUtXNzQxRU9ZUGpXcXVhQThUejZ2Z0VzbGlGRnVtd2t0NUdCTGFKQjlVeUtuZHpIaWk4RjI1QVJvRjJ3?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 1937
       },
       {
-        "title": "Politics starter story 5",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Poland slams SpaceX over Starlink European roaming exclusion",
+        "summary": "Poland has set out a clear language condition that foreigners must satisfy before they can be legally recognised as Polish citizens, according to information published on the country's official government website. Poland requires foreigners to hold an official B1-level Polish language certificate for citizenship.",
+        "body": "Poland has set out a clear language condition that foreigners must satisfy before they can be legally recognised as Polish citizens, according to information published on the country's official government website. The requirement specifies that any individual seeking Polish citizenship must hold a confirmed qualification in the Polish language at B1 level. Poland requires foreigners to hold an official B1-level Polish language certificate for citizenship. In order to be legally recognised as a Polish citizen, you need to have a Polish language qualification at B1 level, you need an official confirmation.\" Read also Canada announces two groups of foreigners exempt from citizenship test PAY ATTENTION: Follow YEN's WhatsApp channel for a daily dose of breaking news on the go!",
+        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
+        "source": "Newswav",
+        "url": "https://yen.com.gh/people/309782-poland-announces-qualification-foreigners-meet-polish-citizens/",
+        "publishedAt": "Wed, 12 Aug 2026 14:06:31 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaUxfcmMxekhXS1VQanBpTlhsV18yZWhLRGFJbk5QZGNtRG5UUnBQWVRuMzJoMkNSYmVTYTBQX3RPNk1CMWU5ZFNNYjVjbFNESUw5eFRxaEYtbW1YTGU3c0NOXzVVQ2pRMmhkeEpJelcwQTZEQTZXUGZSZnBsYUZnNlpfSDhldkVUNk5PTWw1bDRsNGhoTmFJNmlZZl9qcXVlNzlB?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 4587
       }
     ],
     "300": [
       {
-        "title": "Business starter story 1",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "\"The market currently expects the Polish crop to be around 15 to 20% lower than last season\"",
+        "summary": "News World The Polish government has stated that the economy is critically dependent on Ukrainians UA NEWS 12 August 2026 15:09 --> Polish Deputy Minister of the Interior Maciej Duszczyk stated that the Polish economy would have ground to a halt if Ukrainian citizens had not all gone to work at the same time .",
+        "body": "News World The Polish government has stated that the economy is critically dependent on Ukrainians UA NEWS 12 August 2026 15:09 --> Polish Deputy Minister of the Interior Maciej Duszczyk stated that the Polish economy would have ground to a halt if Ukrainian citizens had not all gone to work at the same time . The official emphasized that it is Ukrainians who are filling the labor shortage in the job market, which is why a significant portion of the country’s economic processes depends on military refugees and Ukrainian citizens who are putting down ever deeper roots in Polish society. The official also criticized initiatives to deport unemployed Ukrainian men of draft age, noting that most of them are wounded soldiers undergoing rehabilitation or individuals caring for children with disabilities.",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "FreshPlaza",
+        "url": "https://ua.news/en/world/v-uriadi-polshchi-zaiavili-pro-kritichnu-zalezhnist-ekonomiki-vid-ukrayintsiv",
+        "publishedAt": "Wed, 12 Aug 2026 12:26:32 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPR192MGhubENPNHpDRHhsYzJCSDk1Z0g5MGxaYk9OWXNZWnJPUjhtV3d1dUJQRERQbC1iT0RvWGxMSFptblN5WWZ1SjUyS2trY21KWXhKS3FIYjJYX2Q0ZWNNY0VsdDQ3SHZ5YkZSN1hEOUstZkZxWXFUaGdPbTBIT2tOQV9ZUXNNTGFTVmtjT0hSOXV2T0VtZ3o1ZmZhclpnWjBDNjNmWUtJam9qUUF2RUQyX1pJemkzQl83QkZHeVk4SXE2N1pIUGFZTVBTS1NRNzgtbkFxZTJjaUZqcUtTcQ?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 2084
       },
       {
-        "title": "Business starter story 2",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "The Polish government has stated that the economy is critically dependent on Ukrainians",
+        "summary": "The Polish government has stated that the economy is critically dependent on Ukrainians. This item is currently reported by UA.NEWS; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "The Polish government has stated that the economy is critically dependent on Ukrainians. This item is currently reported by UA.NEWS; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: UA.NEWS. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "UA.NEWS",
+        "url": "https://visitukraine.today/blog/9194/ukrainian-refugees-and-the-polish-economy-how-does-their-contribution-offset-warsaws-costs-for-supporting-ukraine",
+        "publishedAt": "Wed, 12 Aug 2026 12:19:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUmtLSEhZLXNFbGY0R0dKUkpmcDE0N1NpWDNkSVVpX0wwR1J6blczdmQxQ1FncXoxTXVaVHVMb2JwSXh4TGdVR2VVTEotTzhQSDZ5c0pGOVZjX2NTYWE4Wjk1MXJqR0VFV18yTmFCdThwVnpZSC1EcExDU1RQaHJaY194YTFSekVrZGFIVFphNUZWZ1gxeWR6WmxVWGVWYkIzZHExRw?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "UA.NEWS"
+        ]
       },
       {
-        "title": "Business starter story 3",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Polish government assesses the role of Ukrainians in the labor market",
+        "summary": "\"The market currently expects the Polish crop to be around 15 to 20% lower than last season\" Despite spring frosts pestering the Polish apple orchards earlier this year, the season is expected to be a positive one, says Jan Nowakowski, manager of Polish apple distributor Genesis Fresh: \"The new Polish apple season looks positive overall, although it will certainly be different from last year.",
+        "body": "\"The market currently expects the Polish crop to be around 15 to 20% lower than last season\" Despite spring frosts pestering the Polish apple orchards earlier this year, the season is expected to be a positive one, says Jan Nowakowski, manager of Polish apple distributor Genesis Fresh: \"The new Polish apple season looks positive overall, although it will certainly be different from last year. Based on what we see in the orchards and hear from our growers, the market currently expects the Polish crop to be around 15 to 20% lower than last season. From a market perspective, the reduced Jonagold crop is likely to support stronger prices throughout the season, Nowakowski continues. Polish apples continue to be highly competitive thanks to their quality, wide variety range and the experience of Polish growers.",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "Курс України",
+        "url": "https://www.freshplaza.com/north-america/article/9861007/the-market-currently-expects-the-polish-crop-to-be-around-15-to-20-lower-than-last-season/",
+        "publishedAt": "Wed, 12 Aug 2026 11:56:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQLWxua3JxQWNRXzFKZXo4aDZxTldIeVNtV2VkUmZOaW80TG1YYVlRTVhIWHoxSl9pbUQwdkJES2oxemtNM2otN1lYMHpnLUN1RWM1SjlvME9NcHFsMkZpUUc0T2dKZkR0TjFrT2hqRFlYa1BVYWlqRlpyVTJaMERxVmttR3lWUEF5OGxPZnNjNWF2ZDhIRGY2c1dB?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 3111
       },
       {
-        "title": "Business starter story 4",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Ukrainian Refugees and the Polish Economy: How Does Their Contribution Offset Warsaw’s Costs for Supporting Ukraine?",
+        "summary": "Certain sectors of the Polish economy already depend on Ukrainian citizens filling labor shortages.",
+        "body": "Certain sectors of the Polish economy already depend on Ukrainian citizens filling labor shortages. This was stated by Maciej Duszczyk, Deputy Head of Poland's Ministry of Internal Affairs and Administration, in an interview with Polsat News.According to the government official, Ukrainians work in bakeries, discount stores, construction, and public transport. It is precisely Ukrainians, he explained, who cover some vacancies for which the Polish labor market lacks candidates.@media(min-width:768px){#KD-Content-bottom-Others-22-w{min-height:188px}} #KU-Mobile-3-w{min-height:280px}@media(min-width:767px){#KU-Mobile-3-w{min-height:0px}} The deputy minister noted that if all Ukrainians living in Poland simultaneously did not show up for work one day, the country's economy could come to a halt.",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "Visit Ukraine",
+        "url": "https://kurs.com.ua/en/novost/1473752-pravitelstvo-polshi-ocenilo-rol-ukraincev-na-rinke-truda",
+        "publishedAt": "Wed, 12 Aug 2026 11:51:28 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOTEZwMzlYQTA3akV2U1pKXzAyeVhMSjQ4eXp5M2dPV3lScThZM25IOE5TTmFIZV8wWHpQMklRZ0tILS1nWDBLNGhjSmdhbDFFRE1wQVJEZEk1bURxSHRkWlh1NTdWUzBxeW50OFI1cFpJRHBvZmd3ckFGSDFVZzdCZ2dVcGtNbjllMDgyaURvV01ZWks0Zk04VWFWUmxCMGxrNnFNcGY1bHk5aGYyYjBvZG1IcFl6a1dIWkp3TWhOZHI4Nk9yNHEtazE3RVJZSDJYcVpRaTNqU1ZDT2JTSFJtTEx5OVM?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 2473
       },
       {
-        "title": "Business starter story 5",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Poland slams Musk’s Starlink over European roaming exclusion",
+        "summary": "Tasting the world in Macau: How industry-academia collaboration ignites culinary passion UTM Comments is a partnership between Macau News Agency and Macao University of Tourism By Marieta Wong, Lecturer Macau’s evolution into a global gastronomy powerhouse is the result of deliberate strategy, not chance.",
+        "body": "Tasting the world in Macau: How industry-academia collaboration ignites culinary passion UTM Comments is a partnership between Macau News Agency and Macao University of Tourism By Marieta Wong, Lecturer Macau’s evolution into a global gastronomy powerhouse is the result of deliberate strategy, not chance. In fact, being designated a UNESCO Creative City of Gastronomy recognises that the city has built a distinctive culinary identity – one shaped by creativity, [&hellip;]",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "Macau Business",
+        "url": "https://macaubusiness.com/poland-slams-musks-starlink-over-european-roaming-exclusion/",
+        "publishedAt": "Wed, 12 Aug 2026 11:47:58 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOLThuWEJ1UGZXejdmUXRVWS1PZlF5T1V3cUdEcFdjdHlkbFY0NWVCWjNSUHlhM2w3cFFieFQ3OWY1T1gtN0JZTC1Gd1BCMHBVMlBXSXhxRWZnN2gySXZpQ0hOelQ5eFRzbFBtZWZwRDAwajZ5MTNYZHA0MEo3WUoxbFFCdk9LdWxiMUJLN3lJZw?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 475
       }
     ],
     "400": [
       {
-        "title": "Energy starter story 1",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Polish grid operator PSE advances 400-kV offshore wind export line",
+        "summary": "Polish grid operator PSE advances 400-kV offshore wind export line. This item is currently reported by Renewables Now; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Polish grid operator PSE advances 400-kV offshore wind export line. This item is currently reported by Renewables Now; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Renewables Now. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.",
+        "source": "Renewables Now",
+        "url": "https://renewablesnow.com/news/polish-grid-operator-pse-advances-400-kv-offshore-wind-export-line-1299581/",
+        "publishedAt": "Wed, 12 Aug 2026 13:13:09 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOT2JweVJBSUlVVW1JaGVsVkFsV3YtclNiM2lMV29pQXotMWhueWItSmc4VmlBNVBhckh4RWc0M1lhWmVWNFkweWE3bmJTYUsyWmtOa0gydHNXVmcxRlBxVFRFREhBako0T0Nlb3FvLU4wZFJDV0YtR3pwUmZNenRNYzZGY202N2M2NW1EVUVwa2k1T014QW5mSTRWNENnaUhkN01qd3ZZTWEzdw?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Renewables Now"
+        ]
       },
       {
-        "title": "Energy starter story 2",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "ABL, BMB partner on vessel assurance for Baltic Sea offshore projects",
+        "summary": "ABL, BMB partner on vessel assurance for Baltic Sea offshore projects. This item is currently reported by World Oil; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "ABL, BMB partner on vessel assurance for Baltic Sea offshore projects. This item is currently reported by World Oil; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: World Oil. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.",
+        "source": "World Oil",
+        "url": "https://csrwire.com/press-release/alliancebernstein-conflict-europes-periphery-puts-clean-energy-spotlight/",
+        "publishedAt": "Wed, 12 Aug 2026 12:43:54 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOd2dXTkF5OXBNVWJwRW5zMGJZMjhDcUZHei1SV1ZGT0pWcVkzWmVjVHI4UFpVbGZ4VnB4QnZ5TF9jbmZhUXdXQTY2dWZyOHRHVW8xOXJnSDJ1R21pXzlrU3BvMEZtUk9iQk56MVo4dWhWaV96VjBwQVQ1NDdFZzU5eGNxQW16OVFPQ20tNzUxekVveFBtQ3Z4eTl2LXBkQ01CVTB1TkRpb0JtcTFPZUE?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "World Oil"
+        ]
       },
       {
-        "title": "Energy starter story 3",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "AllianceBernstein: Conflict on Europe’s Periphery Puts Clean Energy in the Spotlight",
+        "summary": "AllianceBernstein: Conflict on Europe’s Periphery Puts Clean Energy in the Spotlight. This item is currently reported by CSRwire; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "AllianceBernstein: Conflict on Europe’s Periphery Puts Clean Energy in the Spotlight &nbsp;&nbsp; CSRwire AllianceBernstein: Conflict on Europe's Periphery Puts Clean Energy in the Spotlight &nbsp;&nbsp; ACCESS Newswire",
+        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
+        "source": "CSRwire",
+        "url": "https://www.renews.biz/offshore-wind/abl-signs-baltic-sea-vessel-mou/",
+        "publishedAt": "Wed, 12 Aug 2026 14:04:04 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQckhYbHpfM3djWGxBZHN2aGRvbkhtRUx1N3VaNXc5WG9kdkhkc1pFSVJoZ0czTWNEU0V4WVlrVm14SXJfOVZoZmh2dVRFMzlLOXoxdGd5YWxpWE1KR0lNSnpISF9yMUU5SjdyY21wdW9nV0xaWmRqSjF2X1BZWFBncjN6U0ZxRWgzLVVWX3k4MllrODlTN3owblZ6RVM1RkxaMVNNVFZ0QWp4Um8?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "CSRwire",
+          "ACCESS Newswire"
+        ]
       },
       {
-        "title": "Energy starter story 4",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "FEOC regulations reshape US BESS financing as compliance becomes capital allocation issue",
+        "summary": "FEOC regulations reshape US BESS financing as compliance becomes capital allocation issue. This item is currently reported by Energy-Storage.News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "FEOC regulations reshape US BESS financing as compliance becomes capital allocation issue &nbsp;&nbsp; Energy-Storage.News",
+        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
+        "source": "Energy-Storage.News",
+        "url": "https://www.energy-storage.news/feoc-regulations-reshape-us-bess-financing-as-compliance-becomes-capital-allocation-issue/",
+        "publishedAt": "Wed, 12 Aug 2026 08:22:28 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNUg3aTg4Qk0wMTRKZVFzZWprcnRtejZvc0pndHBqVXVnQzhwU3F6bERtVjV3cVc5NG5qbjJCS2FsZXJjX3NTN2ZtdGFEN1JGQ25FWk5rQVRQOTdqajh0Uk5KVVhUbU5oS0UwUDZjbU1LbWRQQU92bm9OMnI2Q1lYU3NuOWwtc2pUTFBSRW9ha2JjT1dyb01vOFgxcXVfYjZRcW15djYyOURzRGp2Z21VbWJEdXFKOE9lbzM2c0ltbw?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Energy-Storage.News"
+        ]
       },
       {
-        "title": "Energy starter story 5",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "ABL signs Baltic Sea vessel MoU",
+        "summary": "ABL signs Baltic Sea vessel MoU. This item is currently reported by reNEWS; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "ABL signs Baltic Sea vessel MoU. This item is currently reported by reNEWS; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: reNEWS. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
+        "source": "reNEWS",
+        "url": "https://www.worldoil.com/news/2026/8/12/abl-bmb-partner-on-vessel-assurance-for-baltic-sea-offshore-projects/",
+        "publishedAt": "Wed, 12 Aug 2026 13:15:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBuWUEtcEdEelFTTFV2eWdMdWR5U1k4cEhxMU1VTGRvc0JyQnpJZGhOQlV5c2EwNXZTelN6dlU4VDlUbG5iaWloOUdmZDNybkxZaGhPTTlKUGVvcXA3SDVFMHZ2b3A0UGwzLTFTcWdobGZpa0FVTTFieg?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "reNEWS"
+        ]
       }
     ],
     "500": [
       {
-        "title": "AI starter story 1",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "OpenAI finds a crack in Anthropic's business AI lead",
+        "summary": "OpenAI finds a crack in Anthropic's business AI lead. This item is currently reported by Business Insider; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "OpenAI finds a crack in Anthropic's business AI lead &nbsp;&nbsp; Business Insider OpenAI finds a crack in Anthropic's business AI lead &nbsp;&nbsp; Business Insider Africa",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "Business Insider",
+        "url": "https://openai.com/index/how-enterprises-put-ai-to-work/",
+        "publishedAt": "Wed, 12 Aug 2026 14:01:23 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVTdHQ1BndlBUQ2lIcGVjQTNweWVGQjZ0bTBpVkdrRGpfUUhfaEUwNjFLUmxvU2FrVF9sMmM2MFZEQUcwUXc0LUJ5MTBmdXU0WE02WHd0N0NrNUJmbURHQ0pBOGRGbUYxU21mYmhwdldRNzJ1ZjhFdkhMX1RoeU1pQWpLV0RibWM?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Business Insider",
+          "Business Insider Africa"
+        ]
       },
       {
-        "title": "AI starter story 2",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Google debuts SL2T, an AI model that’s designed to understand sign language",
+        "summary": "The data shows that Anthropic's Fable 5 model generated 75% as much spend as OpenAI's GPT-5.6 Sol model did in July, indicating that Anthropic's top model was less popular among businesses.",
+        "body": "OpenAI has an advantage over its rival's priciest and most advanced model, according to new data from Ramp's AI Index. The data shows that Anthropic's Fable 5 model generated 75% as much spend as OpenAI's GPT-5.6 Sol model did in July, indicating that Anthropic's top model was less popular among businesses. In July, Ramp saw the share of US businesses paying for Anthropic AI products reach 43.5%, compared with 39.7% for OpenAI. Kharazian said that the popularity of Chinese open-source models has grown, though not to the point he'd expect OpenAI and Anthropic to \"freak out.\"' As the number of businesses using OpenAI and Anthropic's products increases gradually, Ramp has seen much faster growth in the amount of money those businesses spend.",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "siliconangle.com",
+        "url": "https://www.businessinsider.com/anthropic-fable-5-openai-gpt-5-6-sol-ramp-2026-8",
+        "publishedAt": "Wed, 12 Aug 2026 14:00:50 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONG9uaTk1R3FiZU1YN0ZJdjdJczB2Yk9fZmgyZXBvNFhfU2x1ZU1XM09HUV9ORVZfMGlYSWlqUzZxQWRZSjkwSzZSeTViZFlxa2E5bUxsTHlwQkt3S3JzeWFwMDNMQkZnX0MyZXhDYzN2ZzhDZzFmekFwamE0Z2pvbHNobzFUWXFXZXpkek9QZ2pzWnpLS2pNZXpXdkZtV1pTa21LYWV5UQ?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 3129
       },
       {
-        "title": "AI starter story 3",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple",
+        "summary": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple. This item is currently reported by CNBC; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple. This item is currently reported by CNBC; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: CNBC. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/12/google-pixel-11-gemini-ai-phone-apple.html",
+        "publishedAt": "Wed, 12 Aug 2026 14:00:01 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5QYWQzLTczOGV1N2M0SlhMWXUxcFR2RDhaVVBpYVZuLVFQOVpTd3UwN2k1RTIyX2JUV20zNnE1Y1pFUm1MQ1V2MGhRcHlQc1hoTEpRcUN6ZUlldnFfdGdlRXBsVXh0SXY1OWl3STEtc1pRcTNzTVRpbUlqMUtKQUXSAYQBQVVfeXFMTnNxZnVnbkhtUllzWU5oeEZQbUFsWklxdEpkNjlCQ0JWeFJEc01HeERYcGl2YkdHbU1zQ2tzOG9JSndfOUdkczl0czhxQ1lnY0t4QmQwVUMyamNMeXdFT2tIVkk5OE8teDM4M3lGU3JUTGxmNldCUjlaeDVtdkFyNlhMRVpF?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "CNBC"
+        ]
       },
       {
-        "title": "AI starter story 4",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "From assistance to execution: How enterprises put AI to work",
+        "summary": "From assistance to execution: How enterprises put AI to work. This item is currently reported by OpenAI; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "From assistance to execution: How enterprises put AI to work. This item is currently reported by OpenAI; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: OpenAI. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "OpenAI",
+        "url": "https://siliconangle.com/2026/08/12/google-debuts-sl2t-ai-model-thats-designed-understand-sign-language/",
+        "publishedAt": "Wed, 12 Aug 2026 13:06:54 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1tWU9Wam51YVk5a1BYMlpjSFVMSy1UWDUwcHdFM2o1aUJRTUVzVHhPZVg3MzB4Q3l5UVVtemJzRnFyRU84YTNNeE1fUEt1Y3NXU25Db09pUFZuSXpLby1rZ2FzbDJPb3c?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "OpenAI"
+        ]
       },
       {
-        "title": "AI starter story 5",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "AI Agents are Only the Beginning: Deloitte Survey Examines the AI Readiness Gap and Reveals How Enterprises Can Prepare for Agentic Success",
+        "summary": "AI Agents are Only the Beginning: Deloitte Survey Examines the AI Readiness Gap and Reveals How Enterprises Can Prepare for Agentic Success News provided by Deloitte Aug 12, 2026, 08:01 ET Share this article Share to X Share this article Share to X New research from Deloitte finds that while organizations are embracing agentic AI, the rewards they seek will likely also depend on workflow and process reinvention NEW YORK , Aug.",
+        "body": "AI Agents are Only the Beginning: Deloitte Survey Examines the AI Readiness Gap and Reveals How Enterprises Can Prepare for Agentic Success News provided by Deloitte Aug 12, 2026, 08:01 ET Share this article Share to X Share this article Share to X New research from Deloitte finds that while organizations are embracing agentic AI, the rewards they seek will likely also depend on workflow and process reinvention NEW YORK , Aug. 12, 2026 /PRNewswire/ -- Key takeaways A high ceiling for expectations: Within four years, 74% of leaders surveyed expect nearly half of their business processes will be redesigned or rebuilt around AI agents, and 61% expect most AI agents used will be generally autonomous (with humans acting as oversight).",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "PR Newswire",
+        "url": "https://www.prnewswire.com/news-releases/ai-agents-are-only-the-beginning-deloitte-survey-examines-the-ai-readiness-gap-and-reveals-how-enterprises-can-prepare-for-agentic-success-302848848.html",
+        "publishedAt": "Wed, 12 Aug 2026 12:01:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPOFZNMzdSRlRZWUtZTUl0cW9XZUJGY1F0TW1jbVp4MFpBYTNxQUw5VUl5Ym5ZS2h0M3FyOWgxTVNLZDhCcmZOOWhOUW9JVmpDb3lpV3Y1ZUhXdWhDbFdxVnQtQ1M0TlhObktlMS1vam5ua0VMaXRZZlpNaTZlcTNaOWgwSDFnVUNLTUQ5anc3MVZfal9EWFlveFp3RlhBYlVnMEwxNUtldHlzam45Yjc0c2JhNTNGQTN5MGgzcks4bzBOZ0t4LUNxbEdPTTNjcVNxMFgzM0RVV3dBdmI4cjVCQWlRRFdybXZtVVJpcEEtUDJ0V1B4dFlxdUhIYlRaU2ZNaWlObU9VNkQyWTBHWlJXdGZUM0F2VkRKSkJyM1dIVQ?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 9625
       }
     ],
     "600": [
       {
-        "title": "Sports starter story 1",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Canadian Open Tennis: Poland’s Iga Swiatek storms into semifinals with straight-set win over Russia’s Diana Shnaider",
+        "summary": "News On AIR | August 12, 2026 7:28 PM Canadian Open Tennis: Men’s and women’s semifinals locked in In Canadian Open Tennis, the men’s and women’s semi-final lineups are officially locked in.. Swiatek routed fifteenth-seeded Diana Shnaider 6-2, 6-1 while Svitolina defeated Ekaterina Alexandrova of Russia 3-6, 6-0, 6-3 in the quarterfinal.",
+        "body": "News On AIR | August 12, 2026 7:28 PM Canadian Open Tennis: Men’s and women’s semifinals locked in In Canadian Open Tennis, the men’s and women’s semi-final lineups are officially locked in.. In Women’s Singles, seventh-seeded Iga Swiatek of Poland take on ninth seed Elina Svitolina of Ukraine in Toronto for a place in final. Swiatek routed fifteenth-seeded Diana Shnaider 6-2, 6-1 while Svitolina defeated Ekaterina Alexandrova of Russia 3-6, 6-0, 6-3 in the quarterfinal. In the other semifinal, defending Canadian Open champion and fifth seed Ben Shelton will face fellow American Learner Tien.",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "News On AIR",
+        "url": "https://newsonair.gov.in/canadian-open-tennis-polands-iga-swiatek-storms-into-semifinals-with-straight-set-win-over-russias-diana-shnaider/",
+        "publishedAt": "Wed, 12 Aug 2026 10:10:18 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVEg3Vm1pUVZ3OUpLSldZdUIzY0JmR2k0MHJVSEZCOVd4Q1dtdW9KMks3eHN0c1Z5WW15dUJMWk43WnZhdnBzUU1yTnJManpLN3c5UF9FcDUwcnEzUmZZc1RZTDZ1aFFPUVc0MWFMcjJ3d1Z5Ql9wRGVfclY2MlczWm5EZmdvYXMybC1TTUpMMUJhblhnS0VudXR0LUpuNFh4N3dPb3FRa09ueFh3YnlLUnFtZEw2MVFCRXBlRV9PeU4zcDlLVjdtLVJkRGFqN1VLY2xNQldn?oc=5",
+        "publisherUrlResolved": true,
+        "summaryMethod": "article-extract",
+        "extractedTextChars": 1269
       },
       {
-        "title": "Sports starter story 2",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "CHECK OUT POLAND'S EWA SWOBODA In WOMENS 100m At Athletics World Cup 2018 What Channel Is The Nba Game On Tonight (TaY8t0PfG8)",
+        "summary": "CHECK OUT POLAND'S EWA SWOBODA In WOMENS 100m At Athletics World Cup 2018 What Channel Is The Nba Game On Tonight (TaY8t0PfG8). This item is currently reported by Mshale; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "CHECK OUT POLAND'S EWA SWOBODA In WOMENS 100m At Athletics World Cup 2018 What Channel Is The Nba Game On Tonight (TaY8t0PfG8) &nbsp;&nbsp; Mshale",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "Mshale",
+        "url": "https://t.co/OtT5X6hoyu",
+        "publishedAt": "Wed, 12 Aug 2026 00:07:30 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uTFNDTUFLS2FtMW5taFdlRGhMMTIxUTJST0lFalJ6MGQ2TnUtQ1M2YTlYQkpvUEM5elhMNlRTTzUwRktDdlNNQS04WDhJS25ydnpMcjM2aDE0NUk?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "Mshale"
+        ]
       },
       {
-        "title": "Sports starter story 3",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final",
+        "summary": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final. This item is currently reported by TVP World; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final. This item is currently reported by TVP World; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: TVP World. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "TVP World",
+        "url": "https://tvpworld.com/94809404/athletics-skrzyszowska-wins-100m-hurdles-silver-in-visser-photo-finish",
+        "publishedAt": "Wed, 12 Aug 2026 03:32:42 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON19IY1BVc3pudW81OUc4SXF5UVVjQm5iSU01RTVwSVEtMmJEVGZCWXU3NTVNSWl4TG9OMDB2MEZIVXoyUktVSTRtY0FDbS1ieUd1dkxBQ2hTcElHcmtKVDJTa1J2S3l3NXVBRTF2MXBMX0ZUbUtqY3FQcEQwN0Q0dWZDaE1Bcm9DRHdjb2MzUEtMd3RTdUZZNVppR0o0VkR1U3c?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "TVP World"
+        ]
       },
       {
-        "title": "Sports starter story 4",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships",
+        "summary": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships. This item is currently reported by TVP World; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships. This item is currently reported by TVP World; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: TVP World. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "TVP World",
+        "url": "https://tvpworld.com/94809404/european-athletics-polands-skrzyszowska-wins-100m-hurdles-silver",
+        "publishedAt": "Tue, 11 Aug 2026 20:37:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTnVFcnY2ZDBjbmJrNHliMXJxMXNsZU01dlBwMmZ2cUN6bW1wMzNZWkUwT1RlRGhSb1lJc0dYVXhuV2t3cG9NSDBTZWhrZlV4VS1XYkU0WHpfMTZwUjZMX2p0VW9VUXQ3aTRzcU1HRVgzT2tORTFISEpzNkRfeGhFRUVDd2tsTHJ5dk9wYWpWNVhhbENhRkVMRGVn?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "TVP World"
+        ]
       },
       {
-        "title": "Sports starter story 5",
-        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
-        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
-        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
-        "source": "Starter edition",
-        "url": "",
-        "publishedAt": "2026-08-12T00:00:00Z"
+        "title": "LIVE - Poland v Spain | FIBA U16 EuroBasket 2026 | Quarter-Finals",
+        "summary": "LIVE - Poland v Spain | FIBA U16 EuroBasket 2026 | Quarter-Finals. This item is currently reported by t.co; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "LIVE - Poland v Spain | FIBA U16 EuroBasket 2026 | Quarter-Finals. This item is currently reported by t.co; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: t.co. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "t.co",
+        "url": "https://mshale.com/06f9df60/acc75dbbQD27zAC4SrI",
+        "publishedAt": "Tue, 11 Aug 2026 22:01:01 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE14Q1JHRnBZRGh6Q0hPdlZPbl9sSGNraGVnQzBHeDV0MWlOOVptcDgzaXdnY3o3ZTVoZmpn?oc=5",
+        "publisherUrlResolved": false,
+        "summaryMethod": "rss-cluster",
+        "coverageSources": [
+          "t.co"
+        ]
       }
     ]
   }
