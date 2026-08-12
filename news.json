@@ -1,249 +1,241 @@
 {
   "date": "2026-08-12",
-  "generatedAt": "2026-08-12T08:49:31.661Z",
-  "edition": "live-rss-with-fallback",
-  "freshPages": 4,
-  "categoryStatus": {
-    "200": "fresh",
-    "300": "fresh",
-    "400": "previous-edition-fallback",
-    "500": "fresh",
-    "600": "fresh"
-  },
+  "generatedAt": "2026-08-12T00:00:00Z",
+  "edition": "starter",
   "categories": {
     "200": [
       {
-        "title": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules",
-        "summary": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules &nbsp;&nbsp; The New Voice of Ukraine",
-        "body": "EU responds to attacks on Ukrainians in Poland and reminds Warsaw of EU rules. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "The New Voice of Ukraine",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeS00OFY3VVZBM0hjZkFrSDI1dEVoY2NzRnUxbXJQdGZJOGNhSmxfTnI5THZyZW5OcHhyUXVKRXBHS0tyakhyd0o2VVBzeTBJUXA1NVpSR2UySDNaVzM2dDR3UEhycV9sRVN5OWM2eXlYT1p3VFdKYTA4RjVEXzhxMm16dUNab3U2RU52M19KZXJHaEdzaTNGMFpjQXhVS0FjaGtz0gGfAUFVX3lxTFBQTUdsZjhFUmw3eGtWR18zRmhUSXJmTldWVDR3NG9rWHl3dU5kVU9vMEhSb2MySFBoNmRFM0dWdlNqbVFFaW12c21kV1lPVzVFd3ZpMHRGUmVnVUtfaEhCQUNDN0lSZlBweFp6Nzk5ZUlyX0hzR3JkcWNyTW5TU3ZJWFdYZlVIMDR4aDZzalpJRGdGRkhVWTZjRVlVcFY1MA?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:20:31 GMT"
+        "title": "Politics starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers",
-        "summary": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers &nbsp;&nbsp; LIGA.net",
-        "body": "Ukraine looks to Poland for agricultural exports: minister appeals to Polish farmers. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "LIGA.net",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRUpYOW4tQ0F4elM1SF9kdXd6VnJ2WnZfb1pjVGxqaUFGQTVpMVVqdzdrM2tLdFl0TGVBZGk0MjhiaFhseV80VHZGQ01pYlJLajEtUXFxdHdpLVRiNkNxLTlsUkxZV2NzVF94M05BaTUyNlVGV3o2UGxTVGhseFZvekZyZHVxUExieVBLNVdWSlp0SWtlNDdWc2NjTmJUU2ZvQ2tXOTY4cTZEMXJFTVpyNk1MSWtFeVQ4NHZSanRCXy1Ld9IBxwFBVV95cUxOeHhLYVhpbVVubGswNEtBNnRVLTd2SnRDNnZRcDl5a2NvZTVoWVdNcXdqeWJlQmVxcW1Cc1J1NlR1VWlOUTNFaVJPbmx6eDQ3dG9BR3p0blJ6aFBJUmpzMGlqekJGUk9EY2JTcmdRUHZ0eDh3T2l5ZUh0UnlLT0VPMHBtak5mdE9YZ3lZNFJQNjVDeDRyX09XVWdaYkJTejN0cnhKMkF3T2hVNnBPVU5ZcFJManF1UkxlNmZFc24wa1pDLXNLSG9Z?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 11:43:07 GMT"
+        "title": "Politics starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "BNP Paribas' Polish unit posts 18% profit drop on higher taxes",
-        "summary": "BNP Paribas' Polish unit posts 18% profit drop on higher taxes &nbsp;&nbsp; Business Recorder",
-        "body": "BNP Paribas' Polish unit posts 18% profit drop on higher taxes. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "Business Recorder",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE16RVdQVnVBdlJXcjd4VWhkOG1SaXpyMVBwTW04S2FMYkx2SnUzQ05VX2M1d2Z5S1ltT3lTLTJfUjgxNldybDZESFpzUDZkNlZRcGI4SUR30gFWQVVfeXFMTXpFV1BWdUF2UldyN3hVaGQ4bVJpenIxUHBNbThLYUxiTHZKdTNDTlVfYzV3ZnlLWW1PeVMtMl9SODE2V3JsNkRIWnNQNmQ2VlFwYjhJRHc?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 06:53:53 GMT"
+        "title": "Politics starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "EU edges closer to approving Poland's €7.9b recovery funding request",
-        "summary": "EU edges closer to approving Poland's €7.9b recovery funding request &nbsp;&nbsp; The Brussels Times",
-        "body": "EU edges closer to approving Poland's €7.9b recovery funding request. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "The Brussels Times",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWlJfbC1WZHZWUFlRR0FvenphcnlpUFNfSGdGTHFsM0ZMWlFESFpBMDFUZWVrMnROcXRQNlk5blpCVU95Z2hnYzA3UG9yM2h2WEUxbWdVeEdUVDNMWkRLYmx5VC05RVBHc1hMMERlcW1NQm83NWsyM3k0OXB6aVJzdHNJa1FsRzZYNmZ0WnlieWRmLWowWF9FQTF4cmpVMlByeFRGd3J0UHNac3BHLWFrVE9lLXJyQ2lO?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 21:24:42 GMT"
+        "title": "Politics starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland Negotiates A400M Purchase While Exploring EU SAFE Funding",
-        "summary": "Poland Negotiates A400M Purchase While Exploring EU SAFE Funding &nbsp;&nbsp; Межа. Новини України.",
-        "body": "Poland Negotiates A400M Purchase While Exploring EU SAFE Funding. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Political decisions can change regulation, public spending, security policy, and the business environment.",
-        "source": "Межа. Новини України.",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB4MHdmVkxZazlhY3RzdktEZ04yeWhybmFoa2F6WldDSFdqTVAtNzRUT3ZlbWlIMmVONVdSNVJBN2hIVVdNbFF0ZU1uRmJsZG12NmF5YXpqdjhOVVBtNUtTTnhLMERVYUVBOWVVV0xn?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 20:46:08 GMT"
+        "title": "Politics starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "300": [
       {
-        "title": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters",
-        "summary": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters &nbsp;&nbsp; Defence Industry Europe",
-        "body": "Boeing and PGZ sign offset agreements to develop domestic maintenance and sustainment support for Poland’s 96 AH-64E Apache helicopters. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Defence Industry Europe",
-        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOWFppRzdaWTE2Z1h5ejZTYVlTYzBYTmtYaTlxLU5DUmhUVDZ6VGs5d0NWX25RZ0diQlhVQ0syZWJuNGdodzRFZWotTEpMTFB6UXB6Z0h5R3o1R1hXRUFtSFFybXhTbkRLS0NkdHdPdXhpRlVVLXNkSjQtWlVmdFlFYzg3Y2c4dG1ES0NRUUh3ekZ4VmxxTUVQc1BvVFBaMjVHYy1KVkplajV5c1l0YTFCeWJFSHVBZVNOUVNZMTFxWmtxb3lkSzdpYWlHanVMUF92X1JtaGdWRjhQOGpucWI0SndQQi1iVF9ZdUU0ZS1JVVZ1bDVVdEE?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 19:04:38 GMT"
+        "title": "Business starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Mixed trade in Europe before US inflation data",
-        "summary": "Mixed trade in Europe before US inflation data &nbsp;&nbsp; marketscreener.com",
-        "body": "Mixed trade in Europe before US inflation data. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "marketscreener.com",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQ2FwYWJqU3FEVXR0OGV4SThaYUdlUDNiMUIzS2VlYzdEVUYxUTJDUFp0VHlfZ0ZiVEhmLWl5ZUZjTEs3YVhSRUpob2lMazliZzNGOXFtY243ajdJcXpWVUFwR0V6OFlYQkliQndja0dKSzF0NWduQ2MwOWZDdm1ya2NXQ25GT2t0dGMyeTNVZzBpTGdEUmNyMnM5Y25SbFNJ?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:45:29 GMT"
+        "title": "Business starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland economy now larger than Belgium, Sweden, Ireland and Austria",
-        "summary": "Poland economy now larger than Belgium, Sweden, Ireland and Austria &nbsp;&nbsp; Kathimerini.com.cy",
-        "body": "Poland economy now larger than Belgium, Sweden, Ireland and Austria. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Kathimerini.com.cy",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGNKOTAzNUR0cUhPc2JOLWowODg4S0I3RHluVHNIUWZxOGp2SmMwc2c1UXF5dUdlSDFUVnFFN0R6V1l4NGVfZ0tMSEVucEsxNUhBTVNteDhaYmpPaVJ1SWkxNzBkbndKMnFjNktZX2hWRmpSTFJLbHU5bXQ2RHI4N21CVW56bmhaajd3NWNiclRXSnJ4TzBxNzlVTDNHN1pmRjZ2MldmcFlZdw?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 11:55:00 GMT"
+        "title": "Business starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Circana reveals regional toy market dynamics across Europe, The Americas and Asia-Pacific",
-        "summary": "Circana reveals regional toy market dynamics across Europe, The Americas and Asia-Pacific &nbsp;&nbsp; Licensing.biz",
-        "body": "Circana reveals regional toy market dynamics across Europe, The Americas and Asia-Pacific. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Licensing.biz",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUDJBWUp3MEZLaWM4dllxdU41VThzcG9MT0pzRm1HcnZOTXFtUmNLWWU5cWUwdElSdGw3b0doSEp3TjZia3VHdHZBN2RodjR0ellCdk1oS2Mwa0g5ZGl1WmNZX3VLRllKTG9MS2FTMkhTbzltbUk0UzBDOHJaRWlfWEJUOUVtaU8wVHJxNHhXV3o4WERYMlloWG10bE1uV0VNUzB5eDEydGlPdVVyX2lIXw?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 08:28:09 GMT"
+        "title": "Business starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Four urgent investment keys for Europe not to miss the train of the economy before 2040",
-        "summary": "Four urgent investment keys for Europe not to miss the train of the economy before 2040 &nbsp;&nbsp; Demócrata",
-        "body": "Four urgent investment keys for Europe not to miss the train of the economy before 2040. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Demócrata",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMUVSbF9UTlduWDV0cUpOakJORDdfRUgwWEpoRDc2YjlQLUxMYTV0VExXYUNzSHRvbjZtV1VfTVQ3bzlHODB2aldFaThSMy14cndOektqUnpSRFZ0Z1NMZjVvSkRnNTlFSURZS1JudHBYOGpiMmpMMjlPbG45eFFTNmNKWU9udG93SmpOUFJtNTNxdENScnlYN2JkbFFzcWRhYXJxcXRqNnk0LXk1UzQyenB5dEpaMDItUUIza2U3MXFrd9IBxwFBVV95cUxOdXJQZGlRYWN1RUstT3gzcDZnQk0zSDBleTZ3V0tFNzJFeDBDckJkWE1selROSzhjWUY5MnJ5Zjl2SXNHSUxvaWFZUklPUE5VRW9EaEprdnFBbTFFa2VGOUdqazN4cDVNRVFaYV9GWWlYOTNDSVZDcC0tSWlMMjUwWDVpSl9JNFItVW9FR01Lc0ROWndMY0JPN0tja1FsMWQ5ZGplU3pjYk1Mdm9hN3pLb05yS0xjeG1jNXd5dmtaVWJhZlVPb3hJ?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 03:00:00 GMT"
+        "title": "Business starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "400": [
       {
-        "title": "Europe’s grid operators plan for dip in solar power during the eclipse",
-        "summary": "Europe’s grid operators plan for dip in solar power during the eclipse &nbsp;&nbsp; Euronews.com",
-        "body": "Europe’s grid operators plan for dip in solar power during the eclipse. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Grid capacity can determine how quickly new generation connects and reaches customers.",
-        "source": "Euronews.com",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQajl2U0ptT3JjRUN3RUF6VXA0bE9pMUp2Sk43VWx0VlJqeHBMWjlNeXM0TDRicTNyYzJXTy1mYjlYTVVtYmFrS2pVM19jSDZ5UTRMMWFpRldHZ2E4blZwbHhVWTVVTmFVWU8zbWNYaGtZWTV5b1J2OGlMQ0Jvb1B2R0VQNDBRRktvalNOZkJHcEZOR3hXWTNqMGRqSFdLYTQ0bnFWZmhkYjRWTmtLTnBVaHhQNWFkTXlvU19jY1pTd3RHRE5p?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 05:45:43 GMT"
+        "title": "Energy starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Compromised FortiGate VPN Opens First Step in Multi-Network Polish Energy Attack",
-        "summary": "Compromised FortiGate VPN Opens First Step in Multi-Network Polish Energy Attack &nbsp;&nbsp; CyberSecurityNews",
-        "body": "Compromised FortiGate VPN Opens First Step in Multi-Network Polish Energy Attack. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
-        "source": "CyberSecurityNews",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vYWJDSUJNdTUtMFZNejJjY0hkcjF1UXZ0UGtSbXAwT0gtakVrQlZHYVJ0QmJtVTk4QzZXanVCOUQySTJ4VHJaSlEtRGFSbU1BckVkLUhIaXlKa3phQVJld05IMm9kdGvSAWxBVV95cUxOMHFtY3pLQlJyQ2Zzc0YyYkVtOHN5cXZ1TDh4RzlBQXJRLUplTHVCYmZMMDhGODd1TWRhQUt0bWpyazFUWXhueWdSUkRtQnpqb19rS19UN2RZUlN0QW8wakhfNW1LX2p2aEJGRko?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 11:26:25 GMT"
+        "title": "Energy starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "ENTSO-E Prepares Europe's Power Grids for the August 12 Eclipse",
-        "summary": "ENTSO-E Prepares Europe's Power Grids for the August 12 Eclipse &nbsp;&nbsp; energynews.pro",
-        "body": "ENTSO-E Prepares Europe's Power Grids for the August 12 Eclipse. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Grid capacity can determine how quickly new generation connects and reaches customers.",
-        "source": "energynews.pro",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORF9VWm4yU0ZSWUZha01uSkczcGVDY2c3LUlaeDVzOW1PVmNGZTBBdWFMTkUxYldCTkJZc3NURnpvZUxzZ05SemVsLXV5SjNsUXpvWThGOHJJNUZZVVl1RTNfU19LNFgwVXlkbkFBd0xGT3hMSFVnY0J4d2poM21FTlNGaURndXJhM013cUZVcXVnUQ?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 19:44:07 GMT"
+        "title": "Energy starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Previously unseen entry vector used to breach Polish energy plant",
-        "summary": "Previously unseen entry vector used to breach Polish energy plant &nbsp;&nbsp; Help Net Security",
-        "body": "Previously unseen entry vector used to breach Polish energy plant. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
-        "source": "Help Net Security",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMkFZQkNWa3lodHplX201WjNsZ3JhYzNlR3F2bExhWUdjWExHMWdjTW91QVhtaDFsVnRUQldHNUo2STBqUnpRVzlUUFVjeVZVNXFnLUZNbjNobEpDRWlHMFFxZFJRNDlHYjY3bFg4Y1J4SklQTUtNMUp3WXNma21Gdm1pQlBsa0o2RHBLUW5nTm5naDZZc1RlU0NyZW1oYmZfWm1rdA?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 05:00:59 GMT"
+        "title": "Energy starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "ABB to power Allseas’ heavy transport vessel for offshore wind industry",
-        "summary": "ABB to power Allseas’ heavy transport vessel for offshore wind industry &nbsp;&nbsp; Energy Global",
-        "body": "ABB to power Allseas’ heavy transport vessel for offshore wind industry. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.",
-        "source": "Energy Global",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNV0oyRTJXSFppbU9SRjVwZ2JqUnoySGFXZ21kdHdxQ0puajRkU3M5bVlRU1pfUUthc0VNdkN6V29QZE0zUHpHU09SLWVfVkYtZWhQUGdnQlRKM3FBRnVueHM0dGJTQ1NZd2tsMzZWY3o3eG10MVFyaHEyanAycUtFRzhiZTBqdE01R0NFSjkwV0xfcWN4aS1wSW5GeWE4UDRTNDU2QzRhdE9HN25GX2lsV0didmU?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 16:03:11 GMT"
+        "title": "Energy starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "500": [
       {
-        "title": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic",
-        "summary": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic &nbsp;&nbsp; CNBC",
-        "body": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "CNBC",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1GdzdHeVhqMkp3QnhRTmNUeDdGNXFPcXUzME5SR0dSenc0OG9qcFFJYk53RE5scUVzNlpneG5panpMb2pmUWlLS0dqVDJxRGJPLW9EdFlYdW1UV3RsdjB3LUVyTU1rYTYxY19DUDZjX2JWbkZaOTR4dzZ30gF_QVVfeXFMTUZqWnlpYnMzVXlYeW9XYXFDWEVhUjdjZzIxaU1VbmdRUXI1eHhkUjRGOGxkNDQ2c3RRdnRNRGVRXzFUcDNzRXQtYW5pTjNsc1lTVzRzaGNTREtYVDRzbFdrenFBVklKRDZRVW9NSnN1LXJaYl9PZ18zYXpDd05VNA?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 05:00:01 GMT"
+        "title": "AI starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Google’s Gemini AI Assistant Reaches One Billion Users",
-        "summary": "Google’s Gemini AI Assistant Reaches One Billion Users &nbsp;&nbsp; ASHARQ AL-AWSAT English",
-        "body": "Google’s Gemini AI Assistant Reaches One Billion Users. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "ASHARQ AL-AWSAT English",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQjFvUEdpU2g4aThZV3d1NjZLMUl5bTNqWWNXaW5rQzd6VlhyeHFaNlpxN2I1bThBdktBS3NOanhibVUtZ3IzTkU3ODZsMGxxSXplYXNiWTVGbkdtbnZtTFdfcFpkQmYtVTZaUXdLUVV2Um10c1dtUVVOMEQyc1Bvei1CMnUxMnRiWUwydkx5WEU0TllLQUZGc1pYWkRneFBfWVd1OGl2bXBoa1Z0?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 08:38:29 GMT"
+        "title": "AI starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Kyndryl Launches Agentic Modernization Services to Accelerate Enterprise AI Adoption",
-        "summary": "Kyndryl Launches Agentic Modernization Services to Accelerate Enterprise AI Adoption &nbsp;&nbsp; TechAfrica News",
-        "body": "Kyndryl Launches Agentic Modernization Services to Accelerate Enterprise AI Adoption. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "TechAfrica News",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVTRXZzVtMGpmYTU3NVNneGdfeGVERFNRUklJMzYzTjdrQmdrdFBsTUJhamhTUUxRLUwyLVc4MFNZLVN5Y0VSak5kUmlGS3c0djBOWDMzX1hjMG9kLXlfMFhjX0UyWW5mOUJSU3ZybFhOc3lybjRnQWMtYlpORk9Xcl9BbGExUG1fSFlXNlk3RWVuRjYySC12TXV0NEtpb1A0ZG5DQ2VFVXhtQzdFM3ZuT241TmQ0ZWw5OVRNRks4d1k?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 08:03:45 GMT"
+        "title": "AI starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps",
-        "summary": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps &nbsp;&nbsp; IEEE Spectrum",
-        "body": "Runaway OpenAI Agent Hits Hugging Face and Exposes AI Guardrail Gaps. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "IEEE Spectrum",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9YZWcxOURrVUU5SmtpbTBhbnZfeVNhUDF6WC1JUFpqWUhXZFN6VTc1NU85Qks1VGNBRFN0MVE4dFNJeFp0SlRmTHNBMk9Sd1o2RjZFNXB6cWk0Ti15RWI0bE9USGJzOWxE?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 07:27:44 GMT"
+        "title": "AI starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Lucrative AI Launches Out of Stealth with $500K in Pre-Seed Funding to Bring MCP-Native Automation to Enterprise",
-        "summary": "Lucrative AI Launches Out of Stealth with $500K in Pre-Seed Funding to Bring MCP-Native Automation to Enterprise &nbsp;&nbsp; aithority.com",
-        "body": "Lucrative AI Launches Out of Stealth with $500K in Pre-Seed Funding to Bring MCP-Native Automation to Enterprise. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "aithority.com",
-        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSkJQV0F4eVZZbEd5empvaVlINVp2T0Z6ZTBTVzdxTUZFZ1hzSWcyVTgtNjJXOVA5bnpDOWVyN2dPS1BTd0MwbDczVmw3cjVxUGRXVk94T0FJUHU4aDNOdnRMME9BdjZXeWg5azBZcm9SOG9CVk1sem5fWHpkVWdqaHVMQmJna0VRYS13cEVZa29JNDFTaWYwWDNwb2Y4RERWdjRod3RFMDFla2JZdHNheDJERF9ObkNEYTFxdHRMSnU1eTI3RE83anN5bWNXc3F6cldfc1ppc2gyTC1sWUdTWHhFc3M1QQ?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 08:41:58 GMT"
+        "title": "AI starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ],
     "600": [
       {
-        "title": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final",
-        "summary": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final &nbsp;&nbsp; TVP World",
-        "body": "Poland’s Skrzyszowska wins 100m hurdles silver in photo finish final. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "TVP World",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON19IY1BVc3pudW81OUc4SXF5UVVjQm5iSU01RTVwSVEtMmJEVGZCWXU3NTVNSWl4TG9OMDB2MEZIVXoyUktVSTRtY0FDbS1ieUd1dkxBQ2hTcElHcmtKVDJTa1J2S3l3NXVBRTF2MXBMX0ZUbUtqY3FQcEQwN0Q0dWZDaE1Bcm9DRHdjb2MzUEtMd3RTdUZZNVppR0o0VkR1U3c?oc=5",
-        "publishedAt": "Wed, 12 Aug 2026 03:02:26 GMT"
+        "title": "Sports starter story 1",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships",
-        "summary": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships &nbsp;&nbsp; TVP World",
-        "body": "Poland’s Skrzyszowska wins 100m hurdles silver at European Championships. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "TVP World",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTnVFcnY2ZDBjbmJrNHliMXJxMXNsZU01dlBwMmZ2cUN6bW1wMzNZWkUwT1RlRGhSb1lJc0dYVXhuV2t3cG9NSDBTZWhrZlV4VS1XYkU0WHpfMTZwUjZMX2p0VW9VUXQ3aTRzcU1HRVgzT2tORTFISEpzNkRfeGhFRUVDd2tsTHJ5dk9wYWpWNVhhbENhRkVMRGVn?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 20:37:00 GMT"
+        "title": "Sports starter story 2",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "2026 FIVB Beach Volleyball CEV EuroBeachVolley - Stare Jablonki, Poland",
-        "summary": "2026 FIVB Beach Volleyball CEV EuroBeachVolley - Stare Jablonki, Poland &nbsp;&nbsp; olympics.com",
-        "body": "2026 FIVB Beach Volleyball CEV EuroBeachVolley - Stare Jablonki, Poland. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "olympics.com",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObmZMelRQR3ROV2l1c3RvNmFGY1ZOQ3laRjNJaFVKWkRmX0M5dHU2V3RBckJsRXp4T21QbW5ZdDF2OVRXTnc2Xzk0cXNZS19lakV4VFc1dml6ZXVncTZVQzU1eUNRMVVqeXJYY2EtM0thVHFLdGpjdjRBaXVVT3J4bEVHT0dibE5kbjlVR0tJV21oN3VPZ1VmZ2hCam9ySTYyZ2Nvbw?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 16:57:28 GMT"
+        "title": "Sports starter story 3",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland is preparing for the U-20 Women's World Cup despite the threat of a FIFA boycott by UEFA",
-        "summary": "Poland is preparing for the U-20 Women's World Cup despite the threat of a FIFA boycott by UEFA &nbsp;&nbsp; UA.NEWS",
-        "body": "Poland is preparing for the U-20 Women's World Cup despite the threat of a FIFA boycott by UEFA. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "UA.NEWS",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxORnR0VWd1cFNDMGVEY2pKTU9GV2xRMVVqWmRUMFA5UXJTN2dxYVJOYV9nOUpGVE1wNF9RQmpaVUZnYzFLcUF3UGNVR3lQdVc3RlRya0RhVGJheEJocWo0b2c4SDM0YjNKN1NPYjFwOHRCeFhUQml4eldiUjRjRW1WMWF1UzRmTzNyR1EzNjE2QW5DNWdOMHZoMjBoS2swWkMxOEJCQnQ2cUNRdw?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 17:51:15 GMT"
+        "title": "Sports starter story 4",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       },
       {
-        "title": "Poland vs Spain - Quarter-Finals - FIBA U16 EuroBasket 2026",
-        "summary": "Poland vs Spain - Quarter-Finals - FIBA U16 EuroBasket 2026 &nbsp;&nbsp; FIBA",
-        "body": "Poland vs Spain - Quarter-Finals - FIBA U16 EuroBasket 2026. This Teletext Daily edition uses RSS metadata and links to the publisher for the complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "FIBA",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSEZaNXlMMTJWQVE5OE1UVGVPejFTd1p4dUgzRG1VSjg1al9NWmNfZG5PYnhCSWFRSWx0aG5sekpVQmlteFdoZThYemRKVGpYbFN5Q1ZhcnhxanBVbFlzWWlUa3JaWDdrU05iaXlmaWs2TnE2RVVqSWx4SkNMYUZnRE1BdHR4T29BUjV3?oc=5",
-        "publishedAt": "Tue, 11 Aug 2026 17:30:39 GMT"
+        "title": "Sports starter story 5",
+        "summary": "Starter content. Run the GitHub workflow once to replace this with the current free daily edition.",
+        "body": "This is placeholder content included only so the PWA can be validated and installed before the first scheduled news run.",
+        "whyItMatters": "The first workflow run will replace this placeholder with current ranked news.",
+        "source": "Starter edition",
+        "url": "",
+        "publishedAt": "2026-08-12T00:00:00Z"
       }
     ]
   }

@@ -1,27 +1,32 @@
-TELETEXT DAILY — FREE RSS VERSION
+TELETEXT DAILY — RSS + AI SUMMARIES
 
-This package is flat for easy GitHub web upload.
+HOW IT WORKS
+1. RSS sources discover and rank the Top 5 stories in each category.
+2. Gemini 2.5 Flash-Lite uses Google Search grounding to research those selected stories.
+3. Gemini writes a meaningful 2-sentence summary, a 3-5 sentence article brief, and a story-specific WHY IT MATTERS line.
+4. GitHub publishes news.json. The API key never goes to the phone/PWA.
 
-The daily GitHub Action uses free RSS sources:
-- Google News RSS searches as primary discovery
-- BBC RSS and Euronews RSS as fallbacks
-No API account, API key, paid subscription, or credit card is required.
+COST
+Gemini has a free API tier with rate limits. This app makes only 5 Gemini requests per daily edition, one per category.
+If Gemini is unavailable or the free quota is reached, the workflow keeps RSS fallback text instead of failing.
 
-UPLOAD all files in this ZIP to the repository root.
+REQUIRED SECRET
+Create a free Gemini API key in Google AI Studio.
+In GitHub: Settings > Secrets and variables > Actions > New repository secret
+Name: GEMINI_API_KEY
+Value: your Gemini API key
 
-Then update the real GitHub workflow:
-1. Open WORKFLOW-update-news.yml in the root and copy all text.
-2. Open .github/workflows/update-news.yml.
-3. Edit it, replace all content, paste the copied workflow, and commit.
+UPLOAD
+Upload all files from this ZIP to the repository root, replacing current files.
+Then copy WORKFLOW-update-news.yml into .github/workflows/update-news.yml and commit.
 
-GitHub Pages:
-Settings > Pages > Deploy from a branch > main > /(root)
-
-First run:
+RUN
 Actions > Update Teletext Daily > Run workflow
 
-Success:
-news.json should show edition live-rss-free or live-rss-with-fallback.
+SUCCESS
+news.json should show:
+"edition": "live-rss-ai-free"
+"aiPages": 5
 
-Android:
-Open the Pages URL in Chrome, then INSTALL APP or Chrome menu > Install app.
+ANDROID
+No reinstall should normally be needed. Open the installed PWA after the workflow finishes and tap CHECK NEW EDITION.
