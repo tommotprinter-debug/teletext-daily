@@ -1,37 +1,31 @@
-TELETEXT DAILY — LOCAL SUMMARY VERSION
+TELETEXT DAILY — DECODER + STRICT SUMMARY QUALITY
 
-This version deliberately has NO external AI dependency and NO API quota.
+This build fixes the specific defect seen in the live repository on 12 Aug 2026:
+Google News's generic meta description was incorrectly accepted as an article extract.
 
-DAILY PIPELINE
-1. RSS selects the Top 5 stories in each category.
-2. GitHub Actions tries to resolve/fetch each publisher page.
-3. If article text or metadata is accessible, a local extractive summarizer selects the most informative sentences.
-4. If the page cannot be fetched, the updater searches current RSS coverage of the same event and creates a cross-source coverage summary.
-5. news.json is committed and GitHub Pages serves it to the PWA.
-
-SUMMARY METHODS
-article-extract = based on publisher page text/metadata
-rss-cluster = based on multiple current RSS reports about the event
-rss-basic = last-resort fallback
-
-NO SECRETS REQUIRED
-GEMINI_API_KEY is no longer used.
-
-UPLOAD
-Upload every file from this flat ZIP to your repository root.
+FIXES
+- Google News RSS URLs are decoded to publisher URLs using google-news-url-decoder 1.2.2.
+- Google News pages can NEVER count as publisher article extracts.
+- The exact Google News boilerplate string is explicitly rejected.
+- Article evidence must be long enough before extraction.
+- If decoding/fetching fails, the story uses a cross-source RSS cluster summary.
+- A quality gate aborts the update if Google boilerplate appears or fewer than 20/25 summaries are substantive.
 
 WORKFLOW
-Copy WORKFLOW-update-news.yml into:
-.github/workflows/update-news.yml
+The workflow optionally installs:
+google-news-url-decoder@1.2.2
 
-RUN
-Actions > Update Teletext Daily > Run workflow
+If npm/decoder fails, the updater continues using RSS-cluster summaries instead of failing solely because of the decoder.
 
-PAGE 990
-Shows:
-- article extract coverage
-- RSS cluster coverage
-- direct publisher-link resolution
+SUCCESS LOG
+Expected:
+meaningful summaries 20-25/25
+article extracts X/25
+RSS-cluster summaries Y/25
+direct publisher URLs Z/25
+boilerplate 0
 
-ANDROID
-No reinstall should normally be required. Open the PWA and tap CHECK NEW EDITION.
+UPLOAD
+Upload all flat files to repo root.
+Copy WORKFLOW-update-news.yml to .github/workflows/update-news.yml.
+Run a NEW workflow from main.

@@ -57,11 +57,13 @@ function save(d){localStorage.setItem("teletext-scheduled-edition",JSON.stringif
 function load(){try{return JSON.parse(localStorage.getItem("teletext-scheduled-edition"))}catch{return null}}
 function updateAIDiagnostics(){
  const total=25;
- const extracts=Number(DATA?.articleExtractStories ?? Object.values(DATA?.categories||{}).flat().filter(x=>x.summaryMethod==="article-extract").length);
- const clusters=Number(DATA?.rssClusterStories ?? Object.values(DATA?.categories||{}).flat().filter(x=>x.summaryMethod==="rss-cluster").length);
- const links=Number(DATA?.resolvedPublisherUrls ?? Object.values(DATA?.categories||{}).flat().filter(x=>x.publisherUrlResolved===true).length);
+ const meaningful=Number(DATA?.meaningfulSummaryStories ?? Object.values(DATA?.categories||{}).flat().filter(x=>(x.summary||"").length>=100&&(x.body||"").length>=120).length);
+ const extracts=Number(DATA?.articleExtractStories ?? 0);
+ const clusters=Number(DATA?.rssClusterStories ?? 0);
+ const links=Number(DATA?.resolvedPublisherUrls ?? 0);
+ const bad=Number(DATA?.badBoilerplateStories ?? 0);
  const el=$("aiDiag");
- if(el)el.innerHTML=`<b>Summary coverage:</b> ${extracts}/${total} article extracts • ${clusters}/${total} RSS-cluster summaries • ${links}/${total} direct publisher links`;
+ if(el)el.innerHTML=`<b>Summary coverage:</b> ${meaningful}/${total} meaningful • ${extracts}/${total} publisher extracts • ${clusters}/${total} RSS clusters • ${links}/${total} direct links • boilerplate ${bad}`;
 }
 async function loadEdition(force=false){
  const cached=load(); $("edition").textContent="CHECKING...";

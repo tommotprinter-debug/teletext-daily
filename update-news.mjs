@@ -30,6 +30,46 @@ function googleUrl(c){const p=new URLSearchParams({q:c.googleQuery,hl:c.locale.h
 function rank(all,page,c){const valid=all.filter(a=>a.title.length>=18);valid.sort((a,b)=>score(b,c)-score(a,c));const out=[],perSource=new Map();for(const a of valid){if(out.some(x=>x.url===a.url||similarity(x.title,a.title)>.58))continue;const source=a.source||domain(a.url)||"News source",n=perSource.get(source)||0;if(n>=2)continue;perSource.set(source,n+1);out.push({title:a.title,summary:summary(a,c),body:`${a.title}. Open the original publisher for the complete report.`,whyItMatters:why(page,a.title),source,url:a.url,publishedAt:a.publishedAt||"",aiSummary:false});if(out.length===5)break}console.log(`  ${c.name}: ${out.length}/5 selected from ${valid.length} RSS candidates.`);return out}
 async function collect(page,c){const all=[],seen=new Set();const add=items=>{for(const a of items){if(!a.url||seen.has(a.url))continue;seen.add(a.url);a.title=cleanGoogleTitle(a.title,a.source);all.push(a)}};try{console.log(`  Google News RSS: ${c.googleQuery}`);const items=parseFeed(await fetchText(googleUrl(c)),"Google News");console.log(`  Received ${items.length} Google News RSS items.`);add(items)}catch(e){console.warn(`  Google News RSS unavailable: ${e.message}`)}let ranked=rank(all,page,c);if(ranked.length===5)return ranked;for(const url of c.fallbacks){try{console.log(`  Fallback RSS: ${url}`);const items=parseFeed(await fetchText(url),domain(url));console.log(`  Received ${items.length} fallback RSS items.`);add(items);ranked=rank(all,page,c);if(ranked.length===5)return ranked}catch(e){console.warn(`  Fallback unavailable: ${e.message}`)}}if(ranked.length<5)throw new Error(`${c.name}: only ${ranked.length}/5 suitable RSS stories`);return ranked}
 
+
+let GOOGLE_DECODER=null;
+async function getGoogleDecoder(){
+  if(GOOGLE_DECODER!==null)return GOOGLE_DECODER;
+  try{
+    const mod=await import("google-news-url-decoder");
+    const Cls=mod.GoogleDecoder||mod.default?.GoogleDecoder;
+    GOOGLE_DECODER=Cls?new Cls():false;
+  }catch(e){
+    console.warn(`  Google News decoder unavailable: ${e.message}`);
+    GOOGLE_DECODER=false;
+  }
+  return GOOGLE_DECODER;
+}
+async function decodeGoogleNewsStories(stories){
+  const decoder=await getGoogleDecoder();
+  if(!decoder)return stories;
+  const targets=stories.map(s=>isGoogleNewsUrl(s.url)?s.url:null);
+  const urls=targets.filter(Boolean);
+  if(!urls.length)return stories;
+  try{
+    const results=await decoder.decodeBatch(urls);
+    let j=0,resolved=0;
+    const out=stories.map(story=>{
+      if(!isGoogleNewsUrl(story.url))return story;
+      const r=results[j++];
+      const direct=r?.status?safeHttpUrl(r.decoded_url):"";
+      if(direct&&!isGoogleNewsUrl(direct)){
+        resolved++;
+        return {...story,originalDiscoveryUrl:story.url,url:direct,publisherUrlResolved:true};
+      }
+      return story;
+    });
+    console.log(`  Publisher URL decoder: ${resolved}/${urls.length} Google News links resolved.`);
+    return out;
+  }catch(e){
+    console.warn(`  Publisher URL decoder failed: ${e.message}`);
+    return stories;
+  }
+}
 const STOPWORDS=new Set(("the a an and or but if then else when while of to in on at by for from with as is are was were be been being has have had do does did will would should could may might can this that these those it its their his her they them we our you your i he she who which what where why how about into over after before than also more most less not no new says said report reports reported according amid among during through across per via up down out off just only other another some any all both each few many much such own same so too very".split(/\s+/)));
 
 function htmlDecode(s=""){return s.replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/&lt;/gi,"<").replace(/&gt;/gi,">").replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)))}
@@ -107,25 +147,38 @@ async function fetchHtml(url){
  }finally{clearTimeout(timer)}
 }
 async function resolveAndExtract(story){
+ if(isGoogleNewsUrl(story.url)){
+   return{ok:false,error:"unresolved Google News URL"};
+ }
  let html="",finalUrl="";
  try{
    const first=await fetchHtml(story.url);
-   html=first.html;finalUrl=safeHttpUrl(first.finalUrl);
+   html=first.html;
+   finalUrl=safeHttpUrl(first.finalUrl)||safeHttpUrl(story.url);
  }catch(e){
    return{ok:false,error:e.message};
  }
- let resolved=finalUrl&&!isGoogleNewsUrl(finalUrl)?finalUrl:"";
- if(!resolved){
-   const c=canonicalUrl(html),og=safeHttpUrl(metaContent(html,"og:url"));
-   if(c&&!isGoogleNewsUrl(c))resolved=c;
-   else if(og&&!isGoogleNewsUrl(og))resolved=og;
- }
- if(resolved&&resolved!==finalUrl){
-   try{const second=await fetchHtml(resolved);html=second.html;finalUrl=safeHttpUrl(second.finalUrl)||resolved;if(!isGoogleNewsUrl(finalUrl))resolved=finalUrl}catch{}
- }
- const text=jsonLdArticleBody(html)||articleElementText(html);
+ if(isGoogleNewsUrl(finalUrl))return{ok:false,error:"Google News landing page rejected"};
+
+ let resolved=finalUrl;
+ const c=canonicalUrl(html),og=safeHttpUrl(metaContent(html,"og:url"));
+ if(c&&!isGoogleNewsUrl(c))resolved=c;
+ else if(og&&!isGoogleNewsUrl(og))resolved=og;
+
+ const body=jsonLdArticleBody(html)||articleElementText(html);
  const meta=metaContent(html,"description")||metaContent(html,"og:description");
- return{ok:Boolean(text||meta),url:resolved,text:text||"",meta:meta||""};
+ const evidence=(body||meta||"").trim();
+ const low=evidence.toLowerCase();
+
+ const boilerplate=
+   low.includes("comprehensive up-to-date news coverage") ||
+   low.includes("aggregated from sources all over the world by google news") ||
+   low.includes("google news");
+
+ if(boilerplate)return{ok:false,error:"Google News boilerplate rejected"};
+ if(evidence.length<220)return{ok:false,error:`insufficient article evidence (${evidence.length} chars)`};
+
+ return{ok:true,url:resolved,text:body||"",meta:meta||"",evidenceChars:evidence.length};
 }
 function whyLocal(page,title){return why(page,title)}
 function compactSentences(items,maxChars){
@@ -139,31 +192,58 @@ function compactSentences(items,maxChars){
  return out;
 }
 async function clusterSummary(story,c){
- const query=`"${story.title.replace(/"/g,"")}" when:3d`;
+ const cleanedTitle=story.title.replace(/"/g,"").replace(/\s+/g," ").trim();
+ const query=`"${cleanedTitle}" when:3d`;
  const p=new URLSearchParams({q:query,hl:c.locale.hl,gl:c.locale.gl,ceid:c.locale.ceid});
  let items=[];
  try{items=parseFeed(await fetchText("https://news.google.com/rss/search?"+p),"Google News")}catch{}
- items=items.filter(x=>x.title&&x.url).map(x=>({...x,title:cleanGoogleTitle(x.title,x.source)}));
+ items=items
+   .filter(x=>x.title&&x.url)
+   .map(x=>({...x,title:cleanGoogleTitle(x.title,x.source),description:stripHtml(x.description||"")}));
+
  const related=[];
  for(const x of items){
-   if(similarity(story.title,x.title)<.18)continue;
-   if(related.some(y=>similarity(y.title,x.title)>.7))continue;
+   const sim=similarity(story.title,x.title);
+   if(sim<.12)continue;
+   if(normalize(x.title)===normalize(story.title)&&x.source===story.source)continue;
+   if(related.some(y=>similarity(y.title,x.title)>.72))continue;
    related.push(x);
-   if(related.length===4)break;
+   if(related.length===5)break;
  }
+
  const sources=[story.source,...related.map(x=>x.source)].filter(Boolean);
- const uniqueSources=[...new Set(sources)].slice(0,4);
- const extra=related.filter(x=>normalize(x.title)!==normalize(story.title)).slice(0,2).map(x=>x.title);
- const summary=extra.length
-   ? `${story.title}. Related coverage from ${uniqueSources.slice(1).join(" and ")||"other outlets"} also reports: ${extra.join("; ")}.`
-   : `${story.title}. The story is being carried by ${story.source}; open the original source for the publisher's full report.`;
- const bodyParts=[
-   story.summary&&normalize(story.summary)!==normalize(story.title)?story.summary:"",
-   ...related.map(x=>x.description).filter(d=>d&&normalize(d)!==normalize(story.title)&&d.length>50),
-   ...extra.map(x=>x+".")
- ].filter(Boolean);
- const body=compactSentences(bodyParts,900)||summary;
- return{summary:summary.slice(0,420),body,coverageSources:uniqueSources};
+ const uniqueSources=[...new Set(sources)].slice(0,5);
+ const relatedTitles=related.map(x=>x.title).filter(t=>t&&normalize(t)!==normalize(story.title)).slice(0,3);
+
+ let summary;
+ if(relatedTitles.length>=2){
+   summary=`${story.title}. Other current reports add that ${relatedTitles[0].replace(/[.!?]+$/,"")}; ${relatedTitles[1].replace(/[.!?]+$/,"")}.`;
+ }else if(relatedTitles.length===1){
+   summary=`${story.title}. A separate current report adds: ${relatedTitles[0]}.`;
+ }else{
+   summary=`${story.title}. This item is currently reported by ${story.source}; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.`;
+ }
+
+ const evidence=[];
+ const baseDesc=stripHtml(story.summary||"");
+ if(baseDesc&&normalize(baseDesc)!==normalize(story.title)&&!baseDesc.toLowerCase().includes("comprehensive up-to-date news coverage"))evidence.push(baseDesc);
+ for(const x of related){
+   const d=stripHtml(x.description||"");
+   if(d&&d.length>50&&!d.toLowerCase().includes("comprehensive up-to-date news coverage"))evidence.push(d);
+ }
+ relatedTitles.forEach(t=>evidence.push(t+"."));
+
+ let body=compactSentences(evidence,1000);
+ if(body.length<120){
+   body=`${summary} Sources seen in current RSS coverage: ${uniqueSources.join(", ")||story.source}. Open the original source link for the publisher's complete report.`;
+ }
+
+ return{
+   summary:summary.slice(0,520),
+   body,
+   coverageSources:uniqueSources,
+   relatedReports:relatedTitles.length
+ };
 }
 async function enrichStory(story,page,c){
  const extracted=await resolveAndExtract(story);
@@ -175,13 +255,12 @@ async function enrichStory(story,page,c){
      const direct=extracted.url&&!isGoogleNewsUrl(extracted.url)?extracted.url:"";
      return{
        ...story,
-       originalDiscoveryUrl:story.url,
        url:direct||story.url,
        summary:compactSentences(short,430),
        body:compactSentences(long,1000),
        whyItMatters:whyLocal(page,story.title),
        summaryMethod:"article-extract",
-       publisherUrlResolved:Boolean(direct),
+       publisherUrlResolved:Boolean(direct||story.publisherUrlResolved),
        extractedTextChars:evidence.length
      };
    }
@@ -211,6 +290,7 @@ for(const page of PAGES){
   console.log(`\n=== ${page} ${c.name.toUpperCase()} ===`);
   try{
     let stories=await collect(page,c);
+    stories=await decodeGoogleNewsStories(stories);
     stories=await enrichStories(stories,page,c);
     categories[page]=stories;
     const extractCount=stories.filter(s=>s.summaryMethod==="article-extract").length;
@@ -231,6 +311,10 @@ const allStories=Object.values(categories).flat();
 const articleExtractStories=allStories.filter(s=>s.summaryMethod==="article-extract").length;
 const rssClusterStories=allStories.filter(s=>s.summaryMethod==="rss-cluster").length;
 const resolvedPublisherUrls=allStories.filter(s=>s.publisherUrlResolved===true).length;
+const badBoilerplateStories=allStories.filter(s=>(s.summary||"").toLowerCase().includes("comprehensive up-to-date news coverage")).length;
+const meaningfulSummaryStories=allStories.filter(s=>(s.summary||"").length>=100 && (s.body||"").length>=120).length;
+if(badBoilerplateStories>0)throw new Error(`Quality gate failed: ${badBoilerplateStories} Google News boilerplate summaries`);
+if(meaningfulSummaryStories<20)throw new Error(`Quality gate failed: only ${meaningfulSummaryStories}/25 meaningful summaries`);
 const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW);
 const get=t=>parts.find(x=>x.type===t)?.value;
 const date=`${get("year")}-${get("month")}-${get("day")}`;
@@ -242,8 +326,10 @@ const out={
   articleExtractStories,
   rssClusterStories,
   resolvedPublisherUrls,
+  meaningfulSummaryStories,
+  badBoilerplateStories,
   categoryStatus,
   categories
 };
 await fs.writeFile("news.json",JSON.stringify(out,null,2)+"\n","utf8");
-console.log(`\nSUCCESS: ${date}; stories 25; article extracts ${articleExtractStories}/25; RSS-cluster summaries ${rssClusterStories}/25; direct publisher URLs ${resolvedPublisherUrls}/25.`);
+console.log(`\nSUCCESS: ${date}; stories 25; meaningful summaries ${meaningfulSummaryStories}/25; article extracts ${articleExtractStories}/25; RSS-cluster summaries ${rssClusterStories}/25; direct publisher URLs ${resolvedPublisherUrls}/25; boilerplate 0.`);

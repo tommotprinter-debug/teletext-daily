@@ -16,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 8
 
     steps:
       - name: Checkout repository
@@ -27,6 +27,9 @@ jobs:
         with:
           node-version: "24"
           package-manager-cache: false
+
+      - name: Install Google News URL decoder
+        run: npm install --no-save --no-audit --no-fund google-news-url-decoder@1.2.2 || echo "Decoder install unavailable; RSS-cluster fallback will be used."
 
       - name: Generate local daily summaries
         run: node update-news.mjs
