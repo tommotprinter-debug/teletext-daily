@@ -16,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 6
 
     steps:
       - name: Checkout repository
@@ -28,10 +28,7 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
-      - name: Generate RSS + AI daily edition
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-3-flash-preview
+      - name: Generate local daily summaries
         run: node update-news.mjs
 
       - name: Validate edition
@@ -45,6 +42,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No news.json change to commit."
           else
-            git commit -m "Update Teletext Daily AI edition"
+            git commit -m "Update Teletext Daily local-summary edition"
             git push
           fi
