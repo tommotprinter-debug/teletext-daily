@@ -32,7 +32,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;ba
 <div class="app">
 <header class="header"><div class="logo"><b>TELE</b><b>TEXT</b></div><div class="mid">FREE DAILY NEWS SERVICE</div><div id="clock" class="clock">00:00:00</div></header>
 <div class="pagebar"><div id="pno" class="pno">100</div><div id="ptitle">DAILY INDEX</div><span id="date">--</span></div>
-<div class="state"><span id="net" class="badge live">LIVE</span><span id="edition" class="badge warn">LOADING EDITION...</span><span class="badge off">RSS + AI</span></div>
+<div class="state"><span id="net" class="badge live">LIVE</span><span id="edition" class="badge warn">LOADING EDITION...</span><span class="badge off">RSS + GROUNDED AI</span></div>
 <div class="ticker"><span>TELETEXT DAILY — POLAND FIRST • EUROPE • GLOBAL — DAILY 06:17 WARSAW EDITION • NO API KEY • NO SUBSCRIPTION —</span></div>
 <section id="hero" class="hero"><h1><span style="color:#00ffff">TODAY'S</span><br><span style="color:#ffff00">TOP STORIES</span></h1><p>5 CATEGORIES • TOP 5 EACH • AUTOMATIC DAILY EDITION</p></section>
 <nav class="menu">
@@ -42,9 +42,9 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;ba
 <main class="screen">
 <section id="list"><div id="stories" class="empty">GETTING DAILY EDITION...</div></section>
 <section id="detail" class="detail"><button id="back" class="back">◀ BACK</button><div id="meta" class="meta"></div><h2 id="dtitle"></h2><p id="dcontext" class="context"></p><p id="dbody"></p><p id="dwhy" class="why"></p><a id="source" class="src" target="_blank" rel="noopener noreferrer">OPEN ORIGINAL SOURCE ▶</a></section>
-<section id="setupbox" class="setupbox"><h3>990 SERVICE SETUP</h3><p><b>News source:</b> Public RSS discovery plus Gemini AI summaries. The Gemini key is stored only as a GitHub Secret.</p><p><b>Daily scheduler:</b> GitHub Actions selects stories from RSS, asks Gemini to read the selected URLs and summarize them, then publishes the finished news.json. The phone never receives the AI API key.</p><p><b>Offline:</b> the last complete 25-story edition stays in local storage. The app shell is cached by the service worker.</p><p><b>Refresh:</b> CHECK NEW EDITION downloads the newest news.json immediately.</p><button id="clear" class="back">CLEAR SAVED EDITION</button><div id="status" class="status">READY</div><p class="small">Ranking uses recency, Poland/Baltic relevance, category keywords, source diversity, and duplicate suppression. It uses public article metadata and links to publishers for full reporting.</p></section>
+<section id="setupbox" class="setupbox"><h3>990 SERVICE SETUP</h3><p><b>News source:</b> Public RSS discovery plus Gemini grounded AI summaries. The Gemini key is stored only as a GitHub Secret.</p><p><b>Daily scheduler:</b> GitHub Actions selects stories from RSS, asks Gemini to verify them with Google Search grounding, summarize them, and resolve direct publisher links where possible. The phone never receives the AI API key.</p><p><b>Offline:</b> the last complete 25-story edition stays in local storage. The app shell is cached by the service worker.</p><p><b>Refresh:</b> CHECK NEW EDITION downloads the newest news.json immediately.</p><p id="aiDiag"><b>AI coverage:</b> waiting for edition data.</p><button id="clear" class="back">CLEAR SAVED EDITION</button><div id="status" class="status">READY</div><p class="small">Ranking uses recency, Poland/Baltic relevance, category keywords, source diversity, and duplicate suppression. It uses public article metadata and links to publishers for full reporting.</p></section>
 </main>
-<div class="footer">Source discovery: public RSS feeds. AI summaries: Gemini using URL Context. Headlines remain the property of their publishers. Open the original source for complete reporting.</div>
+<div class="footer">Source discovery: public RSS feeds. AI summaries: Gemini with Google Search grounding. Headlines remain the property of their publishers. Open the original source for complete reporting.</div>
 </div>
 <script>
 const CATS={"200":"POLITICS","300":"BUSINESS","400":"ENERGY","500":"AI","600":"SPORTS"};
@@ -55,6 +55,15 @@ function esc(s=""){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt
 function complete(d){return d&&d.categories&&Object.keys(CATS).every(p=>Array.isArray(d.categories[p])&&d.categories[p].length===5)}
 function save(d){localStorage.setItem("teletext-scheduled-edition",JSON.stringify(d))}
 function load(){try{return JSON.parse(localStorage.getItem("teletext-scheduled-edition"))}catch{return null}}
+function updateAIDiagnostics(){
+ const total=Number(DATA?.aiStoriesTotal ?? 25);
+ const ai=Number(DATA?.aiStories ?? Object.values(DATA?.categories||{}).flat().filter(x=>x.aiSummary===true).length);
+ const pages=Number(DATA?.aiPages ?? 0);
+ const full=Number(DATA?.aiPagesFull ?? 0);
+ const links=Number(DATA?.resolvedPublisherUrls ?? Object.values(DATA?.categories||{}).flat().filter(x=>x.publisherUrlResolved===true).length);
+ const el=$("aiDiag");
+ if(el)el.innerHTML=`<b>AI coverage:</b> ${ai}/${total} stories • ${pages}/5 pages with AI • ${full}/5 fully AI • ${links}/${total} direct publisher links`;
+}
 async function loadEdition(force=false){
  const cached=load(); $("edition").textContent="CHECKING...";
  try{
@@ -66,6 +75,7 @@ async function loadEdition(force=false){
   if(complete(cached)){DATA=cached;$("edition").textContent="SAVED • "+fmt(DATA.date);$("edition").className="badge off";$("status").textContent="USING SAVED EDITION: "+e.message}
   else{DATA={date:"",categories:{"200":[],"300":[],"400":[],"500":[],"600":[]}};$("edition").textContent="NO EDITION";$("edition").className="badge off";$("status").textContent="NO VALID EDITION AVAILABLE"}
  }
+ updateAIDiagnostics();
  render();
 }
 function row(p,s,i,prefix=""){return `<div class="story" tabindex="0" data-page="${p}" data-i="${i}"><div class="rank">${i+1}</div><div><div class="title">${prefix}${esc(s.title)}</div><div class="brief">${esc(s.summary)}</div></div><div class="spage">${+p+i+1}</div></div>`}

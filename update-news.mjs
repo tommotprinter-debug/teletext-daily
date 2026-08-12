@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 
 const NOW=new Date();
 const GEMINI_API_KEY=process.env.GEMINI_API_KEY||"";
-const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-3.1-flash-lite";
+const GEMINI_MODEL=process.env.GEMINI_MODEL||"gemini-3-flash-preview";
 const PAGES=["200","300","400","500","600"];
 const CATS={
 "200":{name:"Politics",googleQuery:'(Poland OR Polish OR Warsaw) (government OR parliament OR election OR president OR minister OR NATO OR EU) when:2d',locale:{hl:"en",gl:"PL",ceid:"PL:en"},fallbacks:["https://feeds.bbci.co.uk/news/world/europe/rss.xml","https://www.euronews.com/rss?format=mrss&level=vertical&name=my-europe"],boost:["poland","polish","warsaw","government","parliament","election","president","minister","nato","european union","eu"]},
@@ -45,42 +45,38 @@ async function aiSummarize(page,c,stories){
     return stories;
   }
 
-  const inputs=stories.map((s,i)=>({
+  const inputs=stories.map((story,i)=>({
     id:i+1,
-    title:s.title,
-    source:s.source,
-    url:s.url,
-    rssSummary:s.summary
+    title:story.title,
+    source:story.source,
+    rssSummary:story.summary,
+    discoveryUrl:story.url
   }));
 
-  const prompt=`You are preparing a concise factual teletext news edition.
-Use URL Context to inspect the URLs supplied below. The URLs may be Google News redirect URLs; follow the accessible page/redirect where possible.
+  const prompt=`Prepare a factual daily teletext brief for these five CURRENT ${c.name.toUpperCase()} stories.
 
-For EACH of the 5 ${c.name.toUpperCase()} stories:
-1. Identify what actually happened from the accessible URL content.
-2. Do not invent facts that are absent from the retrieved content.
-3. If a URL cannot be accessed or does not provide enough evidence, set unavailable=true and leave the factual text fields empty.
+Use Google Search grounding to identify and verify each event from its headline and named source. Do not rely on model memory for current facts.
 
-Return ONLY a JSON array with exactly these fields:
-[
-  {
-    "id": 1,
-    "unavailable": false,
-    "summary": "2 concise factual sentences, 35-65 words total",
-    "body": "3-5 concise factual sentences, 70-120 words total",
-    "whyItMatters": "1 event-specific sentence"
-  }
-]
+For every story:
+- preserve the exact id;
+- summary: 2 concise factual sentences, 35-65 words total;
+- body: 3-5 concise factual sentences, 70-120 words total;
+- whyItMatters: 1 concise sentence specific to this event;
+- sourceName: the publisher/source you verified;
+- sourceUrl: the direct publisher article URL when you can identify it from grounded search results; otherwise "";
+- unavailable: true only if you cannot verify enough facts to summarize safely.
 
-Keep the exact IDs.
+Never invent a URL. Prefer the publisher's article page over Google News, aggregators, home pages, or search-result pages.
+Return ONLY a JSON array, no markdown.
 
 Stories:
 ${JSON.stringify(inputs)}`;
 
-  const url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
+  const apiUrl=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),90000);
+
   try{
-    const r=await fetch(url,{
+    const response=await fetch(apiUrl,{
       method:"POST",
       signal:controller.signal,
       headers:{
@@ -89,49 +85,79 @@ ${JSON.stringify(inputs)}`;
       },
       body:JSON.stringify({
         contents:[{parts:[{text:prompt}]}],
-        tools:[{url_context:{}}],
+        tools:[{google_search:{}}],
         generationConfig:{
-          maxOutputTokens:5000,
+          temperature:0.15,
+          maxOutputTokens:6000,
           responseMimeType:"application/json"
         }
       })
     });
 
-    const raw=await r.text();
-    if(!r.ok)throw new Error(`Gemini HTTP ${r.status}: ${raw.slice(0,300).replace(/\s+/g," ")}`);
+    const raw=await response.text();
+    if(!response.ok){
+      throw new Error(`Gemini HTTP ${response.status}: ${raw.slice(0,320).replace(/\s+/g," ")}`);
+    }
 
-    const j=JSON.parse(raw);
-    const outText=(j.candidates?.[0]?.content?.parts||[]).map(x=>x.text||"").join("").trim();
-    const items=extractJson(outText);
-    if(!Array.isArray(items))throw new Error("Gemini output is not an array");
+    const payload=JSON.parse(raw);
+    const output=(payload.candidates?.[0]?.content?.parts||[])
+      .map(part=>part.text||"").join("").trim();
+    const items=extractJson(output);
+    if(!Array.isArray(items)) throw new Error("Gemini output is not an array");
 
-    const byId=new Map(items.map(x=>[Number(x.id),x]));
-    let applied=0, unavailable=0;
+    const byId=new Map(items.map(item=>[Number(item.id),item]));
+    let applied=0,resolved=0,unavailable=0;
 
     const merged=stories.map((story,i)=>{
-      const x=byId.get(i+1);
-      if(!x || x.unavailable===true){
+      const item=byId.get(i+1);
+      if(!item || item.unavailable===true){
         unavailable++;
         return story;
       }
-      if(typeof x.summary!=="string" || typeof x.body!=="string" || typeof x.whyItMatters!=="string") return story;
-      if(x.summary.trim().length<30 || x.body.trim().length<50) return story;
+      if(
+        typeof item.summary!=="string" ||
+        typeof item.body!=="string" ||
+        typeof item.whyItMatters!=="string"
+      ) return story;
+      if(item.summary.trim().length<30 || item.body.trim().length<50) return story;
+
+      let publisherUrl="";
+      if(typeof item.sourceUrl==="string" && item.sourceUrl.trim()){
+        try{
+          const u=new URL(item.sourceUrl.trim());
+          const host=u.hostname.toLowerCase();
+          if((u.protocol==="https:"||u.protocol==="http:") && !host.endsWith("news.google.com")){
+            publisherUrl=u.href;
+          }
+        }catch{}
+      }
+
+      const sourceName=typeof item.sourceName==="string" && item.sourceName.trim()
+        ? item.sourceName.trim()
+        : story.source;
+
       applied++;
+      if(publisherUrl) resolved++;
+
       return {
         ...story,
-        summary:x.summary.trim(),
-        body:x.body.trim(),
-        whyItMatters:x.whyItMatters.trim(),
+        originalDiscoveryUrl:story.url,
+        url:publisherUrl || story.url,
+        source:sourceName,
+        summary:item.summary.trim(),
+        body:item.body.trim(),
+        whyItMatters:item.whyItMatters.trim(),
         aiSummary:true,
         aiModel:GEMINI_MODEL,
-        aiContext:"url-context"
+        aiContext:"google-search-grounding",
+        publisherUrlResolved:Boolean(publisherUrl)
       };
     });
 
-    console.log(`  ${c.name}: URL-context AI summaries applied to ${applied}/5 stories; unavailable ${unavailable}.`);
+    console.log(`  ${c.name}: AI summaries ${applied}/5; publisher URLs resolved ${resolved}/5; unavailable ${unavailable}.`);
     return merged;
   }catch(e){
-    console.warn(`  ${c.name}: Gemini URL-context summarization unavailable: ${e.message}`);
+    console.warn(`  ${c.name}: grounded AI summarization unavailable: ${e.message}`);
     return stories;
   }finally{
     clearTimeout(timer);
@@ -140,10 +166,55 @@ ${JSON.stringify(inputs)}`;
 
 async function previousCategories(){try{return JSON.parse(await fs.readFile("news.json","utf8"))?.categories||{}}catch{return{}}}
 
-const previous=await previousCategories(),categories={},categoryStatus={};let freshPages=0,aiPages=0;
-for(const page of PAGES){const c=CATS[page];console.log(`\n=== ${page} ${c.name.toUpperCase()} ===`);try{let stories=await collect(page,c);stories=await aiSummarize(page,c,stories);categories[page]=stories;categoryStatus[page]=stories.every(s=>s.aiSummary)?"fresh-ai":"fresh-rss";freshPages++;if(stories.every(s=>s.aiSummary))aiPages++}catch(e){console.error(`  ${c.name} update failed: ${e.message}`);if(Array.isArray(previous[page])&&previous[page].length===5){categories[page]=previous[page];categoryStatus[page]="previous-edition-fallback";console.warn(`  Keeping previous valid ${c.name} page.`)}else throw new Error(`${c.name} has no fresh stories and no previous valid page.`)}}
-const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW),get=t=>parts.find(x=>x.type===t)?.value,date=`${get("year")}-${get("month")}-${get("day")}`;
-const edition=aiPages===5?"live-rss-ai-free":freshPages===5?"live-rss-partial-ai":"live-rss-ai-with-fallback";
-const out={date,generatedAt:NOW.toISOString(),edition,freshPages,aiPages,categoryStatus,categories};
+const previous=await previousCategories(),categories={},categoryStatus={};
+let freshPages=0;
+for(const page of PAGES){
+  const c=CATS[page];
+  console.log(`\n=== ${page} ${c.name.toUpperCase()} ===`);
+  try{
+    let stories=await collect(page,c);
+    stories=await aiSummarize(page,c,stories);
+    categories[page]=stories;
+    const aiCount=stories.filter(story=>story.aiSummary===true).length;
+    categoryStatus[page]=aiCount===5?"fresh-ai":aiCount>0?"fresh-partial-ai":"fresh-rss";
+    freshPages++;
+  }catch(e){
+    console.error(`  ${c.name} update failed: ${e.message}`);
+    if(Array.isArray(previous[page])&&previous[page].length===5){
+      categories[page]=previous[page];
+      categoryStatus[page]="previous-edition-fallback";
+      console.warn(`  Keeping previous valid ${c.name} page.`);
+    }else{
+      throw new Error(`${c.name} has no fresh stories and no previous valid page.`);
+    }
+  }
+}
+
+const allStories=Object.values(categories).flat();
+const aiStories=allStories.filter(story=>story.aiSummary===true).length;
+const aiStoriesTotal=allStories.length;
+const aiPages=Object.values(categories).filter(stories=>stories.some(story=>story.aiSummary===true)).length;
+const aiPagesFull=Object.values(categories).filter(stories=>stories.every(story=>story.aiSummary===true)).length;
+const resolvedPublisherUrls=allStories.filter(story=>story.publisherUrlResolved===true).length;
+
+const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Warsaw",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(NOW);
+const get=t=>parts.find(x=>x.type===t)?.value;
+const date=`${get("year")}-${get("month")}-${get("day")}`;
+const edition=aiStories===25?"live-rss-ai-free":aiStories>0?"live-rss-partial-ai":freshPages===5?"live-rss":"live-rss-with-fallback";
+
+const out={
+  date,
+  generatedAt:NOW.toISOString(),
+  edition,
+  freshPages,
+  aiStories,
+  aiStoriesTotal,
+  aiPages,
+  aiPagesFull,
+  resolvedPublisherUrls,
+  categoryStatus,
+  categories
+};
+
 await fs.writeFile("news.json",JSON.stringify(out,null,2)+"\n","utf8");
-console.log(`\nSUCCESS: ${date}; fresh pages ${freshPages}/5; AI pages ${aiPages}/5; total stories ${Object.values(categories).reduce((n,a)=>n+a.length,0)}.`);
+console.log(`\nSUCCESS: ${date}; fresh pages ${freshPages}/5; AI stories ${aiStories}/${aiStoriesTotal}; AI pages ${aiPages}/5; full AI pages ${aiPagesFull}/5; publisher URLs ${resolvedPublisherUrls}/${aiStoriesTotal}.`);
