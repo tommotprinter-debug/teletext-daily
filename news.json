@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-28",
-  "generatedAt": "2026-08-28T21:17:18.558Z",
+  "date": "2026-08-29",
+  "generatedAt": "2026-08-29T04:18:18.412Z",
   "edition": "live-local-summary",
   "freshPages": 5,
-  "articleExtractStories": 14,
-  "rssClusterStories": 11,
-  "resolvedPublisherUrls": 14,
+  "articleExtractStories": 15,
+  "rssClusterStories": 10,
+  "resolvedPublisherUrls": 15,
   "meaningfulSummaryStories": 25,
   "mismatchedExtractStories": 0,
   "badBoilerplateStories": 0,
@@ -99,12 +99,29 @@
         "decoderResolved": true,
         "summaryMethod": "article-extract",
         "publisherUrlResolved": true,
-        "extractedTextChars": 2403,
+        "extractedTextChars": 2394,
         "publisherTitle": "U.S. delivers five more Lockheed Martin F-35A Lightning II fighters to Poland as Warsaw plans to acquire 32 additional jets",
         "titleMatchScore": 1
       }
     ],
     "300": [
+      {
+        "title": "“High Costs, Low Growth, and the Rise of China and Japan” — South Korea’s MMORPG Growth Formula Falters as Game Industry Seeks New Growth Engine in Poland",
+        "summary": "“High Costs, Low Growth, and the Rise of China and Japan” — South Korea’s MMORPG Growth Formula Falters as Game Industry Seeks New Growth Engine in Poland. This item is currently reported by economy.ac; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "“High Costs, Low Growth, and the Rise of China and Japan” — South Korea’s MMORPG Growth Formula Falters as Game Industry Seeks New Growth Engine in Poland &nbsp;&nbsp; economy.ac",
+        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
+        "source": "economy.ac",
+        "url": "https://economy.ac/news/2026/08/202608291956",
+        "publishedAt": "Fri, 28 Aug 2026 22:38:02 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE14LU9zTW5Yd05lUThRYzBDV1hPSEVpRF9HaEw3aXJCcnJZaXlXbVdnam1HeV9KUFVKSmVTX0VqOWdhZVZJcTRkbmJRUE13ejVjSnRIeEZRTQ?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "economy.ac"
+        ]
+      },
       {
         "title": "Poland keeps rates at 3.75% as inflation pressure stays moderate",
         "summary": "Read Poland keeps interest rates unchanged as wage and inflation pressures remain moderate By CEO August 28, 2026 Facebook X Pinterest WhatsApp - Advertisement - Poland’s Monetary Policy Council has kept interest rates unchanged, with the NBP reference rate remaining at 3.75%.",
@@ -152,7 +169,7 @@
         "decoderResolved": true,
         "summaryMethod": "article-extract",
         "publisherUrlResolved": true,
-        "extractedTextChars": 2403,
+        "extractedTextChars": 2394,
         "publisherTitle": "U.S. delivers five more Lockheed Martin F-35A Lightning II fighters to Poland as Warsaw plans to acquire 32 additional jets",
         "titleMatchScore": 1
       },
@@ -172,23 +189,6 @@
         "extractedTextChars": 1036,
         "publisherTitle": "Polish furniture industry squeezed by oil prices and supply shortages",
         "titleMatchScore": 1
-      },
-      {
-        "title": "Poland's Growth Outlook Brightens As Investment Rebounds, ING Says",
-        "summary": "Poland's Growth Outlook Brightens As Investment Rebounds, ING Says. This item is currently reported by Bitcoin World; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Poland's Growth Outlook Brightens As Investment Rebounds, ING Says. This item is currently reported by Bitcoin World; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Bitcoin World. Open the original source link for the publisher's complete report.",
-        "whyItMatters": "Business developments can affect investment, demand, financing conditions, and corporate decisions.",
-        "source": "Bitcoin World",
-        "url": "https://bitcoinworld.co.in/poland-growth-investment-rebound-ing/",
-        "publishedAt": "Fri, 28 Aug 2026 15:00:17 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMickFVX3lxTE40WWpyVUlSTk5sak8xQkFEZkFJMXFaUjNVdUk1QVdWZzZMUDZfbjh5Mi15czZ5V1RZVmIyTUV5VEVPMU1ndzFvWnhXQkZCd2VSRUY3bThVb2t2WGpvMFZWQThkdVVSRGk4WVpUVnhmYWM0Zw?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "Bitcoin World"
-        ]
       }
     ],
     "400": [
@@ -210,6 +210,57 @@
         ]
       },
       {
+        "title": "Baltica 2 completes the installation of its 111 monopiles in the Baltic Sea",
+        "summary": "Baltica 2 completes the installation of its 111 monopiles in the Baltic Sea. This item is currently reported by Inspenet; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Baltica 2 completes the installation of its 111 monopiles in the Baltic Sea. This item is currently reported by Inspenet; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Inspenet. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
+        "source": "Inspenet",
+        "url": "https://inspenet.com/en/news/baltica-2-complete-installation-111-monopiles/",
+        "publishedAt": "Fri, 28 Aug 2026 22:00:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNUU3NnphR1VZaWw3dGc5SXpHM0ZGMm94WGdJcXJuZ1p4alZtaWQ1dWZEM1U5X1MtbmhQVkFlbWJjakhDZV9xNkF6RkVnMzU4aWd6LXU0bV9qVUM2OEJWQWNhNDhNaF9qR2RISkNhbTloWGdfb2hIa0N3eGN0MHMtZA?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "Inspenet"
+        ]
+      },
+      {
+        "title": "Banking on a connection: Europe’s 1,700 GW grid backlog",
+        "summary": "Europe’s electricity grids are not modernizing fast enough to accommodate the rapid build-out of renewable capacity, turning access into a key economic constraint for new projects, affecting development timelines, financing structures and investment decisions.",
+        "body": "Europe’s electricity grids are not modernizing fast enough to accommodate the rapid build-out of renewable capacity, turning access into a key economic constraint for new projects, affecting development timelines, financing structures and investment decisions.",
+        "whyItMatters": "Grid capacity can determine how quickly new generation connects and reaches customers.",
+        "source": "Factor This",
+        "url": "https://www.solarandwindeurope.com/solar-wind-articles/banking-connection",
+        "publishedAt": "Fri, 28 Aug 2026 19:20:15 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSlA2Smtsa09iTXl0a01uQnJqOTBLX1Q2bUc3SnFoZnVVMXF2Q3k1TFR2SWZOQWswUUpIRS1QNTkwOTV4UUdpYlcxbFhCYU1fZlpWclVPRl9HSHlpZGVEQmgtUXRjUXNMOFFhRlhzNDRNbjd2anc2Qk5hZktGcl9ORkFkNlFPYlBZMV85NmlpMHU1YXpXeEJhVHpMOEU3bE1xYXdyWmRDSDVDNk1uZjgtWEkxRGU2cnk3THFISQ?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "article-extract",
+        "publisherUrlResolved": true,
+        "extractedTextChars": 260,
+        "publisherTitle": "Banking on a connection: Europe's 1,700 GW grid backlog",
+        "titleMatchScore": 1
+      },
+      {
+        "title": "German nuclear group files complaint against public broadcaster for inflating atom costs and cheapening wind",
+        "summary": "German nuclear group files complaint against public broadcaster for inflating atom costs and cheapening wind. This item is currently reported by Brussels Signal; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "German nuclear group files complaint against public broadcaster for inflating atom costs and cheapening wind &nbsp;&nbsp; Brussels Signal",
+        "whyItMatters": "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.",
+        "source": "Brussels Signal",
+        "url": "https://brusselssignal.eu/2026/08/german-nuclear-group-files-complaint-against-public-broadcaster-for-inflating-atom-costs-and-cheapening-wind/",
+        "publishedAt": "Fri, 28 Aug 2026 14:03:51 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNakJHemRua2lNd2tKa3h1eFN2eEktU0kzNnVnbDhfVnJ1S2pwZi1na240bkltakdoQzVCSVc4TGMzNlFWbHBBOE1DSmgyWEh3Zmc3azNUUEU5NzF0LVp6Y0x5N1BIR3hTOFhzWk1JZURxbTBpaU5rRk1yTGx6ZlI5NUFpbkhXU0UyV2hBQXFINXdKc2hTMUlKUFpKOFN0bXZLaTRMd2lTb1lQY2F4Y2stQzI0OGdsN081eUxBZFcyeF9NYUNSZGFsaUxyZzdwY3paTlNVMmNpd2NNZkk?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "Brussels Signal"
+        ]
+      },
+      {
         "title": "What the heat waves in Europe tell us about the reliability of nuclear power",
         "summary": "Energy What the heat waves in Europe tell us about the reliability of nuclear power In France and Switzerland, nuclear plants went offline, while in Romania, Hungary, and Bulgaria they shut down or reduced output by Alexander C.",
         "body": "Energy What the heat waves in Europe tell us about the reliability of nuclear power In France and Switzerland, nuclear plants went offline, while in Romania, Hungary, and Bulgaria they shut down or reduced output by Alexander C. But ​ “ if you don’t like nuclear, this is the annual occurrence that basically allows you to try … and say, ​ ‘ No, actually nuclear is not reliable and it can’t be built for a changing climate.’” RELATED STORIES Rethinking risk in the age of climate chaos AI data centres are driving an energy and water crunch worldwide Solar has helped Europe weather record-breaking heat The climate challenge for Europe’s nuclear plants is twofold. Nuclear plants remain the most reliable power generators on the planet.” Making nuclear plants more resilient The most obvious solution to water levels dropping below the intake pump is, as Buongiorno described, to lower the equipment.",
@@ -225,209 +276,157 @@
         "extractedTextChars": 8445,
         "publisherTitle": "What the heat waves in Europe tell us about the reliability of nuclear power",
         "titleMatchScore": 1
-      },
-      {
-        "title": "Europe turns offshore wind into strategic energy infrastructure",
-        "summary": "Intelligence and productivity platform GlobalData claimed that Europe is moving into an offshore wind “supremacy phase” as governments shift from ambition to execution, locking in multi‑gigawatt pipelines with redesigned auctions, clearer revenue stabilisation tools, and faster permitting rules.",
-        "body": "Intelligence and productivity platform GlobalData claimed that Europe is moving into an offshore wind “supremacy phase” as governments shift from ambition to execution, locking in multi‑gigawatt pipelines with redesigned auctions, clearer revenue stabilisation tools, and faster permitting rules. Its latest report, Europe Renewable Energy Policy Handbook 2026, stated that offshore wind is increasingly being treated as strategic infrastructure rather than simply another generation technology. A parallel development is that offshore wind is increasingly integrated into broader energy system planning, not only power generation planning. “Offshore wind is now one of Europe’s most consequential renewables battlegrounds not only for decarbonization, but for energy security, industrial competitiveness, and long‑term power affordability.",
-        "whyItMatters": "Relevant to offshore wind capacity, infrastructure, supply chain, or market development.",
-        "source": "Splash247",
-        "url": "https://splash247.com/europe-turns-offshore-wind-into-strategic-energy-infrastructure/",
-        "publishedAt": "Fri, 28 Aug 2026 08:14:54 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRDdtYkduRXVRejdUa25GVXNaMWF3OW02RXE0dVdLU2ZBWkIxMjZUT1JZbDFTUGVTek8xWmFtZWs4MkxjQTREdms5SXQ4NGdobzZIbE1VZXpfMTRtSFJFVlZsVWVZZFpCUmlSUUU3NUJEUDBIZ0JBaTdSajBRckxFS2ZxVVNVTU5udWRQeXFOUQ?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "article-extract",
-        "publisherUrlResolved": true,
-        "extractedTextChars": 3207,
-        "publisherTitle": "Europe turns offshore wind into strategic energy infrastructure - Splash247",
-        "titleMatchScore": 1
-      },
-      {
-        "title": "Mobile BESS provider Nomad begins life under new ownership with US DOE approval of Vermont pilot",
-        "summary": "Mobile BESS provider Nomad begins life under new ownership with US DOE approval of Vermont pilot. This item is currently reported by Energy-Storage.News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Mobile BESS provider Nomad begins life under new ownership with US DOE approval of Vermont pilot &nbsp;&nbsp; Energy-Storage.News",
-        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
-        "source": "Energy-Storage.News",
-        "url": "https://www.energy-storage.news/mobile-bess-provider-nomad-begins-life-under-new-ownership-with-us-doe-approval-of-vermont-pilot/",
-        "publishedAt": "Fri, 28 Aug 2026 13:08:33 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcWN5Z2UwS25fRnFHUVhRZE9PVy1KdlR3NV82cUFLUVJxWEliUlVManBpZjRDV0FnOGo0aTB6Sm5pMVFoUEEzQ1AwRWJNQjJGcmVnQ0xJc2lEZy1mM1RFNEo3LUlaODV2VFBxOXVJakx6N1EyMzZZYWxSU2pWdmpDU2hXdkEyVHV4Z0l3cXd2dXFLcUNuNzI1WmlibnZ5N09KNnJ5WUw3YXFpTGYzT1dLVWxlWHBPN3JQTzRYWVZaVVJfX0F0VHd0dg?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "Energy-Storage.News"
-        ]
-      },
-      {
-        "title": "Europe heads into winter with gas storage at 20-year seasonal low",
-        "summary": "As the Iran war has severely disrupted Qatari LNG supplies to Europe, sent gas and LNG prices in Europe and Asia skyrocketing, and heightened competition for the shrunk pool of readily available global LNG cargoes, Europe is heading for the 2026-2027 winter with one of its lowest levels of gas in storage in the past two decades, according to a report by OilPrice.com.",
-        "body": "As the Iran war has severely disrupted Qatari LNG supplies to Europe, sent gas and LNG prices in Europe and Asia skyrocketing, and heightened competition for the shrunk pool of readily available global LNG cargoes, Europe is heading for the 2026-2027 winter with one of its lowest levels of gas in storage in the past two decades, according to a report by OilPrice.com. Europe’s gas storage is just 63 percent full, its lowest level for this time of the year in nearly two decades, according to data from Gas Infrastructure Europe. For instance, the European benchmark natural gas prices in Europe at the Dutch Title Transfer Facility (TTF) surged this August to the highest since 2023, and so did the LNG prices in northwest Europe. Energy analysts say, Europe faces a winter [2026/2027] with the highest prices for gas and electricity in four years, with even higher gas needs next year for the next winter, unless LNG starts flowing out of the Strait of Hormuz very soon.",
-        "whyItMatters": "Energy developments can affect investment, security of supply, infrastructure, and power prices.",
-        "source": "Businessamlive",
-        "url": "https://businessamlive.com/europe-heads-into-winter-with-gas-storage-at-20-year-seasonal-low/",
-        "publishedAt": "Fri, 28 Aug 2026 16:42:30 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPeHJ4dzJUd0ZORmhQb3lLYTVrcWhYTXc3eXZLV2FHVEtvSzVaYnc1Uk1zOGFIajJrR3NqVU5fTlU2a1BkbHhObUJLd3RVWkJXOFpyRHFkVFhLc1VSVFBDbjdpNmNZaXpuaEdSRktuV2xwMkh2ZjFqaklDNW55dXVLTVVfWTluZTJfcEJfRnhPYUxKQVlBM0I4LQ?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "article-extract",
-        "publisherUrlResolved": true,
-        "extractedTextChars": 5440,
-        "publisherTitle": "Europe heads into winter with gas storage at 20-year seasonal low",
-        "titleMatchScore": 1
       }
     ],
     "500": [
       {
-        "title": "Pythian unveils Gemini Enterprise AI model for staff",
-        "summary": "Pythian unveils Gemini Enterprise AI model for staff. A separate current report adds: iManage links governed legal data to Gemini Enterprise.",
-        "body": "Pythian unveils Gemini Enterprise AI model for staff &nbsp;&nbsp; IT Brief Asia iManage links governed legal data to Gemini Enterprise &nbsp;&nbsp; CFOtech Asia iManage links governed legal data to Gemini Enterprise.",
+        "title": "Google’s Gemini Omni 1.1 Flash brings controllable AI video to developers",
+        "summary": "The broader Gemini Omni model family, which Google introduced earlier, is built to combine images, audio, video and text as input and generate video grounded in what Google calls its “real-world knowledge.” That means the model draws on an understanding of physics, including forces like gravity, kinetic energy and fluid dynamics, to make generated scenes look more plausible.",
+        "body": "Google is packaging scene continuation, camera control, cheap previews and high-resolution finishing into one workflow, available now through Google AI Studio, Google Flow and the Gemini Enterprise Agent Platform. The broader Gemini Omni model family, which Google introduced earlier, is built to combine images, audio, video and text as input and generate video grounded in what Google calls its “real-world knowledge.” That means the model draws on an understanding of physics, including forces like gravity, kinetic energy and fluid dynamics, to make generated scenes look more plausible. Google also identifies Adobe, Figma Weave, GMI Cloud and Runway as companies already using or integrating Gemini Omni Flash in creative workflows, a sign that the tools are moving beyond Google’s own platforms. The AI video evaluation platform Arena reported that Gemini Omni 1.1 Flash ranked first in the Text-to-Video Arena and second in the Image-to-Video Arena.",
         "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "IT Brief Asia",
-        "url": "https://itbrief.asia/story/pythian-unveils-gemini-enterprise-ai-model-for-staff",
-        "publishedAt": "Fri, 28 Aug 2026 15:45:00 GMT",
+        "source": "Northeast Times",
+        "url": "https://northeasttimes.com/2026/08/28/google-s-gemini-omni-1-1-flash-brings-controllable-ai-video-to-developers/",
+        "publishedAt": "Fri, 28 Aug 2026 21:49:31 GMT",
         "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMFB0X2o2NEZNYTFadnZTX0dReUFDZ2REWjlUUTVyaHFRbl9DUFdqTnNfVGhlZ1hzT3NSaVA4S2t5WHU0ZktiN1FSTm1LZEZRRDFRRlRvanB5QUdXaTdYeUlkb3VCZ2g3RVp1dGw2VFByamw4dU5kZjZuRU94amU0aXZWNTh0dw?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "IT Brief Asia",
-          "CFOtech Asia"
-        ]
-      },
-      {
-        "title": "Anthropic standard lets AI agents run lab and factory hardware",
-        "summary": "Anthropic standard lets AI agents run lab and factory hardware. This item is currently reported by IoT News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Anthropic standard lets AI agents run lab and factory hardware. This item is currently reported by IoT News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: IoT News. Open the original source link for the publisher's complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "IoT News",
-        "url": "https://iottechnews.com/news/anthropic-standard-ai-agents-run-lab-factory-hardware/",
-        "publishedAt": "Fri, 28 Aug 2026 18:03:17 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNjNqcWpRNVJRSHJ1SlVNRS10MGJPcWxGUnVjM3RJeXJOMFZfLXFvQWpPaGFfRWZBbUZyWGJoLVhBWkhRVVRRdTRSdm8tTFg2MnR0djh5YlUwWktfRlBkU0tUUTRmRmxab2lRc2dlS09NOXdLRGEyNjk0WTlMSUpxSWx2QllHNnJyWmxZ?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "IoT News"
-        ]
-      },
-      {
-        "title": "Nutanix Enterprise AI 2.8 Adds AI Agent Controls",
-        "summary": "Nutanix Enterprise AI 2.8 Adds AI Agent Controls. This item is currently reported by Channel Insider; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Nutanix Enterprise AI 2.8 Adds AI Agent Controls. This item is currently reported by Channel Insider; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Channel Insider. Open the original source link for the publisher's complete report.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "Channel Insider",
-        "url": "https://www.channelinsider.com/infrastructure/nutanix-enterprise-ai-2-8-agent-controls/",
-        "publishedAt": "Fri, 28 Aug 2026 17:55:57 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYk96UU1PN3ZObFVGMlQtbWxsY2hmZmk2MlltQWNtS01GX05lend2Z2JmNXJKXy1kV1l6M2sxQXRqc3JHVnc2ZEZRazZJSTZJWmlWV1ViZ0MxTHh2bk80VGptVWp2M1huTlhPamdfUEpUejlPX3ZxWGpwbDZhVGhSMHhhMlpKcFBQOTYxeUZTMm4?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "Channel Insider"
-        ]
-      },
-      {
-        "title": "Google Cloud and Mahindra Bring Gemini Enterprise AI Directly Into Vehicles",
-        "summary": "In today’s Cloud Wars Minute, I look at how Google Cloud is expanding the Gemini ecosystem into the automotive world through its partnership with Mahindra. Highlights 00:03 — Google Cloud is partnering with the Indian automobile manufacturer Mahindra to get Gemini Enterprise installed directly into its vehicles.",
-        "body": "Share Facebook Twitter LinkedIn Email Welcome to the Cloud Wars Minute — your daily cloud news and commentary show. In today’s Cloud Wars Minute, I look at how Google Cloud is expanding the Gemini ecosystem into the automotive world through its partnership with Mahindra. Highlights 00:03 — Google Cloud is partnering with the Indian automobile manufacturer Mahindra to get Gemini Enterprise installed directly into its vehicles. This is also a really important way for Google Cloud to expand the Gemini ecosystem beyond smartphones, PCs, and enterprise software.",
-        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "Cloud Wars",
-        "url": "https://cloudwars.com/cloud-wars-minute/google-cloud-and-mahindra-bring-gemini-enterprise-ai-directly-into-vehicles/",
-        "publishedAt": "Fri, 28 Aug 2026 11:30:00 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObkpIVzhtdnpvMnU1a2FpRzBXTlh3Nnl3Vko4VnV4cDdTRTZrSlg5eGxLNGhSUTZSbC10VWFvNWlzSGdaSjBJRkNZWGZSNWk1b05fazlNZTg0TlRacTgtSTh1d1gzdUxJUEhLVDg5NE13bEJVcjFiT2dJU1NrUEJmRHRITDlpMkdINWwxbUdPd3QwMkFTY2lHS0FNalNtU3NmcWFqcmZHbnZuMEwxMDlHYlNiXzQyU1U?oc=5",
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObWkxQXR0aWl5aWs2RTJSeTIzc0pSandYb1BNTnIwZ0NTLUFRQjl5b1dCb25wRjd0MTFxdnFfMEtQbWZuSFBIV0xhbzVQblRyTlJhZ0F3MV9ZM3Zfdk5fbEZkZ0V5MTRRdWZPUllRV1RBQnNndFNSSmhHaGVQODZtc3hteG5YMC1LRnk1VzhOWnFBODU1S1BDMFhUNHR2YTQtOWtxLWRRa3dvaW1WYnk3bXNR?oc=5",
         "decoderResolved": true,
         "summaryMethod": "article-extract",
         "publisherUrlResolved": true,
-        "extractedTextChars": 2466,
-        "publisherTitle": "Google Cloud and Mahindra Bring Gemini Enterprise AI Directly Into Vehicles",
+        "extractedTextChars": 6357,
+        "publisherTitle": "Google's Gemini Omni 1.1 Flash brings controllable AI video to developers - Northeast Times",
         "titleMatchScore": 1
       },
       {
-        "title": "Tim Kosiba: NSA Discussing AI Model Testing With Developers",
-        "summary": "AWS Launches General Availability of Amazon Keyspaces to Manage Cassandra Workloads; Shawn Bice, Edward Lewis Quoted by Sarah Sybert December 6, 2022 Amazon Web Services (AWS) has announced the general availability of Amazon Keyspaces, a scalable, highly available, and fully managed database service for Cassandra workloads, the company reported on...",
-        "body": "AWS Launches General Availability of Amazon Keyspaces to Manage Cassandra Workloads; Shawn Bice, Edward Lewis Quoted by Sarah Sybert December 6, 2022 Amazon Web Services (AWS) has announced the general availability of Amazon Keyspaces, a scalable, highly available, and fully managed database service for Cassandra workloads, the company reported on...",
+        "title": "AI Agents for Embedded Systems Development",
+        "summary": "AI Agents for Embedded Systems Development. This item is currently reported by Design News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "AI Agents for Embedded Systems Development. This item is currently reported by Design News; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Design News. Open the original source link for the publisher's complete report.",
         "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
-        "source": "ExecutiveGov",
-        "url": "https://www.executivegov.com/articles/tim-kosiba-nsa-commercial-ai-models",
-        "publishedAt": "Fri, 28 Aug 2026 21:09:47 GMT",
+        "source": "Design News",
+        "url": "https://www.designnews.com/embedded-systems/three-more-tricks-for-using-ai-in-embedded-software",
+        "publishedAt": "Sat, 29 Aug 2026 02:48:45 GMT",
         "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1OSjFEUGVEOGFkU1ZZYlNlam8wY3pzN0pwazhieTNMS3ZSWjFDdC1KUXZHMGEzaGFPRDZ1amk1Q0tfaWgzSkszUzZ5Vk9VYTF6Mzd2SUZZS2w3YzlrV0ZMWVNaNXN1WlViOEZXeFllZ1dabGx1S2dabl80YU5sdw?oc=5",
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWm5EaW51YkM5N0k3RnY4M3lxNXNvZ2hIWGcxN3Nsd2FjTk56QTJULTdkZFBlbXZORWRJMGw0aEg4VHV3R0EwNE9yVXh6R2hkRnhWeGIzbFlKR3NoeG5WbU4xVU4tUF9ZRTBzYWdWS2htN1lObWNDTFFJNExNR0RXVjIwakFmOU5kbjZGUW1MU3Z0ZFlEeVBlLXp2NA?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "Design News"
+        ]
+      },
+      {
+        "title": "What Airbnb (ABNB)'s AI Push and New Host-Fee Model Mean For Shareholders",
+        "summary": "And It’s Still Cheap Fair Value: US$359.22 39.4 % undervalued 1 follower users have followed this narrative · 0 comments users have commented on this narrative · 0 likes users have liked this narrative AC achillez_97613 on Intel · about 8 hours ago Fair Value = $110, Bull = $150, Bear = $65.",
+        "body": "United States / Hospitality / NasdaqGS:ABNB What Airbnb (ABNB)&#x27;s AI Push and New Host-Fee Model Mean For Shareholders August 29, 2026 SI Simply Wall St Reviewed by Sasha Jovanovic In the past week, Airbnb reported strong second-quarter growth in revenue, gross booking value, and nights booked, alongside an upgraded 2026 outlook that highlighted continued international expansion and AI-driven customer support improvements. And It’s Still Cheap Fair Value: US$359.22 39.4 % undervalued 1 follower users have followed this narrative · 0 comments users have commented on this narrative · 0 likes users have liked this narrative AC achillez_97613 on Intel · about 8 hours ago Fair Value = $110, Bull = $150, Bear = $65.",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "simplywall.st",
+        "url": "https://simplywall.st/stocks/us/consumer-services/nasdaq-abnb/airbnb/news/what-airbnb-abnbs-ai-push-and-new-host-fee-model-mean-for-sh",
+        "publishedAt": "Sat, 29 Aug 2026 02:24:33 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNc09yWTd5cldGVzFPRHYwSEhLN000Rk1wcXNZd1JySGlHQ3BOTUtiYnZ4cFREaHROS2lOWW5lNXJYaHM2b2tLUVFxNzV2VEloWXlsX19QSWYxRER2UC1fSDRtdTFzb0txdk9fM0VsZXNDaHFKWHVXZldVQkRsYXNWeTJQQVlTREctdlViTWN3UVJVQl80dGRCNnFKeDd5aktNclNwOXU3X1AzVDdBY0VaNWpiN0VtbFNBU0VsWTdzMTJveWFIUjJORzBFYU43NEnSAdQBQVVfeXFMUFVNdDZNVlIyMTN6ZXVlZUMtV3BaVktCQnpLQzlIb3pMdUFBbG9XVVdJYVZKYWpVT2hvNzZraUxQYzR6LVlyU0tYNEZxYm5LYk0zajJ3NW1oVWVHLUtIbEpfNGNJcHp5bmlXRU5sMWxmeDlrN0hPNkhwZFpRUzc0MXlCNjdlbzhobEJQQ3J2NmRiOHBIQTVHSkpNaE4yV2JDREFEZ1hSTDNtX3lmajRyT1haYjR1eUFuV0xxT1ZPRVVoRmtMaG5JZ080RUJhR0ZXNkVzQ3M?oc=5",
         "decoderResolved": true,
         "summaryMethod": "article-extract",
         "publisherUrlResolved": true,
-        "extractedTextChars": 370,
-        "publisherTitle": "Tim Kosiba: NSA Discussing AI Model Testing With Developers",
+        "extractedTextChars": 10811,
+        "publisherTitle": "What Airbnb (ABNB)&#x27;s AI Push and New Host-Fee Model Mean For Shareholders",
         "titleMatchScore": 1
+      },
+      {
+        "title": "OpenAI Ends AI Partnership with SpaceX's Cursor | Finance News",
+        "summary": "On August 28, 2026, OpenAI announced it will wind down its contract supplying AI models to Cursor—now owned by Elon Musk’s SpaceX—citing concerns over SpaceX’s adherence to its terms of service. The shutoff is scheduled for November 12, 2026.",
+        "body": "On August 28, 2026, OpenAI announced it will wind down its contract supplying AI models to Cursor—now owned by Elon Musk’s SpaceX—citing concerns over SpaceX’s adherence to its terms of service. The shutoff is scheduled for November 12, 2026.",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "Global Banking & Finance Review",
+        "url": "https://www.globalbankingandfinance.com/openai-end-partnership-spacexs-cursor/",
+        "publishedAt": "Sat, 29 Aug 2026 02:07:26 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPRGNIaDI4bzdPTVZ6RFVWMU1JRWhNdDBqNmVkQUQxSndlekprTEIyYl96Z1hCRHdWU3ZlTWdtNDZfSUhSZ3F5VEhZY3oxVHplVlRrR1YxN3poR1RwOEJmUmhmRFFlanNOSGYxNnZaU3NNZkx2UkFRR3BJUHVteTJ0NVpYcWE?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "article-extract",
+        "publisherUrlResolved": true,
+        "extractedTextChars": 242,
+        "publisherTitle": "OpenAI Ends SpaceX Cursor AI Deal Amidst Musk-Altman Feud",
+        "titleMatchScore": 0.571
+      },
+      {
+        "title": "Court rules Pentagon can’t ban Anthropic’s AI models",
+        "summary": "Court rules Pentagon can’t ban Anthropic’s AI models. This item is currently reported by SiliconANGLE; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Court rules Pentagon can’t ban Anthropic’s AI models. This item is currently reported by SiliconANGLE; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: SiliconANGLE. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Material AI developments can affect software capability, productivity, competition, and technology spending.",
+        "source": "SiliconANGLE",
+        "url": "https://siliconangle.com/2026/08/28/court-rules-pentagon-cant-ban-anthropics-ai-models/",
+        "publishedAt": "Fri, 28 Aug 2026 20:54:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPckc0N2h0QWphVmVYU3RhWTRiT0VSYnBvWms1SEJiUzdnazlRMS1QaVgzRDB5b0U4S2k3MjNmZHBDTm5iMmFwZUdOckF6NEV0UlBMcVJ2c0NZemZWVTgzdVkyckJaWVdQLXUyYXJNdTFxTDFlZVdKMTl3NDdlRHhRcDIyTkVCRS1hcWhCUGx4Z28?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "SiliconANGLE"
+        ]
       }
     ],
     "600": [
       {
-        "title": "Falconets Beat Poland 1-0 In World Cup Warm-Up",
-        "summary": "Falconets Beat Poland 1-0 In World Cup Warm-Up By Kelechi / Women's Football / August 28, 2026 Contents show 1 One More Test Before The Tournament 2 Group F Opener Against Spain A stoppage-time strike from Mary Mamudu gave the Falconets a confidence-boosting win over their World Cup hosts, just over a week before the tournament proper begins.",
-        "body": "Falconets Beat Poland 1-0 In World Cup Warm-Up By Kelechi / Women's Football / August 28, 2026 Contents show 1 One More Test Before The Tournament 2 Group F Opener Against Spain A stoppage-time strike from Mary Mamudu gave the Falconets a confidence-boosting win over their World Cup hosts, just over a week before the tournament proper begins. Add as a preferred source Nigeria’s Falconets secured a 1-0 victory over hosts Poland in an international friendly at the Municipal Stadium in Brzeg on Friday. One More Test Before The Tournament The Falconets will now turn their attention to their final warm-up fixture against Korea Republic at the Remes Resort & Spa Football Stadium on Tuesday, 1 September. Group F Opener Against Spain Nigeria have been drawn in Group F alongside Spain, China PR and Paraguay, and will open their World Cup campaign against Spain on Monday, 7 September.",
+        "title": "Highlights: Kirtland vs. Poland high school football",
+        "summary": "Highlights: Kirtland vs. Poland high school football. A separate current report adds: Highlights: Kirtland vs. Poland high school football August 28, 2026.",
+        "body": "Highlights: Kirtland vs. Poland high school football &nbsp;&nbsp; WKBN.com Highlights: Kirtland vs. Poland high school football August 28, 2026 &nbsp;&nbsp; WKBN.com Highlights: Kirtland vs. Poland high school football August 28, 2026.",
         "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "footballinnigeria.com.ng",
-        "url": "https://www.footballinnigeria.com.ng/womens-football/falconets-beat-poland-1-0-in-world-cup-warm-up/",
-        "publishedAt": "Fri, 28 Aug 2026 18:27:33 GMT",
+        "source": "WKBN.com",
+        "url": "https://www.wkbn.com/sports/highlights-kirtland-vs-poland-high-school-football/",
+        "publishedAt": "Sat, 29 Aug 2026 02:24:14 GMT",
         "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWWswc1NoYVAzSWN2Rm9CWVkyNEdIR0FFaEZJYWNVSEJnV2k4aXhmSk1ELXM5UFVteEJvWjdjWm1uX2ZDaV9Bd2FaSS1RMGlEZ2wtVjJZQlFma2x1RnlxSDgwY1hsNWROcDFBVkh1OW9GdjVVNUhsZzdJckJwa3pLR0sxaTd6UFlDeF95RDBhV21fVjlQVUp6aEtFS0xRcWN4S3c?oc=5",
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNE1GUUJ1Y0NyS2ZDOVFqcGZydk5WUWFYVUxOSFpXRjd6N3Z6WU5YamFLSVBObmhVV3BJUXJLRUxmOHpqbVYzNHk4bU1aUU1seW9kWFRoclZicGJ2WEhtYllJX3VSQk9SbnZoOXdPaE1OSEhoZUh4bTlPN3RvUUhVNTFINWQ2Z9IBiwFBVV95cUxOYkNlWEREVmxHclNMdS1zNENieU52eHlsd21DOUZXckJWWXBHRldWSVJkSE9EMXBVamt3ZVI2QmFDY3MzdUJPQTdIbkZhSFQzdUdvUkdabHRKOVpWSElMdTQ4QjVud1JhQWQ0d1V0ZHVYM1lTR0JhckVHMDNNS0N2OVp6dnNMR1FVNFow?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "WKBN.com"
+        ]
+      },
+      {
+        "title": "Poland falls to perennial state power Kirtland",
+        "summary": "Poland falls to perennial state power Kirtland. This item is currently reported by Yahoo Sports; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Poland falls to perennial state power Kirtland. This item is currently reported by Yahoo Sports; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Yahoo Sports. Open the original source link for the publisher's complete report.",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/highlights-kirtland-vs-poland-high-022414769.html",
+        "publishedAt": "Sat, 29 Aug 2026 02:24:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM215VnozcDZSWTRTZEUxU1FKd2FScnFFbm42TWdpdHRlVUxXRlJ0bUs5YnByUXRmVnI2WWFUejRDUExHd2NidVg5MzRfLUUtTmVydGtQYkNIdndUMGVVX19CVURyRHRjRkMxRmt1VEY2azRHbzQxYzdkWjNSMHBhbFpNamlERUxBa0FF?oc=5",
+        "decoderResolved": true,
+        "summaryMethod": "rss-cluster",
+        "publisherUrlResolved": false,
+        "coverageSources": [
+          "Yahoo Sports"
+        ]
+      },
+      {
+        "title": "Falconets defeat Poland ahead of FIFA U20 Women’s World Cup",
+        "summary": "Tribal Football World Cup Women U20 Falconets defeat Poland ahead of FIFA U20 Women’s World Cup Falconets defeat Poland ahead of FIFA U20 Women’s World Cup Shina Oludare Falconets defeat Poland ahead of FIFA U20 Women’s World Cup Sunday Joshua / Alamy / Profimedia Nigeria’s Falconets secured a 1-0 victory over hosts Poland in an international friendly at the Municipal Stadium in Brzeg on Friday.",
+        "body": "Tribal Football World Cup Women U20 Falconets defeat Poland ahead of FIFA U20 Women’s World Cup Falconets defeat Poland ahead of FIFA U20 Women’s World Cup Shina Oludare Falconets defeat Poland ahead of FIFA U20 Women’s World Cup Sunday Joshua / Alamy / Profimedia Nigeria’s Falconets secured a 1-0 victory over hosts Poland in an international friendly at the Municipal Stadium in Brzeg on Friday. Mary Mamudu scored the decisive goal in first-half stoppage time, handing Moses Aduku’s side a valuable morale boost ahead of the 2026 FIFA U-20 Women’s World Cup. The Falconets will play their final warm-up match against Korea Republic at the Remes Resort & Spa Football Stadium on Tuesday, September 1. Mentions Poland Nigeria Spain China New Caledonia World Cup Women U20 African football",
+        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
+        "source": "TribalFootball",
+        "url": "https://www.tribalfootball.com/article/falconets-defeat-poland-ahead-of-fifa-u20-women-s-world-cup-470a7968-08d4-47ea-a146-2d269a084f0b",
+        "publishedAt": "Fri, 28 Aug 2026 21:19:00 GMT",
+        "aiSummary": false,
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRkdrLXFEOFJSUzhYNWtXVzdsMnpIWXRwc3Z1YmFpZDd2Z3hZSHJ3M0oyYVFod2xoQVVWa2l1b0w3MF9iM0paWUlkSEFGS0hJb3hjWXV5WU16aC1vNF9aS1g1Z2dZTWZyVnVrZnJhajZ2cEZBMGtnRThZM3podUxGRml0Qy1uN3liZ19kOHZGSXlMQmdzaHFua2lSRDUyQ2g5UGgydWhfZDRsSnRoMVBNYTR3MnQySHJ0TDdaeks3SnkxQ1U3TGh5UVJsQmlRdXhv?oc=5",
         "decoderResolved": true,
         "summaryMethod": "article-extract",
         "publisherUrlResolved": true,
-        "extractedTextChars": 1361,
-        "publisherTitle": "Falconets Beat Poland 1-0 In World Cup Warm-Up",
+        "extractedTextChars": 1106,
+        "publisherTitle": "Falconets defeat Poland ahead of FIFA U20 Women’s World Cup",
         "titleMatchScore": 1
       },
       {
-        "title": "Poland's RISING 400m Star! 💫 Anastazja Kus SMASHES Championship Best | Banska Bystrica 2024 Shane Doan (nw3aZ7VLiU)",
-        "summary": "Poland's RISING 400m Star! 💫 Anastazja Kus SMASHES Championship Best | Banska Bystrica 2024 Shane Doan (nw3aZ7VLiU). This item is currently reported by Mshale; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Poland's RISING 400m Star! 💫 Anastazja Kus SMASHES Championship Best | Banska Bystrica 2024 Shane Doan (nw3aZ7VLiU) &nbsp;&nbsp; Mshale",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "Mshale",
-        "url": "https://mshale.com/463e7018/de6a1fb2fcSLstRP2NA",
-        "publishedAt": "Fri, 28 Aug 2026 14:47:53 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE41aldLZlJTWFEyV2xJbzY0bVc3QzBKd2JpLXF2MHZoVFZrYUo1eFBlTndZTTZQcVV6cnJxSVZwTW9kZXM2aVhmdHdTcFp6cjVOelUxc2dXVTN4cnM?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "Mshale"
-        ]
-      },
-      {
-        "title": "Türkiye reach EuroVolley last 16 despite Poland defeat",
-        "summary": "Türkiye reach EuroVolley last 16 despite Poland defeat. This item is currently reported by Daily Sabah; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Türkiye reach EuroVolley last 16 despite Poland defeat. This item is currently reported by Daily Sabah; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Daily Sabah. Open the original source link for the publisher's complete report.",
-        "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "Daily Sabah",
-        "url": "https://www.dailysabah.com/sports/turkiye-reach-eurovolley-last-16-despite-poland-defeat/news",
-        "publishedAt": "Fri, 28 Aug 2026 19:28:00 GMT",
-        "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkdZNjRrTk54Ui1MdW9lU21QbENLYWsxZnpoZmpRZ183WG1Ha1g1LU5SV2RpLVNlSXRyOUtWbkNQVHhOS01XMTFyN3B6WmM0dlJVY2FGVDNaUk5YMkVkT0ttendvZm55bUZMMzVNcHlnZXJOQjZfMHFBcHdyTTJaM2ktMzNjcm5oVTlLTGsxRVFYU255OGpHNg?oc=5",
-        "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "Daily Sabah"
-        ]
-      },
-      {
-        "title": "Kazakhstani canoeist finishes seventh at World Cup in Poland",
-        "summary": "Kazakhstani canoeist finishes seventh at World Cup in Poland. This item is currently reported by Qazinform; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Kazakhstani canoeist finishes seventh at World Cup in Poland. This item is currently reported by Qazinform; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Qazinform. Open the original source link for the publisher's complete report.",
+        "title": "Kazakh equestrian claims silver at international tournament in Poland",
+        "summary": "Kazakh equestrian claims silver at international tournament in Poland. This item is currently reported by Qazinform; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
+        "body": "Kazakh equestrian claims silver at international tournament in Poland. This item is currently reported by Qazinform; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Qazinform. Open the original source link for the publisher's complete report.",
         "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
         "source": "Qazinform",
-        "url": "https://qazinform.com/amp/kazakhstani-canoeist-finishes-seventh-at-world-cup-in-poland-099f4f/",
-        "publishedAt": "Fri, 28 Aug 2026 18:21:50 GMT",
+        "url": "https://qazinform.com/amp/kazakh-equestrian-claims-silver-at-international-tournament-in-poland-bda9e2/",
+        "publishedAt": "Fri, 28 Aug 2026 23:37:34 GMT",
         "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNajNiNTJhcXI2Yk91ZkRWZVdSaWV1a1VYbWJCV0wwVkV0ZlppZ2dXaWI1T1Yza292Z2hVMUxOQW1KeWliYTFhaVpGNHRzdEdTaU9PM1podkNHYy1waVkzcHFOdURTS0swMmZqQjFlVGZIRWo0VGQ5d2YwOG0zTElqSFVDUl9iZWJPNERzUmZpOE9LUzVVT3JSVXVR0gGaAUFVX3lxTE1qM2I1MmFxcjZiT3VmRFZlV1JpZXVrVVhtYkJXTDBWRXRmWmlnZ1dpYjVPVjNrb3ZnaFUxTE5BbUp5aWJhMWFpWkY0dHN0R1NpT08zWmh2Q0djLXBpWTNwcU51RFNLSzAyZmpCMWVUZkhFajRUZDl3ZjA4bTNMSWpIVUNSX2JlYk80RHNSZmk4T0tTNVVPclJVdVE?oc=5",
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWEhuN21hWmlGbTEtWGl0bjU0bG1zMFNOV0gwVzBiU0RYdWpwb3JWVVpwT2hPZUhBVHBWY283UXZWTVJUajRBZVJHLVZDa3BvUVFZQjc2LU80VWtwN1JaWjRybFJOcHBxUWNUSTBjYUU4cmdFRUFqQWpkNTlxc0lLc3M1Z0xsWHMwRWJVY05qUFJqZ3FVZDFqZ19RTXd5ckJmVTRtMUpB0gGmAUFVX3lxTE5YSG43bWFaaUZtMS1YaXRuNTRsbXMwU05XSDBXMGJTRFh1anBvclZVWnBPaE9lSEFUcFZjbzdRdlZNUlRqNEFlUkctVkNrcG9RUVlCNzYtTzRVa3A3UlpaNHJsUk5wcHFRY1RJMGNhRThyZ0VFQWpBamQ1OXFzSUtzczVnTGxYczBFYlVjTmpQUmpncVVkMWpnX1FNd3lyQmZVNG0xSkE?oc=5",
         "decoderResolved": true,
         "summaryMethod": "rss-cluster",
         "publisherUrlResolved": false,
@@ -436,21 +435,21 @@
         ]
       },
       {
-        "title": "Falconets beat Poland 1-0 in U-20 Women’s World Cup friendly",
-        "summary": "Falconets beat Poland 1-0 in U-20 Women’s World Cup friendly. This item is currently reported by Peoples Gazette Nigeria; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief.",
-        "body": "Falconets beat Poland 1-0 in U-20 Women’s World Cup friendly. This item is currently reported by Peoples Gazette Nigeria; no sufficiently distinct corroborating RSS headline was available for a fuller automated brief. Sources seen in current RSS coverage: Peoples Gazette Nigeria. Open the original source link for the publisher's complete report.",
+        "title": "Preview: Can world champions Germany stop unbeaten Poland?",
+        "summary": "Sunday brings us six games in Groups K and L, the biggest one being the matchup between the defending world champions Germany, and one of a 7-0 surprise package of the Qualifiers in Poland. Poland have won 10 of their 12 home games in the World Cup Qualifiers, including the most recent five, but their last home defat was against Germany, 69-72 in November 2021.",
+        "body": "Sunday brings us six games in Groups K and L, the biggest one being the matchup between the defending world champions Germany, and one of a 7-0 surprise package of the Qualifiers in Poland. Poland have won 10 of their 12 home games in the World Cup Qualifiers, including the most recent five, but their last home defat was against Germany, 69-72 in November 2021. Dennis Schroder (Germany) has had 20+ points and 5+ assists in each of his last three games in the World Cup Qualifiers, while only Luka Doncic (4) has recorded a longer such run in Europe in the competition. Hungary have won their last two games in the World Cup Qualifiers, but they have never won three in a row during a single campaign of qualifiers.",
         "whyItMatters": "Major sports results and events shape rankings, qualification, schedules, and public attention.",
-        "source": "Peoples Gazette Nigeria",
-        "url": "https://gazettengr.com/falconets-beat-poland-1-0-in-u-20-womens-world-cup-friendly/",
-        "publishedAt": "Fri, 28 Aug 2026 17:49:58 GMT",
+        "source": "FIBA",
+        "url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-european-qualifiers/news/preview-can-world-champions-germany-stop-unbeaten-poland",
+        "publishedAt": "Fri, 28 Aug 2026 22:46:13 GMT",
         "aiSummary": false,
-        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdWZLYmg5VkxjOGxmZkJxREhIUDhZemRLVFY1Qi1kZXNWQ0ZBeTlaOVhTcE9qc2lvOUtNM1lma09EYVIySktPTHlBVlU0YmQ5T2dHMGpLWHhJd0pwODJHY2NrSWgzWENZS3lnVVo3aldxTkdPTEZPeVpXbXZOTHM1NWRET09neloxTnVR?oc=5",
+        "originalDiscoveryUrl": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMlliT3JxOHBqRFAxQmdqeUtYd0poNmd4cFpoUldhMVdmZUdjQTlQRF9pSk5EUDNISnEtVDFyTkxKNTV1NXo4N05Hc09fR09PazRSOGpIcTdZQlRySEhNWXB0dE1GLW91RWozdHFMc0VtOUJvcmVzMk9fUWlheHV2TTlTQ1BoWll3bnVOUU5VYmJFbGN4aTZydDRrdGIxenhkc2pWX3dnbnJJa2JZeEhvOGhRQkpJY0c0RW5abkVzeFA2VlhSZkVLU2JsZFpZUUp5ZndGN1dXMGxud1J2UlZteUoxdlE?oc=5",
         "decoderResolved": true,
-        "summaryMethod": "rss-cluster",
-        "publisherUrlResolved": false,
-        "coverageSources": [
-          "Peoples Gazette Nigeria"
-        ]
+        "summaryMethod": "article-extract",
+        "publisherUrlResolved": true,
+        "extractedTextChars": 4000,
+        "publisherTitle": "Preview: Can world champions Germany stop unbeaten Poland?",
+        "titleMatchScore": 1
       }
     ]
   }
