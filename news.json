@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-14",
-  "generatedAt": "2026-11-14T12:08:23.550Z",
+  "date": "2026-11-15",
+  "generatedAt": "2026-11-15T12:42:14.826Z",
   "edition": "live-local-summary",
-  "freshPages": 5,
+  "freshPages": 0,
   "articleExtractStories": 11,
   "rssClusterStories": 14,
   "resolvedPublisherUrls": 11,
@@ -10,11 +10,11 @@
   "mismatchedExtractStories": 0,
   "badBoilerplateStories": 0,
   "categoryStatus": {
-    "200": "fresh-rss-cluster",
-    "300": "fresh-mixed",
-    "400": "fresh-mixed",
-    "500": "fresh-mixed",
-    "600": "fresh-mixed"
+    "200": "previous-edition-fallback",
+    "300": "previous-edition-fallback",
+    "400": "previous-edition-fallback",
+    "500": "previous-edition-fallback",
+    "600": "previous-edition-fallback"
   },
   "categories": {
     "200": [
